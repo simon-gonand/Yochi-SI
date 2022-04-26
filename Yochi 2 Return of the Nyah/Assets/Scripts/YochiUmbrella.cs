@@ -23,6 +23,7 @@ public class YochiUmbrella : MonoBehaviour
     void Start()
     {
         SwitchEmitter(false);
+        umbrellaAngle = 90;
     }
 
     void Update()
@@ -83,7 +84,7 @@ public class YochiUmbrella : MonoBehaviour
     private void UpdateUmbrellaOrientation()
     {
         int indexOrientation = 0;
-        while(umbrellaAngle > (22.5f + (indexOrientation * 45f)))
+        while((umbrellaAngle >= 0 ? umbrellaAngle : (umbrellaAngle + 360)) > (22.5f + (indexOrientation * 45f)))
         {
             indexOrientation++;
         }
