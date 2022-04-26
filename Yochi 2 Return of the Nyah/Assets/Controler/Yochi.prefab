@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1132662924663911603}
   - component: {fileID: 1132662924663911602}
   - component: {fileID: 8675668267994493411}
+  - component: {fileID: 8433160207501487802}
   m_Layer: 0
   m_Name: Yochi
   m_TagString: Player
@@ -51,14 +52,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a824e807a861a34a995ec3b807a4b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealthPoint: 6
+  invulnerableTime: 1
+  healthBar: {fileID: 0}
   spriteRenderer: {fileID: 1132662924663911604}
-  realWorldColor: {r: 0.990566, g: 0.57910764, b: 0.032707386, a: 1}
-  yokaiWorldColor: {r: 0.023529414, g: 0.98823535, b: 1, a: 1}
+  realWorldColor: {r: 1, g: 1, b: 1, a: 1}
+  yokaiWorldColor: {r: 0.8254717, g: 0.99789727, b: 1, a: 1}
   collisionInYokaiWorld:
     tagList: 64
   collisionInRealWorld:
     tagList: 128
   isInYokaiWorld: 0
+  isInvulnerable: 0
 --- !u!114 &4634130879036724829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +76,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07638666bd66bf34c92d2c5808a7f0ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementMaxSpeed: 8
+  animator: {fileID: 8433160207501487802}
+  movementMaxSpeed: 5
 --- !u!114 &1061930793294267362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,35 +90,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8569119348dbabb47934575ea77c74a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 8433160207501487802}
   yokaiEmitter: {fileID: 11400000, guid: b78f6a7d7ca592c4985248ec9643c8ae, type: 2}
   realEmitter: {fileID: 11400000, guid: a35fb34acede08e48adebc55f2bcdf6c, type: 2}
   bulletEmitter: {fileID: 8768771792820014503}
   umbrella: {fileID: 2064891494976140651}
-  aimCursorDistance: 1
+  aimCursorDistance: 0.5
   realUmbrellaOrientations:
-  - {fileID: 21300000, guid: 28610edcc3fd9bc499f4c59ac2df5935, type: 3}
-  - {fileID: 21300000, guid: 6f15ae40cfc403e4888f42cc5ae50b21, type: 3}
-  - {fileID: 21300000, guid: 62256c3cdba211047ac950f7dc75f6f8, type: 3}
-  - {fileID: 21300000, guid: 35ee14c125e6fba47ad38d4f79def14b, type: 3}
-  - {fileID: 21300000, guid: 5c5e521acaf439d4a95da7fcf7bf2c49, type: 3}
-  - {fileID: 21300000, guid: 9c50e4ecf682c224e8b60a138c7dfaef, type: 3}
-  - {fileID: 21300000, guid: 409292589552825489d8a609a23c5c9c, type: 3}
-  - {fileID: 21300000, guid: 2fec678f23514bd429fff16d562c4617, type: 3}
-  - {fileID: 21300000, guid: 28610edcc3fd9bc499f4c59ac2df5935, type: 3}
+  - {fileID: 303378952, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 110394506, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: -1605334448, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 1492361418, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 1475349472, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: -2027118715, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 421477489, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 1307528980, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 303378952, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
   yokaiUmbrellaOrientations:
-  - {fileID: 21300000, guid: 28610edcc3fd9bc499f4c59ac2df5935, type: 3}
-  - {fileID: 21300000, guid: 6f15ae40cfc403e4888f42cc5ae50b21, type: 3}
-  - {fileID: 21300000, guid: 62256c3cdba211047ac950f7dc75f6f8, type: 3}
-  - {fileID: 21300000, guid: 35ee14c125e6fba47ad38d4f79def14b, type: 3}
-  - {fileID: 21300000, guid: 5c5e521acaf439d4a95da7fcf7bf2c49, type: 3}
-  - {fileID: 21300000, guid: 9c50e4ecf682c224e8b60a138c7dfaef, type: 3}
-  - {fileID: 21300000, guid: 409292589552825489d8a609a23c5c9c, type: 3}
-  - {fileID: 21300000, guid: 2fec678f23514bd429fff16d562c4617, type: 3}
-  - {fileID: 21300000, guid: 28610edcc3fd9bc499f4c59ac2df5935, type: 3}
+  - {fileID: 303378952, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 110394506, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: -1605334448, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 1492361418, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 1475349472, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: -2027118715, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 421477489, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 1307528980, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 303378952, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
   umbrellaRenderer: {fileID: 3166562756622934132}
-  umbrellaFrontLayer: Test2
-  umbrellaBackLayer: Default
+  umbrellaFrontLayer: UmbrellaFront
+  umbrellaBackLayer: UmbrellaBack
   minMaxForBackUmbrella: {x: 20, y: 160}
+  playerRenderer: {fileID: 1132662924663911604}
 --- !u!212 &1132662924663911604
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -151,11 +159,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1780015767
-  m_SortingLayer: 1
+  m_SortingLayerID: 1510233557
+  m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 0.023584902, g: 0.9896981, b: 1, a: 1}
+  m_Sprite: {fileID: 792366077, guid: a166f0da760ef0347843c08482602254, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -228,7 +236,19 @@ MonoBehaviour:
     tagList: 128
   OnHitByBullet:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8949582875187621537}
+        m_TargetAssemblyTypeName: YochiManager, Assembly-CSharp
+        m_MethodName: TakeOneDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnHitByBulletEnter:
     m_PersistentCalls:
       m_Calls: []
@@ -244,6 +264,26 @@ MonoBehaviour:
   useDefaultGizmoColor: 1
   gizmoColor: {r: 0, g: 0, b: 0, a: 1}
   gizmoZOffset: 0
+--- !u!95 &8433160207501487802
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1132662924663911601}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9e3a74f0a1b5f2d44b25101dba7ec2ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1755811440402737252
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,7 +413,7 @@ Transform:
   m_GameObject: {fileID: 2064891494976140651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 0.23446737, y: 0.23446737, z: 0.23446737}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2874516880121918444}
@@ -418,10 +458,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -242239453
-  m_SortingLayer: 2
+  m_SortingLayerID: -814257267
+  m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 62256c3cdba211047ac950f7dc75f6f8, type: 3}
+  m_Sprite: {fileID: 1307528980, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
