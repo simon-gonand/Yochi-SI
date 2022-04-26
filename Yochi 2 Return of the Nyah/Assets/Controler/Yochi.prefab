@@ -77,8 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8569119348dbabb47934575ea77c74a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletEmitter: {fileID: 4799958904514951547}
-  umbrellaAim: {fileID: 2064891494976140651}
+  bulletEmitter: {fileID: 8768771792820014503}
+  umbrella: {fileID: 2064891494976140651}
   aimCursorDistance: 1
 --- !u!212 &1132662924663911604
 SpriteRenderer:
@@ -211,7 +211,7 @@ MonoBehaviour:
   useDefaultGizmoColor: 1
   gizmoColor: {r: 0, g: 0, b: 0, a: 1}
   gizmoZOffset: 0
---- !u!1 &2064891494976140651
+--- !u!1 &1755811440402737252
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -219,38 +219,56 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 738731609100645317}
-  - component: {fileID: 3166562756622934132}
-  - component: {fileID: 4799958904514951547}
+  - component: {fileID: 2874516880121918444}
+  - component: {fileID: 8768771792820014503}
+  - component: {fileID: 9136965556840402170}
   m_Layer: 0
-  m_Name: Umbrella
+  m_Name: BulletEmitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &738731609100645317
+--- !u!4 &2874516880121918444
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064891494976140651}
+  m_GameObject: {fileID: 1755811440402737252}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.14, z: 0}
-  m_LocalScale: {x: 0.4078, y: 0.4078, z: 0.4078}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1132662924663911605}
+  m_Father: {fileID: 738731609100645317}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &3166562756622934132
+--- !u!114 &8768771792820014503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1755811440402737252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitterProfile: {fileID: 11400000, guid: b78f6a7d7ca592c4985248ec9643c8ae, type: 2}
+  patternOrigin: {fileID: 2874516880121918444}
+  playAtStart: 0
+  useDefaultGizmoColor: 1
+  gizmoColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoSize: 0.5
+--- !u!212 &9136965556840402170
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064891494976140651}
+  m_GameObject: {fileID: 1755811440402737252}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -285,8 +303,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.10849059, g: 1, b: 0.8058895, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b4cbd21f66a7b1249a56bebeab57e2e0, type: 3}
+  m_Color: {r: 0.23113209, g: 1, b: 0.66475356, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -296,21 +314,88 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4799958904514951547
-MonoBehaviour:
+--- !u!1 &2064891494976140651
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 738731609100645317}
+  - component: {fileID: 3166562756622934132}
+  m_Layer: 0
+  m_Name: Umbrella
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &738731609100645317
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064891494976140651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emitterProfile: {fileID: 11400000, guid: b78f6a7d7ca592c4985248ec9643c8ae, type: 2}
-  patternOrigin: {fileID: 0}
-  playAtStart: 0
-  useDefaultGizmoColor: 1
-  gizmoColor: {r: 0, g: 1, b: 0, a: 1}
-  gizmoSize: 0.5
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.14, z: 0}
+  m_LocalScale: {x: 0.13058612, y: 0.13058612, z: 0.13058612}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2874516880121918444}
+  m_Father: {fileID: 1132662924663911605}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &3166562756622934132
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064891494976140651}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: b4cbd21f66a7b1249a56bebeab57e2e0, type: 3}
+  m_Color: {r: 0.23113209, g: 1, b: 0.66475356, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
