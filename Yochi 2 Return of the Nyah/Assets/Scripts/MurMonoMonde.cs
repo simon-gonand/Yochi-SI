@@ -56,14 +56,14 @@ public class MurMonoMonde : MonoBehaviour
                 spriteRenderer.sprite = realWorldInvisibleSprite;
                 collider.enabled = false;
                 receiver.enabled = false;
-                spriteRenderer.color = Color.red;
+                spriteRenderer.color = Color.green;
             }
             else
             {
                 spriteRenderer.sprite = realWorldVisibleSprite;
                 collider.enabled = true;
                 receiver.enabled = true;
-                spriteRenderer.color = Color.blue;
+                spriteRenderer.color = Color.yellow;
             }
         }
     }

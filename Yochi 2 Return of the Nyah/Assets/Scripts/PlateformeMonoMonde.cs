@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlateformeMonoMonde : MonoBehaviour
@@ -26,6 +27,15 @@ public class PlateformeMonoMonde : MonoBehaviour
     {
         ChangeSprite();
     }
+    
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            //tomber + perte de PV
+            Debug.Log("je tombe");
+        } 
+    }
 
     void ChangeSprite()
     {
@@ -50,14 +60,15 @@ public class PlateformeMonoMonde : MonoBehaviour
             {
                 spriteRenderer.sprite = realWorldInvisibleSprite;
                 collider.enabled = false;
-                spriteRenderer.color = Color.red;
+                spriteRenderer.color = Color.green;
             }
             else
             {
                 spriteRenderer.sprite = realWorldVisibleSprite;
                 collider.enabled = true;
-                spriteRenderer.color = Color.blue;
+                spriteRenderer.color = Color.yellow;
             }
         }
+        
     }
 }
