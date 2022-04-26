@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bullet 2
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 453059
+  uniqueIndex: 16338106
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children: []
@@ -7499,7 +7499,7 @@ MonoBehaviour:
   m_Name: First Bullet 0
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 7609659
+  uniqueIndex: 830380
   profile: {fileID: 11400000}
   parent: {fileID: 7732043911084081247}
   children: []
@@ -15208,7 +15208,7 @@ MonoBehaviour:
   m_Name: Second Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 16029937
+  uniqueIndex: 7343170
   profile: {fileID: 11400000}
   parent: {fileID: 3385186977485339488}
   children: []
@@ -21961,7 +21961,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: {fileID: 7759183749765453740, guid: 7a1340baf704ad84f9306030e0b1bf38, type: 3}
+      defaultValue: {fileID: 1429615364350716623, guid: 1567ba3aaa6758149892574f6f57e4ab, type: 3}
     narrowType: 1
     requireComponent: 1
     typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
@@ -22309,7 +22309,7 @@ MonoBehaviour:
     requiredComponentName: 
   customParameters:
   - type: 4
-    name: Spirit
+    name: IsSpirit
     intValue:
       valueTree: []
       useSlider: 0
@@ -22542,7 +22542,7 @@ MonoBehaviour:
           parameterType: 0
           relativeTo: 0
           parameterName: 
-        defaultValue: 0
+        defaultValue: 1
     stringValue:
       valueTree: []
     colorValue:
@@ -22917,7 +22917,7 @@ MonoBehaviour:
   m_Name: Third Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 1971581
+  uniqueIndex: 15343865
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -25335,7 +25335,7 @@ MonoBehaviour:
   m_Name: Third Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 15508116
+  uniqueIndex: 12685210
   profile: {fileID: 11400000}
   parent: {fileID: -1447942672748992966}
   children: []
@@ -32088,7 +32088,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: {fileID: 7759183749765453740, guid: 7a1340baf704ad84f9306030e0b1bf38, type: 3}
+      defaultValue: {fileID: 1429615364350716623, guid: 1567ba3aaa6758149892574f6f57e4ab, type: 3}
     narrowType: 1
     requireComponent: 1
     typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
@@ -32436,7 +32436,7 @@ MonoBehaviour:
     requiredComponentName: 
   customParameters:
   - type: 4
-    name: Spirit
+    name: IsSpirit
     intValue:
       valueTree: []
       useSlider: 0
@@ -33044,7 +33044,7 @@ MonoBehaviour:
   m_Name: Bullet 1
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 8720686
+  uniqueIndex: 1894160
   profile: {fileID: 11400000}
   parent: {fileID: 6313358445331630014}
   children: []
@@ -40572,7 +40572,7 @@ MonoBehaviour:
   m_Name: First Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 5072971
+  uniqueIndex: 11896354
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -47325,7 +47325,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: {fileID: 7759183749765453740, guid: 7a1340baf704ad84f9306030e0b1bf38, type: 3}
+      defaultValue: {fileID: 1429615364350716623, guid: 1567ba3aaa6758149892574f6f57e4ab, type: 3}
     narrowType: 1
     requireComponent: 1
     typeName: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
@@ -47673,7 +47673,7 @@ MonoBehaviour:
     requiredComponentName: 
   customParameters:
   - type: 4
-    name: Spirit
+    name: IsSpirit
     intValue:
       valueTree: []
       useSlider: 0
@@ -47906,7 +47906,7 @@ MonoBehaviour:
           parameterType: 0
           relativeTo: 0
           parameterName: 
-        defaultValue: 0
+        defaultValue: 1
     stringValue:
       valueTree: []
     colorValue:
@@ -48281,7 +48281,7 @@ MonoBehaviour:
   m_Name: First Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 11777070
+  uniqueIndex: 95420
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -48569,7 +48569,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 2874664
+  uniqueIndex: 7151304
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -55681,7 +55681,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 3904770
+  uniqueIndex: 7101729
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -109474,7 +109474,7 @@ MonoBehaviour:
   m_Name: Shot 0
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 7432542
+  uniqueIndex: 2591193
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -111892,7 +111892,7 @@ MonoBehaviour:
   m_Name: Second Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 4241369
+  uniqueIndex: 16570123
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -114310,7 +114310,7 @@ MonoBehaviour:
   m_Name: Shot 1
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 1462265
+  uniqueIndex: 16015484
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -116728,7 +116728,7 @@ MonoBehaviour:
   m_Name: Bullet 0
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 5933752
+  uniqueIndex: 15552265
   profile: {fileID: 11400000}
   parent: {fileID: 2095395431096400330}
   children: []
@@ -124214,7 +124214,7 @@ MonoBehaviour:
   m_Name: First Shot 0
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 14042881
+  uniqueIndex: 9026156
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
