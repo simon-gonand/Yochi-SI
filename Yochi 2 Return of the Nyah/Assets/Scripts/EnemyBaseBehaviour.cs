@@ -11,8 +11,8 @@ public class EnemyBaseBehaviour : MonoBehaviour
     public float timeBewteenShots;
     public BulletEmitter emitter;
     public int lifePoints;
-    private Transform playerPos;
-    [HideInInspector] public bool canShoot;
+    private Transform playerPos;    
+    public bool canShoot = true;
     private bool isMoving;
 
 
@@ -27,11 +27,6 @@ public class EnemyBaseBehaviour : MonoBehaviour
         RotateEmitter();
 
         MoveAgent();
-
-        if (canShoot)
-        {
-            StartCoroutine(StartShooting());
-        }
     }
 
     public void HitByBullet(int dmg)
@@ -39,17 +34,18 @@ public class EnemyBaseBehaviour : MonoBehaviour
         lifePoints -= dmg;
         if(lifePoints <= 0)
         {
+            //death VFX
             Destroy(transform.parent);
         }
     }
 
-    public IEnumerator StartShooting()
+    public void StartShooting()
     {
-        canShoot = false;
-        emitter.Play();
-        yield return new WaitUntil(() => emitter.isPlaying!);
-        yield return new WaitForSeconds(timeBewteenShots);
-        canShoot = true;
+        if(canShoot)
+        {
+            emitter.Play();
+            canShoot = false;
+        }        
     }
 
     public void RotateEmitter()
@@ -65,14 +61,15 @@ public class EnemyBaseBehaviour : MonoBehaviour
         if (distanceToPlayer.magnitude < minDistanceToPlayer)
         {
             GetComponentInParent<Rigidbody2D>().velocity = distanceToPlayer.normalized * speed;
-            Debug.Log("trop prêt");
+            StartShooting();
             isMoving = true;
         }
 
         else if (distanceToPlayer.magnitude > maxDistanceToPlayer)
         {
             GetComponentInParent<Rigidbody2D>().velocity = -distanceToPlayer.normalized * speed;
-            Debug.Log("trop loin");
+            emitter.Stop();
+            canShoot = true;
             isMoving = true;
         }
 
@@ -82,7 +79,7 @@ public class EnemyBaseBehaviour : MonoBehaviour
             {
                 GetComponentInParent<Rigidbody2D>().velocity = Vector3.zero;
                 isMoving = false;
-                Debug.Log("nickel");
+                StartShooting();
             }
             
         }
