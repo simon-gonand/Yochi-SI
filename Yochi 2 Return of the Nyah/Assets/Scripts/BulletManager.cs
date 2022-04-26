@@ -16,26 +16,42 @@ public class BulletManager
         }
     }
 
-    private List<Bullet> spiritBullet;
-    private List<Bullet> realBullet;
+    private List<Bullet> enemiesBullet = new List<Bullet>();
 
-    public void AddSpiritBullet(Bullet bullet)
+    public void AddEnemiesBullet(Bullet bullet)
     {
-        spiritBullet.Add(bullet);
+        enemiesBullet.Add(bullet);
     }
 
-    public void RemoveSpiritBullet(Bullet bullet)
+    public void RemoveEnemiesBullet(Bullet bullet)
     {
-        spiritBullet.Remove(bullet);
+        enemiesBullet.Remove(bullet);
     }
 
-    public void AddRealBullet(Bullet bullet)
+    public void OnChangeWorld()
     {
-        realBullet.Add(bullet);
-    }
+        
+        foreach(Bullet bullet in enemiesBullet)
+        {
+            if (YochiManager.instance.isInYokaiWorld)
+            {
+                if (bullet.moduleCollision.collisionTags[6])
+                    bullet.moduleRenderer.animationSprites[0] = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).yokaiBulletYokaiWorld;
+                else if (bullet.moduleCollision.collisionTags[7])
+                    bullet.moduleRenderer.animationSprites[0] = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).realBulletYokaiWorld;
+                else
+                    Debug.LogWarning("One enemy bullet of " + bullet.emitter.name + " does not have collision tag");
+            }
+            else
+            {
+                if (bullet.moduleCollision.collisionTags[6])
+                    bullet.moduleRenderer.animationSprites[0] = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).yokaiBulletRealWorld;
+                else if (bullet.moduleCollision.collisionTags[7])
+                    bullet.moduleRenderer.animationSprites[0] = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).realBulletRealWorld;
+                else
+                    Debug.LogWarning("One enemy bullet of " + bullet.emitter.name + " does not have collision tag");
+            }
 
-    public void RemoveRealBullet(Bullet bullet)
-    {
-        realBullet.Remove(bullet);
+        }
     }
 }

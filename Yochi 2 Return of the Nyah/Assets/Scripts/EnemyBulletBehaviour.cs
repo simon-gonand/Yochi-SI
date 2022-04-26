@@ -12,19 +12,17 @@ public class EnemyBulletBehaviour : BaseBulletBehaviour {
 	// You can access this.bullet to get the parent bullet script.
 	// After bullet's death, you can delay this script's death : use this.lifetimeAfterBulletDeath.
 
+	public Sprite yokaiBulletYokaiWorld;
+	public Sprite yokaiBulletRealWorld;
+	public Sprite realBulletYokaiWorld;
+	public Sprite realBulletRealWorld;
+
 	// Use this for initialization (instead of Start)
 	public override void OnBulletBirth ()
 	{
 		base.OnBulletBirth();
 
-		if (this.bullet.moduleParameters.GetBool("IsSpirit"))
-		{
-			BulletManager.instance.AddSpiritBullet(this.bullet);
-		}
-		else
-		{
-			BulletManager.instance.AddRealBullet(this.bullet);
-		}
+		BulletManager.instance.AddEnemiesBullet(this.bullet);
 	}
 	
 	// Update is (still) called once per frame
@@ -40,10 +38,7 @@ public class EnemyBulletBehaviour : BaseBulletBehaviour {
 	{
 		base.OnBulletDeath();
 
-		if (this.bullet.moduleParameters.GetBool("IsSpirit"))
-			BulletManager.instance.RemoveSpiritBullet(this.bullet);
-		else
-			BulletManager.instance.RemoveRealBullet(this.bullet);
+		BulletManager.instance.RemoveEnemiesBullet(this.bullet);
 	}
 
 	// This gets called after the bullet has died, it can be delayed.

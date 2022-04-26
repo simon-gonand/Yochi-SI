@@ -7499,7 +7499,7 @@ MonoBehaviour:
   m_Name: Second Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 5787026
+  uniqueIndex: 14342140
   profile: {fileID: 11400000}
   parent: {fileID: 3385186977485339488}
   children: []
@@ -15093,7 +15093,7 @@ MonoBehaviour:
   m_Name: Third Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 15035411
+  uniqueIndex: 3351048
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -17511,7 +17511,7 @@ MonoBehaviour:
   m_Name: Third Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 12060270
+  uniqueIndex: 11646555
   profile: {fileID: 11400000}
   parent: {fileID: -1447942672748992966}
   children: []
@@ -32631,7 +32631,7 @@ MonoBehaviour:
   m_Name: First Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 16369152
+  uniqueIndex: 14781681
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -47625,7 +47625,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 11482080
+  uniqueIndex: 16505451
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
