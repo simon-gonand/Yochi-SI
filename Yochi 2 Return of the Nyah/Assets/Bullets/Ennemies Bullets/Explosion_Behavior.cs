@@ -16,6 +16,15 @@ public class Explosion_Behavior : BaseBulletBehaviour {
 	public override void OnBulletBirth ()
 	{
 		base.OnBulletBirth();
+
+		if (this.bullet.moduleParameters.GetBool("isSpirit") == true)
+        {
+			this.bullet.moduleCollision.collisionTags["YokaiBullet"] = true;
+		}
+		else if (this.bullet.moduleParameters.GetBool("isSpirit") == false)
+        {
+			this.bullet.moduleCollision.collisionTags["RealBullet"] = true;
+		}
 	}
 	
 	// Update is (still) called once per frame
