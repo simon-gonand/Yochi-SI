@@ -5,6 +5,8 @@ using BulletPro;
 
 public class YochiManager : MonoBehaviour
 {
+    public int maxHealthPoint;
+    public float invulnerableTime;
     public SpriteRenderer spriteRenderer;
     public Color realWorldColor;
     public Color yokaiWorldColor;
@@ -18,6 +20,9 @@ public class YochiManager : MonoBehaviour
     public static YochiManager instance;
     private YochiUmbrella yochiUmbrella;
     private BulletReceiver bulletReceiver;
+    [HideInInspector]
+    public bool isInvulnerable;
+    private int currentHealthPoint;
 
     private void Awake()
     {
@@ -38,6 +43,7 @@ public class YochiManager : MonoBehaviour
         {
             SwitchWorld(!isInYokaiWorld);
         }
+        InvulnerableTimeUpdate();
     }
 
     public void SwitchWorld(bool isYokaiWorld)
@@ -56,5 +62,32 @@ public class YochiManager : MonoBehaviour
         }
         isInYokaiWorld = isYokaiWorld;
         yochiUmbrella.SwitchEmitter(isInYokaiWorld);
+    }
+
+    private void InvulnerableTimeUpdate()
+    {
+        if(invulTimeRemaining > 0)
+        {
+            invulTimeRemaining -= Time.deltaTime;
+        }
+        else
+        {
+            isInvulnerable = false;
+        }
+    }
+
+    private float invulTimeRemaining;
+    public void TakeOneDamage()
+    {
+        if(!isInvulnerable)
+        {
+            isInvulnerable = true;
+            invulTimeRemaining = invulnerableTime;
+            if (currentHealthPoint > 0)
+            {
+                currentHealthPoint--;
+                //feedback dégats
+            }
+        }
     }
 }

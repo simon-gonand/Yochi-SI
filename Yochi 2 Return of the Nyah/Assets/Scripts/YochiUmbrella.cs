@@ -14,6 +14,9 @@ public class YochiUmbrella : MonoBehaviour
     public Sprite[] realUmbrellaOrientations;
     public Sprite[] yokaiUmbrellaOrientations;
     public SpriteRenderer umbrellaRenderer;
+    public string umbrellaFrontLayer;
+    public string umbrellaBackLayer;
+    public Vector2 minMaxForBackUmbrella;
 
     private Vector2 aimInput;
     private Vector2 aimDirection;
@@ -69,7 +72,7 @@ public class YochiUmbrella : MonoBehaviour
             bulletEmitter.transform.rotation = Quaternion.Euler(0, 0, umbrellaAngle - 90);
         }
 
-        if (Input.GetAxis("RightTrigger") == 1)
+        if (Input.GetAxis("RightTrigger") == 1/* || aimInput.magnitude > 0.3f*/)
         {
             Shoot();
         }
@@ -96,6 +99,15 @@ public class YochiUmbrella : MonoBehaviour
         else
         {
             umbrellaRenderer.sprite = realUmbrellaOrientations[indexOrientation];
+        }
+
+        if(umbrellaAngle > minMaxForBackUmbrella.x && umbrellaAngle < minMaxForBackUmbrella.y)
+        {
+            umbrellaRenderer.sortingLayerID = SortingLayer.NameToID(umbrellaBackLayer);
+        }
+        else
+        {
+            umbrellaRenderer.sortingLayerID = SortingLayer.NameToID(umbrellaFrontLayer);
         }
     }
 }
