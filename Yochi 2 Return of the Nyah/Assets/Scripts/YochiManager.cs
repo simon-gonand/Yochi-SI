@@ -7,6 +7,13 @@ public class YochiManager : MonoBehaviour
     [HideInInspector]
     public bool isInYokaiWorld;
 
+    public static YochiManager instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     void Start()
     {
         isInYokaiWorld = false;

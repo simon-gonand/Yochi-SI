@@ -6,9 +6,10 @@ using BulletPro;
 public class YochiUmbrella : MonoBehaviour
 {
     public BulletEmitter bulletEmitter;
-    public GameObject umbrellaAim;
+    public GameObject umbrella;
     public float aimCursorDistance;
 
+    private Vector2 aimInput;
     private Vector2 aimDirection;
 
     private bool isShooting;
@@ -20,24 +21,26 @@ public class YochiUmbrella : MonoBehaviour
 
     void Update()
     {
-        aimDirection = new Vector2(Input.GetAxis("RightStickH"), Input.GetAxis("RightStickV"));
+        aimInput = new Vector2(Input.GetAxis("RightStickH"), Input.GetAxis("RightStickV"));
 
 
-        if (aimDirection.magnitude > 0)
+        if (aimInput.magnitude > 0.3f)
         {
-            aimDirection.Normalize();
+            aimDirection = aimInput.normalized;
 
-            umbrellaAim.SetActive(true);
-            umbrellaAim.transform.localPosition = aimCursorDistance * aimDirection;
-        }
-        else
-        {
-            umbrellaAim.SetActive(false);
+            umbrella.transform.localPosition = aimCursorDistance * aimDirection;
+            bulletEmitter.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, aimDirection));
         }
 
         if(Input.GetAxis("RightTrigger") == 1)
         {
             Shoot();
+        }
+        else
+        {
+            isShooting = false;
+
+            bulletEmitter.Stop();
         }
     }
 
@@ -47,10 +50,6 @@ public class YochiUmbrella : MonoBehaviour
         {
             isShooting = true;
             bulletEmitter.Play();
-        }
-        else
-        {
-            isShooting = false;
         }
     }
 }
