@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BulletPro;
 
 public class YochiUmbrella : MonoBehaviour
 {
+    public BulletEmitter bulletEmitter;
     public GameObject umbrellaAim;
     public float aimCursorDistance;
 
     private Vector2 aimDirection;
+
+    private bool isShooting;
+
     void Start()
     {
         
@@ -30,5 +35,22 @@ public class YochiUmbrella : MonoBehaviour
             umbrellaAim.SetActive(false);
         }
 
+        if(Input.GetAxis("RightTrigger") == 1)
+        {
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        if(!isShooting)
+        {
+            isShooting = true;
+            bulletEmitter.Play();
+        }
+        else
+        {
+            isShooting = false;
+        }
     }
 }
