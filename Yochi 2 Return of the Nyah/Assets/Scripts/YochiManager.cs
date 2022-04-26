@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using BulletPro;
 
 public class YochiManager : MonoBehaviour
 {
+    public SpriteRenderer spriteRenderer;
+    public Color realWorldColor;
+    public Color yokaiWorldColor;
+    [Header("Collision in yokai dimension")]
+    public CollisionTags collisionInYokaiWorld;
+    [Header("Collision in real dimension")]
+    public CollisionTags collisionInRealWorld;
+
     [HideInInspector]
     public bool isInYokaiWorld;
-
     public static YochiManager instance;
+    private YochiUmbrella yochiUmbrella;
+    private BulletReceiver bulletReceiver;
 
     private void Awake()
     {
@@ -16,28 +26,35 @@ public class YochiManager : MonoBehaviour
 
     void Start()
     {
+        yochiUmbrella = GetComponent<YochiUmbrella>();
+        bulletReceiver = GetComponent<BulletReceiver>();
         isInYokaiWorld = false;
+        SwitchWorld(isInYokaiWorld);
     }
 
     void Update()
     {
         if (Input.GetButtonDown("RightBumper") || Input.GetButtonDown("LeftBumper"))
         {
-            SwitchWorld();
+            SwitchWorld(!isInYokaiWorld);
         }
     }
 
-    public void SwitchWorld()
+    public void SwitchWorld(bool isYokaiWorld)
     {
-        if(isInYokaiWorld)
+        if(!isYokaiWorld)
         {
-            isInYokaiWorld = false;
+            spriteRenderer.color = realWorldColor;
+            bulletReceiver.collisionTags = collisionInRealWorld;
             Debug.Log("Switch to Real world");
         }
         else
         {
-            isInYokaiWorld = true;
+            spriteRenderer.color = yokaiWorldColor;
+            bulletReceiver.collisionTags = collisionInYokaiWorld;
             Debug.Log("Switch to Yokai world");
         }
+        isInYokaiWorld = isYokaiWorld;
+        yochiUmbrella.SwitchEmitter(isInYokaiWorld);
     }
 }

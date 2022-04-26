@@ -51,6 +51,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a824e807a861a34a995ec3b807a4b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1132662924663911604}
+  realWorldColor: {r: 0.990566, g: 0.57910764, b: 0.032707386, a: 1}
+  yokaiWorldColor: {r: 0.023529414, g: 0.98823535, b: 1, a: 1}
+  collisionInYokaiWorld:
+    tagList: 0
+  collisionInRealWorld:
+    tagList: 0
   isInYokaiWorld: 0
 --- !u!114 &4634130879036724829
 MonoBehaviour:
@@ -77,6 +84,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8569119348dbabb47934575ea77c74a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  yokaiEmitter: {fileID: 11400000, guid: a35fb34acede08e48adebc55f2bcdf6c, type: 2}
+  realEmitter: {fileID: 11400000, guid: b78f6a7d7ca592c4985248ec9643c8ae, type: 2}
   bulletEmitter: {fileID: 8768771792820014503}
   umbrella: {fileID: 2064891494976140651}
   aimCursorDistance: 1
