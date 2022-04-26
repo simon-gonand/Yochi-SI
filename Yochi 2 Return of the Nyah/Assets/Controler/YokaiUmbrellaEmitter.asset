@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bullet 0
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 9479771
+  uniqueIndex: 7164882
   profile: {fileID: 11400000}
   parent: {fileID: -4896868741354282102}
   children: []
@@ -7499,7 +7499,7 @@ MonoBehaviour:
   m_Name: Shot 0
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 2491303
+  uniqueIndex: 15093100
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -7820,7 +7820,7 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 14543844
+  uniqueIndex: 538103
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -10139,7 +10139,7 @@ MonoBehaviour:
   foldoutVFX: 1
   hideSpriteList: 0
   vfxOpened: 0
-  currentlyDisplayedModule: 3
+  currentlyDisplayedModule: 2
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -11409,7 +11409,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: 5
+      defaultValue: 10
     useSlider: 0
     sliderMin: 0
     sliderMax: 0
@@ -11865,7 +11865,7 @@ MonoBehaviour:
           parameterType: 0
           relativeTo: 0
           parameterName: 
-        defaultValue: 1
+        defaultValue: 5
       useSlider: 0
       sliderMin: 0
       sliderMax: 0
@@ -11989,21 +11989,21 @@ MonoBehaviour:
           - serializedVersion: 3
             time: 0
             value: 0
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
             weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
+            inWeight: 0
+            outWeight: 0
           - serializedVersion: 3
             time: 1
             value: 1
-            inSlope: 0
-            outSlope: 0
-            tangentMode: 0
+            inSlope: 1
+            outSlope: 1
+            tangentMode: 34
             weightedMode: 0
-            inWeight: 0.33333334
-            outWeight: 0.33333334
+            inWeight: 0
+            outWeight: 0
           m_PreInfinity: 2
           m_PostInfinity: 2
           m_RotationOrder: 4
@@ -15306,7 +15306,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 11638104
+  uniqueIndex: 13110747
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -15594,7 +15594,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 352857
+  uniqueIndex: 11830682
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -22706,7 +22706,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 11493464
+  uniqueIndex: 10378695
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
