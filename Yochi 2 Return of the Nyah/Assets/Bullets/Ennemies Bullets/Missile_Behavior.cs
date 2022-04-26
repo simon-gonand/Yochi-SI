@@ -46,8 +46,6 @@ public class Missile_Behavior : BaseBulletBehaviour {
 	public override void OnBulletCollision(BulletReceiver br, Vector3 collisionPoint)
 	{
 		base.OnBulletCollision(br, collisionPoint);
-
-		bullet.modulePatterns.Play();
 	}
 
 	// This gets called whenever the bullet collides with a BulletReceiver AND was not colliding during the previous frame.
@@ -55,7 +53,7 @@ public class Missile_Behavior : BaseBulletBehaviour {
 	{
 		base.OnBulletCollisionEnter(br, collisionPoint);
 
-		// Your code here
+		bullet.modulePatterns.Play();
 	}
 
 	// This gets called whenever the bullet stops colliding with any BulletReceiver.
