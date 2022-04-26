@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RealBullets
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 3719467
+  uniqueIndex: 13820633
   profile: {fileID: 11400000}
   parent: {fileID: 2319588888284331312}
   children: []
@@ -7169,7 +7169,7 @@ MonoBehaviour:
   m_Name: BulletSpread_Spirit
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 3461457
+  uniqueIndex: 9183763
   profile: {fileID: 11400000}
   parent: {fileID: 6471935776871157370}
   children:
@@ -9603,7 +9603,7 @@ MonoBehaviour:
   m_Name: Shot 0
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 16137608
+  uniqueIndex: 3177177
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children: []
@@ -12060,7 +12060,7 @@ MonoBehaviour:
   foldoutExport: 0
   foldoutEmptyBin: 0
   foldoutCompactMode: 0
-  currentParamsSelected: {fileID: 114201774248674550}
+  currentParamsSelected: {fileID: 5035998398672934007}
   numberOfSubAssets: 0
 --- !u!114 &114027673760526898
 MonoBehaviour:
@@ -12075,7 +12075,7 @@ MonoBehaviour:
   m_Name: Missile
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 2803545
+  uniqueIndex: 14746771
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children:
@@ -19671,7 +19671,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 11233998
+  uniqueIndex: 15185954
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -22105,7 +22105,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 12323332
+  uniqueIndex: 11138019
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -29217,7 +29217,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 12785379
+  uniqueIndex: 11543027
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -53452,7 +53452,7 @@ MonoBehaviour:
   m_Name: Bullet 0
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 9178943
+  uniqueIndex: 13976026
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -61048,7 +61048,7 @@ MonoBehaviour:
   m_Name: BulletSpread_Rea
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 13866490
+  uniqueIndex: 10822388
   profile: {fileID: 11400000}
   parent: {fileID: 6471935776871157370}
   children:
@@ -63482,7 +63482,7 @@ MonoBehaviour:
   m_Name: Explosion 0
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 12750163
+  uniqueIndex: 7183148
   profile: {fileID: 11400000}
   parent: {fileID: 522425021016612056}
   children: []
@@ -88256,7 +88256,7 @@ MonoBehaviour:
   m_Name: SpiritBullets
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 7403091
+  uniqueIndex: 6269897
   profile: {fileID: 11400000}
   parent: {fileID: -8198798898679320039}
   children: []
@@ -95412,7 +95412,7 @@ MonoBehaviour:
   m_Name: Explosion
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 1620246
+  uniqueIndex: 4972937
   profile: {fileID: 11400000}
   parent: {fileID: 114027673760526898}
   children:
