@@ -53,15 +53,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealthPoint: 6
-  invulnerableTime: 1
+  invulnerableTime: 0.2
   healthBar: {fileID: 0}
   spriteRenderer: {fileID: 1132662924663911604}
   realWorldColor: {r: 1, g: 1, b: 1, a: 1}
-  yokaiWorldColor: {r: 0.8254717, g: 0.99789727, b: 1, a: 1}
+  yokaiWorldColor: {r: 1, g: 1, b: 1, a: 1}
   collisionInYokaiWorld:
     tagList: 64
   collisionInRealWorld:
     tagList: 128
+  animator: {fileID: 8433160207501487802}
+  cineCamera: {fileID: 0}
+  shakeIntensity: 1
+  shakeTime: 0.2
   isInYokaiWorld: 0
   isInvulnerable: 0
 --- !u!114 &4634130879036724829
@@ -107,20 +111,28 @@ MonoBehaviour:
   - {fileID: 1307528980, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
   - {fileID: 303378952, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
   yokaiUmbrellaOrientations:
-  - {fileID: 303378952, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
-  - {fileID: 110394506, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
-  - {fileID: -1605334448, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
-  - {fileID: 1492361418, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
-  - {fileID: 1475349472, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
-  - {fileID: -2027118715, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
-  - {fileID: 421477489, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
-  - {fileID: 1307528980, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
-  - {fileID: 303378952, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
+  - {fileID: 1597053238, guid: 5d7aba670d4d6db4f8e63d838417d50d, type: 3}
+  - {fileID: -2043893838, guid: 5d7aba670d4d6db4f8e63d838417d50d, type: 3}
+  - {fileID: 407184308, guid: 5d7aba670d4d6db4f8e63d838417d50d, type: 3}
+  - {fileID: 765878369, guid: 5d7aba670d4d6db4f8e63d838417d50d, type: 3}
+  - {fileID: 2063303849, guid: 5d7aba670d4d6db4f8e63d838417d50d, type: 3}
+  - {fileID: -30936967, guid: 5d7aba670d4d6db4f8e63d838417d50d, type: 3}
+  - {fileID: -1769382605, guid: 5d7aba670d4d6db4f8e63d838417d50d, type: 3}
+  - {fileID: 1192498783, guid: 5d7aba670d4d6db4f8e63d838417d50d, type: 3}
+  - {fileID: 1597053238, guid: 5d7aba670d4d6db4f8e63d838417d50d, type: 3}
   umbrellaRenderer: {fileID: 3166562756622934132}
   umbrellaFrontLayer: UmbrellaFront
   umbrellaBackLayer: UmbrellaBack
-  minMaxForBackUmbrella: {x: 20, y: 160}
+  minMaxForBackUmbrella: {x: 0, y: 180}
   playerRenderer: {fileID: 1132662924663911604}
+  yokaiRechargeTime: 0.5
+  yokaiBulletCadence: 0.12
+  yokaiChargerBulletNumber: 14
+  realRechargeTime: 0.8
+  rechargeBar: {fileID: 0}
+  umbrellaLerpSpeed: 3
+  yokaiShotKnockback: 0.1
+  realShotKnockback: 0.2
 --- !u!212 &1132662924663911604
 SpriteRenderer:
   m_ObjectHideFlags: 0
