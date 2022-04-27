@@ -27,18 +27,18 @@ public class EnemyBulletBehaviour : BaseBulletBehaviour {
 		if (YochiManager.instance.isInYokaiWorld)
         {
 			if (this.bullet.moduleCollision.collisionTags[6])
-				this.bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)this.bullet.additionalBehaviourScripts[0]).yokaiBulletYokaiWorld;
+				this.bullet.spriteRenderer.sprite = yokaiBulletYokaiWorld;
 			else if (this.bullet.moduleCollision.collisionTags[7])
-				this.bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)this.bullet.additionalBehaviourScripts[0]).realBulletYokaiWorld;
+				this.bullet.spriteRenderer.sprite = realBulletYokaiWorld;
 			else
 				Debug.LogWarning("One enemy bullet of " + this.bullet.emitter.name + " does not have collision tag");
 		}
 		else
         {
 			if (this.bullet.moduleCollision.collisionTags[6])
-				this.bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)this.bullet.additionalBehaviourScripts[0]).yokaiBulletRealWorld;
+				this.bullet.spriteRenderer.sprite = yokaiBulletRealWorld;
 			else if (this.bullet.moduleCollision.collisionTags[7])
-				this.bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)this.bullet.additionalBehaviourScripts[0]).realBulletRealWorld;
+				this.bullet.spriteRenderer.sprite = realBulletRealWorld;
 			else
 				Debug.LogWarning("One enemy bullet of " + this.bullet.emitter.name + " does not have collision tag");
 		}
