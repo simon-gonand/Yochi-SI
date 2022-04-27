@@ -55,7 +55,7 @@ MonoBehaviour:
   killBulletOnCollision: 1
   maxSimultaneousCollisionsPerFrame: 1
   collisionTags:
-    tagList: 1
+    tagList: 256
   OnHitByBullet:
     m_PersistentCalls:
       m_Calls:
@@ -81,7 +81,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   parentSyncFoldout: 0
-  collisionTagsFoldout: 0
+  collisionTagsFoldout: 1
   advancedEventsFoldout: 1
   useDefaultGizmoColor: 1
   gizmoColor: {r: 0, g: 0, b: 0, a: 1}
