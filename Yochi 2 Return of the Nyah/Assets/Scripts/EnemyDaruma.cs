@@ -42,14 +42,14 @@ public class EnemyDaruma : MonoBehaviour
 
     public IEnumerator StartShooting()
     {
+        emitter.Play();
         if (YochiManager.instance.isInYokaiWorld)
         {
             emitter.rootBullet.moduleParameters.SetBool("isSpirit", true);
         }
         else
             emitter.rootBullet.moduleParameters.SetBool("isSpirit", false);
-        yield return new WaitForSeconds(0.5f);
-        emitter.Play();
+        yield return new WaitForSeconds(0.5f);        
         //emitter.Stop();
         canMove = true;
     }
