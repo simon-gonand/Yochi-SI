@@ -35,7 +35,7 @@ public class EnemyBaseBehaviour : MonoBehaviour
         if(lifePoints <= 0)
         {
             //death VFX
-            Destroy(transform.parent);
+            Destroy(transform.parent.gameObject);
         }
     }
 
