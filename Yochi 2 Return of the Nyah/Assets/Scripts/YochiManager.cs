@@ -121,5 +121,7 @@ public class YochiManager : MonoBehaviour
     public void getHP(int hp)
     {
         currentHealthPoint += hp;
+
+        //feedback heal
     }
 }
