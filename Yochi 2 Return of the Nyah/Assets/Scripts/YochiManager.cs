@@ -55,13 +55,13 @@ public class YochiManager : MonoBehaviour
         {
             spriteRenderer.color = realWorldColor;
             bulletReceiver.collisionTags = collisionInRealWorld;
-            Debug.Log("Switch to Real world");
+            //Debug.Log("Switch to Real world");
         }
         else
         {
             spriteRenderer.color = yokaiWorldColor;
             bulletReceiver.collisionTags = collisionInYokaiWorld;
-            Debug.Log("Switch to Yokai world");
+            //Debug.Log("Switch to Yokai world");
         }
         isInYokaiWorld = isYokaiWorld;
         yochiUmbrella.SwitchEmitter(isInYokaiWorld);

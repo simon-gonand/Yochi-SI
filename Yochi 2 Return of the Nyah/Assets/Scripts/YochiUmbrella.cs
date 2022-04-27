@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BulletPro;
+using UnityEngine.UI;
 
 public class YochiUmbrella : MonoBehaviour
 {
@@ -20,29 +21,131 @@ public class YochiUmbrella : MonoBehaviour
     public Vector2 minMaxForBackUmbrella;
     public SpriteRenderer playerRenderer;
 
+    public float yokaiRechargeTime;
+    public float yokaiBulletCadence;
+    public int yokaiChargerBulletNumber;
+    public float realRechargeTime;
+    public Image rechargeBar;
+
     private Vector2 aimInput;
     private Vector2 aimDirection;
     private bool isShooting;
     private float umbrellaAngle;
+    private float rechargeTimeRemaining;
+    private float cadenceLeft;
+    private int bulletLeft;
 
     void Start()
     {
         SwitchEmitter(false);
         umbrellaAngle = 90;
+
+        bulletLeft = yokaiChargerBulletNumber;
     }
 
     void Update()
     {
         UpdateInput();
         UpdateUmbrellaOrientation();
+        UpdateUmbrellaShootState();
     }
 
-    void Shoot()
+    private void YokaiSingleShoot()
     {
-        if(!isShooting)
+        bulletEmitter.Play();
+        bulletEmitter.Play();
+
+        cadenceLeft = yokaiBulletCadence;
+        bulletLeft--;
+        if (bulletLeft <= 0)
         {
-            isShooting = true;
-            bulletEmitter.Play();
+            rechargeTimeRemaining = yokaiRechargeTime;
+            bulletLeft = yokaiChargerBulletNumber;
+        }
+    }
+
+    private void RealBigShoot()
+    {
+        bulletEmitter.Play();
+        bulletEmitter.Play();
+        rechargeTimeRemaining = realRechargeTime;
+        bulletLeft = yokaiChargerBulletNumber;
+    }
+
+    private void UpdateUmbrellaShootState()
+    {
+        if (isShooting)
+        {
+            if (YochiManager.instance.isInYokaiWorld)
+            {
+                if (rechargeTimeRemaining <= 0)
+                {
+                    if (cadenceLeft > 0)
+                    {
+                        cadenceLeft -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        YokaiSingleShoot();
+                    }
+                }
+            }
+        }
+
+        if (Input.GetAxis("RightTrigger") == 1/* || aimInput.magnitude > 0.3f*/)
+        {
+            if (!isShooting)
+            {
+                isShooting = true;
+
+                if (rechargeTimeRemaining <= 0)
+                {
+                    if(YochiManager.instance.isInYokaiWorld)
+                    {
+                        YokaiSingleShoot();
+                    }
+                    else
+                    {
+                        RealBigShoot();
+                    }
+                }
+            }
+        }
+        else
+        {
+            if(isShooting)
+            {
+                isShooting = false;
+            }
+        }
+
+        if(YochiManager.instance.isInYokaiWorld)
+        {
+
+            if (rechargeTimeRemaining > 0)
+            {
+                rechargeBar.fillAmount = (yokaiRechargeTime - rechargeTimeRemaining) / yokaiRechargeTime;
+                rechargeTimeRemaining -= Time.deltaTime;
+                rechargeBar.gameObject.SetActive(true);
+            }
+            else
+            {
+                rechargeBar.fillAmount = (float)bulletLeft / (float)yokaiChargerBulletNumber;
+                rechargeBar.gameObject.SetActive(true);
+            }
+        }
+        else
+        {
+            rechargeBar.fillAmount = (realRechargeTime - rechargeTimeRemaining) / realRechargeTime;
+            if (rechargeTimeRemaining > 0)
+            {
+                rechargeTimeRemaining -= Time.deltaTime;
+                rechargeBar.gameObject.SetActive(true);
+            }
+            else
+            {
+                rechargeBar.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -72,17 +175,6 @@ public class YochiUmbrella : MonoBehaviour
 
             umbrella.transform.localPosition = aimCursorDistance * aimDirection;
             bulletEmitter.transform.rotation = Quaternion.Euler(0, 0, umbrellaAngle - 90);
-        }
-
-        if (Input.GetAxis("RightTrigger") == 1/* || aimInput.magnitude > 0.3f*/)
-        {
-            Shoot();
-        }
-        else
-        {
-            isShooting = false;
-
-            bulletEmitter.Stop();
         }
     }
 

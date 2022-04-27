@@ -121,6 +121,11 @@ MonoBehaviour:
   umbrellaBackLayer: UmbrellaBack
   minMaxForBackUmbrella: {x: 20, y: 160}
   playerRenderer: {fileID: 1132662924663911604}
+  yokaiRechargeTime: 0.5
+  yokaiBulletCadence: 0.12
+  yokaiChargerBulletNumber: 14
+  realRechargeTime: 0.8
+  rechargeBar: {fileID: 0}
 --- !u!212 &1132662924663911604
 SpriteRenderer:
   m_ObjectHideFlags: 0
