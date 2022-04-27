@@ -24,7 +24,7 @@ public class YochiManager : MonoBehaviour
     private BulletReceiver bulletReceiver;
     [HideInInspector]
     public bool isInvulnerable;
-    private int currentHealthPoint;
+    public int currentHealthPoint;
 
     private void Awake()
     {
@@ -91,8 +91,13 @@ public class YochiManager : MonoBehaviour
             if (currentHealthPoint > 0)
             {
                 currentHealthPoint--;
-                //feedback dégats
+                //feedback dï¿½gats
             }
         }
+    }
+
+    public void getHP(int hp)
+    {
+        currentHealthPoint += hp;
     }
 }
