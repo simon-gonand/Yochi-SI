@@ -23,6 +23,25 @@ public class EnemyBulletBehaviour : BaseBulletBehaviour {
 		base.OnBulletBirth();
 
 		BulletManager.instance.AddEnemiesBullet(this.bullet);
+
+		if (YochiManager.instance.isInYokaiWorld)
+        {
+			if (this.bullet.moduleCollision.collisionTags[6])
+				this.bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)this.bullet.additionalBehaviourScripts[0]).yokaiBulletYokaiWorld;
+			else if (this.bullet.moduleCollision.collisionTags[7])
+				this.bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)this.bullet.additionalBehaviourScripts[0]).realBulletYokaiWorld;
+			else
+				Debug.LogWarning("One enemy bullet of " + this.bullet.emitter.name + " does not have collision tag");
+		}
+		else
+        {
+			if (this.bullet.moduleCollision.collisionTags[6])
+				this.bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)this.bullet.additionalBehaviourScripts[0]).yokaiBulletRealWorld;
+			else if (this.bullet.moduleCollision.collisionTags[7])
+				this.bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)this.bullet.additionalBehaviourScripts[0]).realBulletRealWorld;
+			else
+				Debug.LogWarning("One enemy bullet of " + this.bullet.emitter.name + " does not have collision tag");
+		}
 	}
 	
 	// Update is (still) called once per frame

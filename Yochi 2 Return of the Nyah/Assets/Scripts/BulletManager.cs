@@ -28,30 +28,54 @@ public class BulletManager
         enemiesBullet.Remove(bullet);
     }
 
+    public void ChangeBulletWorld(Bullet bullet)
+    {
+        if (bullet.moduleCollision.collisionTags[6])
+        {
+            if (YochiManager.instance.isInYokaiWorld)
+                bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).realBulletYokaiWorld;
+            else
+                bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).realBulletRealWorld;
+
+            bullet.moduleCollision.collisionTags[6] = false;
+            bullet.moduleCollision.collisionTags[7] = true;
+        }
+        else if (bullet.moduleCollision.collisionTags[7])
+        {
+            if (YochiManager.instance.isInYokaiWorld)
+                bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).yokaiBulletYokaiWorld;
+            else
+                bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).yokaiBulletRealWorld;
+
+            bullet.moduleCollision.collisionTags[6] = true;
+            bullet.moduleCollision.collisionTags[7] = false;
+        }
+        else
+            Debug.LogWarning("One enemy bullet of " + bullet.emitter.name + " does not have collision tag");
+    }
+
     public void OnChangeWorld()
     {
-        
         foreach(Bullet bullet in enemiesBullet)
         {
             if (YochiManager.instance.isInYokaiWorld)
             {
                 if (bullet.moduleCollision.collisionTags[6])
-                    bullet.moduleRenderer.animationSprites[0] = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).yokaiBulletYokaiWorld;
+                    bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).yokaiBulletYokaiWorld;
                 else if (bullet.moduleCollision.collisionTags[7])
-                    bullet.moduleRenderer.animationSprites[0] = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).realBulletYokaiWorld;
+                    bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).realBulletYokaiWorld;
                 else
                     Debug.LogWarning("One enemy bullet of " + bullet.emitter.name + " does not have collision tag");
             }
             else
             {
                 if (bullet.moduleCollision.collisionTags[6])
-                    bullet.moduleRenderer.animationSprites[0] = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).yokaiBulletRealWorld;
+                    bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).yokaiBulletRealWorld;
                 else if (bullet.moduleCollision.collisionTags[7])
-                    bullet.moduleRenderer.animationSprites[0] = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).realBulletRealWorld;
+                    bullet.spriteRenderer.sprite = ((EnemyBulletBehaviour)bullet.additionalBehaviourScripts[0]).realBulletRealWorld;
                 else
                     Debug.LogWarning("One enemy bullet of " + bullet.emitter.name + " does not have collision tag");
             }
-
         }
     }
 }

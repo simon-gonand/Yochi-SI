@@ -65,6 +65,7 @@ public class YochiManager : MonoBehaviour
         }
         isInYokaiWorld = isYokaiWorld;
         yochiUmbrella.SwitchEmitter(isInYokaiWorld);
+        BulletManager.instance.OnChangeWorld();
     }
 
     private void InvulnerableTimeUpdate()
