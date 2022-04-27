@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class PickupHealth : MonoBehaviour
 {
-    private Collider2D collider;
+    private Collider2D colliderComp;
     public int numberOfHPHeal;
     // Start is called before the first frame update
     void Start()
     {
-        collider = GetComponent<Collider2D>();
+        colliderComp = GetComponent<Collider2D>();
     }
 
     // Update is called once per frame

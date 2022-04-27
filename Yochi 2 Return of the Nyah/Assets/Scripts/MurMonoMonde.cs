@@ -11,14 +11,14 @@ public class MurMonoMonde : MonoBehaviour
     public Sprite realWorldInvisibleSprite;
     public bool isForYokaiWorld;
     private SpriteRenderer spriteRenderer;
-    private BoxCollider2D collider;
+    private BoxCollider2D boxCollider;
     private BulletReceiver receiver;
 
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        collider = GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
         receiver = GetComponent<BulletReceiver>();
         ChangeSprite();
 
@@ -37,14 +37,14 @@ public class MurMonoMonde : MonoBehaviour
             if (YochiManager.instance.isInYokaiWorld)
             {
                 spriteRenderer.sprite = yokaiWorldVisibleSprite;
-                collider.enabled = true;
+                boxCollider.enabled = true;
                 receiver.enabled = true;
                 spriteRenderer.color = Color.blue;
             }
             else
             {
                 spriteRenderer.sprite = yokaiWorldInvisibleSprite;
-                collider.enabled = false;
+                boxCollider.enabled = false;
                 receiver.enabled = false;
                 spriteRenderer.color = Color.red;
             }
@@ -54,14 +54,14 @@ public class MurMonoMonde : MonoBehaviour
             if (YochiManager.instance.isInYokaiWorld)
             {
                 spriteRenderer.sprite = realWorldInvisibleSprite;
-                collider.enabled = false;
+                boxCollider.enabled = false;
                 receiver.enabled = false;
                 spriteRenderer.color = Color.green;
             }
             else
             {
                 spriteRenderer.sprite = realWorldVisibleSprite;
-                collider.enabled = true;
+                boxCollider.enabled = true;
                 receiver.enabled = true;
                 spriteRenderer.color = Color.yellow;
             }
