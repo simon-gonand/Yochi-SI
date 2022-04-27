@@ -8,11 +8,9 @@ public class EnemyDaruma : MonoBehaviour
     public float speed;
     public float minDistanceToPlayer;
     public float maxDistanceToPlayer;
-    //public float timeBewteenShots;
     public BulletEmitter emitter;
     public int lifePoints;
     private Transform playerPos;
-    //public bool canShoot = true;
     private bool canMove = true;
     public Animator animator;
 
@@ -52,13 +50,17 @@ public class EnemyDaruma : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("isRolling", false);
         animator.SetBool("isAttacking", false);
-        //emitter.Stop();
         canMove = true;
     }
 
     public void RotateEmitter()
     {
         Vector2 look = playerPos.position - emitter.transform.position;
+
+        if(look.normalized.x < 0)
+        {
+            animator.gameObject.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
+        }
         emitter.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, look));
     }
 
@@ -66,7 +68,7 @@ public class EnemyDaruma : MonoBehaviour
     {
         Vector2 distanceToPlayer = transform.position - playerPos.position;
 
-        if (distanceToPlayer.magnitude <= minDistanceToPlayer)
+        if (distanceToPlayer.magnitude <= minDistanceToPlayer && canMove)
         {
             canMove = false;
             animator.SetBool("isAttacking", true);
@@ -79,21 +81,7 @@ public class EnemyDaruma : MonoBehaviour
         {
             
             animator.SetBool("isRolling", true);
-            GetComponentInParent<Rigidbody2D>().velocity = -distanceToPlayer.normalized * speed;
-            //emitter.Stop();
-            //canShoot = true;
-            //isMoving = true;
+            GetComponentInParent<Rigidbody2D>().velocity = -distanceToPlayer.normalized * speed;            
         }
-
-        /*else
-        {
-            if (isMoving)
-            {
-                GetComponentInParent<Rigidbody2D>().velocity = Vector3.zero;
-                isMoving = false;
-                StartShooting();
-            }
-
-        }*/
     }
 }
