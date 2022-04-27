@@ -238,8 +238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifePoints: 5
   speed: 0.5
-  minDistanceToPlayer: 5
-  maxDistanceToPlayer: 5.2
+  minDistanceToPlayer: 7
+  maxDistanceToPlayer: 9
   emitter: {fileID: 4076422268100830210}
   canShoot: 0
 --- !u!114 &6620198737884562106
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emitterProfile: {fileID: 11400000, guid: d19221a7295a70d48900a126211eaa6a, type: 2}
+  emitterProfile: {fileID: 11400000, guid: 0b4b4384fdf337049aac18b753d089ee, type: 2}
   patternOrigin: {fileID: 4076422268100830221}
   playAtStart: 0
   useDefaultGizmoColor: 1

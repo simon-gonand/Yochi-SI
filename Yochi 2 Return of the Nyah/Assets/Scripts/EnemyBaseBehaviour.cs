@@ -9,7 +9,7 @@ public class EnemyBaseBehaviour : EnemyParent
     public float minDistanceToPlayer;
     public float maxDistanceToPlayer;
     public BulletEmitter emitter;
-    
+    public Animator animator;
     private Transform playerPos;    
     public bool canShoot = true;
     private bool isMoving;
@@ -41,6 +41,10 @@ public class EnemyBaseBehaviour : EnemyParent
     public void RotateEmitter()
     {
         Vector2 look = playerPos.position - emitter.transform.position;
+        if (look.normalized.x < 0)
+        {
+            animator.gameObject.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
+        }
         emitter.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, look));
     }
 
