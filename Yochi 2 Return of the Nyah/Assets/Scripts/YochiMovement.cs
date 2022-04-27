@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class YochiMovement : MonoBehaviour
 {
+    public Animator animator;
     public float movementMaxSpeed;
 
     private Vector2 targetMovementVelocity;
@@ -22,5 +23,7 @@ public class YochiMovement : MonoBehaviour
         targetMovementVelocity = Vector2.ClampMagnitude(leftJoytsickInput, 1);
 
         rb.velocity = leftJoytsickInput * movementMaxSpeed;
+
+        animator.SetBool("isMoving", rb.velocity.magnitude > 0.1f);
     }
 }

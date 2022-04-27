@@ -50,6 +50,12 @@ TagManager:
   - name: Ennemis
     uniqueID: 2462846393
     locked: 0
+  - name: UmbrellaBack
+    uniqueID: 3480710029
+    locked: 0
   - name: Player
     uniqueID: 1510233557
+    locked: 0
+  - name: UmbrellaFront
+    uniqueID: 3562903989
     locked: 0

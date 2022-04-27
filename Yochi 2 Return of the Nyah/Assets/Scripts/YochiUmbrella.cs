@@ -5,6 +5,7 @@ using BulletPro;
 
 public class YochiUmbrella : MonoBehaviour
 {
+    public Animator playerAnimator;
     public EmitterProfile yokaiEmitter;
     public EmitterProfile realEmitter;
 
@@ -17,6 +18,7 @@ public class YochiUmbrella : MonoBehaviour
     public string umbrellaFrontLayer;
     public string umbrellaBackLayer;
     public Vector2 minMaxForBackUmbrella;
+    public SpriteRenderer playerRenderer;
 
     private Vector2 aimInput;
     private Vector2 aimDirection;
@@ -109,5 +111,9 @@ public class YochiUmbrella : MonoBehaviour
         {
             umbrellaRenderer.sortingLayerID = SortingLayer.NameToID(umbrellaFrontLayer);
         }
+
+        playerAnimator.SetFloat("AimAngle", umbrellaAngle);
+
+        playerRenderer.flipX = umbrellaAngle > 90 || umbrellaAngle < -90;
     }
 }

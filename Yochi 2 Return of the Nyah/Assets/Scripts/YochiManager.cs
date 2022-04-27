@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using BulletPro;
+using UnityEngine.UI;
 
 public class YochiManager : MonoBehaviour
 {
     public int maxHealthPoint;
     public float invulnerableTime;
+    public Image healthBar;
     public SpriteRenderer spriteRenderer;
     public Color realWorldColor;
     public Color yokaiWorldColor;
@@ -35,6 +37,7 @@ public class YochiManager : MonoBehaviour
         bulletReceiver = GetComponent<BulletReceiver>();
         isInYokaiWorld = false;
         SwitchWorld(isInYokaiWorld);
+        currentHealthPoint = maxHealthPoint;
     }
 
     void Update()
@@ -74,6 +77,7 @@ public class YochiManager : MonoBehaviour
         {
             isInvulnerable = false;
         }
+        healthBar.fillAmount = (float)currentHealthPoint / (float)maxHealthPoint;
     }
 
     private float invulTimeRemaining;
