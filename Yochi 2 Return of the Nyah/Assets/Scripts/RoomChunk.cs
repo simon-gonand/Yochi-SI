@@ -14,6 +14,8 @@ public class RoomChunk : MonoBehaviour
     private Collider2D noReturnCollider;
     public Collider2D nextNoReturnCollider;
 
+    public List<MurYokai> destroyedGameObject;
+
     public void SetChunkPosition(RoomChunk lastRoom)
     {
         Vector3 offset = self.position - entryPoint.position;
@@ -21,6 +23,12 @@ public class RoomChunk : MonoBehaviour
         stairsCollider.enabled = true;
         noReturnCollider.enabled = false;
         lastRoom.nextNoReturnCollider = noReturnCollider;
+        foreach (MurYokai wall in destroyedGameObject)
+        {
+            wall.gameObject.SetActive(true);
+            wall.ResetHealth();
+        }
+        destroyedGameObject.Clear();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -30,6 +38,7 @@ public class RoomChunk : MonoBehaviour
             GameManager.instance.GetNextRoom();
             stairsCollider.enabled = false;
             nextNoReturnCollider.enabled = true;
+            GameManager.instance.currentRoom = nextNoReturnCollider.GetComponent<RoomChunk>();
         }
     }
 }

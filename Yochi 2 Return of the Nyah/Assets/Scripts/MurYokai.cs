@@ -14,6 +14,11 @@ public class MurYokai : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        ResetHealth();
+    }
+
+    public void ResetHealth()
+    {
         healthPoint = 3;
     }
 
@@ -36,6 +41,7 @@ public class MurYokai : MonoBehaviour
 
     public void OnTakeDamage(BulletPro.Bullet bullet, Vector3 vec3)
     {
+        Debug.Log("saucisse");
         if (canTakeDamage)
         {
             healthPoint -= 1;
@@ -43,7 +49,8 @@ public class MurYokai : MonoBehaviour
 
         if (healthPoint <= 0)
         {
-            Destroy(gameObject);
+            GameManager.instance.currentRoom.destroyedGameObject.Add(this);
+            gameObject.SetActive(false);
         }
     }
 }

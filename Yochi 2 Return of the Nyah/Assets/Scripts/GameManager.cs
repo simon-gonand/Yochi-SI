@@ -16,7 +16,10 @@ public class GameManager : MonoBehaviour
     public List<RoomChunk> freeRooms;
     public List<RoomChunk> usedRooms;
 
-    public int level = 1;
+    public RoomChunk currentRoom;
+
+    private int _level = 1;
+    public int level { get { return _level; } set { _level = value; } }
 
     private void Awake()
     {
