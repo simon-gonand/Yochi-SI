@@ -13,18 +13,26 @@ public class Explosion_Behavior : BaseBulletBehaviour {
 	// After bullet's death, you can delay this script's death : use this.lifetimeAfterBulletDeath.
 
 	// Use this for initialization (instead of Start)
+
+	[Header("Yokai collision")]
+	public CollisionTags yokaiCollision;
+	[Header("Real collision")]
+	public CollisionTags realCollision;
+
 	public override void OnBulletBirth ()
 	{
 		base.OnBulletBirth();
 
 		if (this.bullet.moduleParameters.GetBool("isSpirit") == true)
         {
-			this.bullet.moduleCollision.collisionTags["YokaiBullet"] = true;
+			this.bullet.moduleCollision.collisionTags = yokaiCollision;
 		}
 		else if (this.bullet.moduleParameters.GetBool("isSpirit") == false)
         {
-			this.bullet.moduleCollision.collisionTags["RealBullet"] = true;
+			this.bullet.moduleCollision.collisionTags = realCollision;
 		}
+
+		transform.parent.GetChild(0).GetComponent<EnemyBulletBehaviour>().OnBulletBirth();
 	}
 	
 	// Update is (still) called once per frame

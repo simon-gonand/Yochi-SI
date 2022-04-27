@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpiritBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 1571033
+  uniqueIndex: 13499200
   profile: {fileID: 11400000}
   parent: {fileID: 222342622874853272}
   children: []
@@ -2332,7 +2332,7 @@ MonoBehaviour:
   foldoutVFX: 1
   hideSpriteList: 0
   vfxOpened: 0
-  currentlyDisplayedModule: 3
+  currentlyDisplayedModule: 7
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -2792,7 +2792,7 @@ MonoBehaviour:
   animationMovementSpace: 0
   animationTexture: {fileID: 0}
   collisionTags:
-    tagList: 64
+    tagList: 68
   colliders:
   - colliderType: 0
     size: 0.2
@@ -7163,7 +7163,7 @@ MonoBehaviour:
   m_Name: RealBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 16060065
+  uniqueIndex: 11940419
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -14280,7 +14280,7 @@ MonoBehaviour:
   m_Name: RealShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 13825863
+  uniqueIndex: 15459766
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -16850,7 +16850,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 3962426
+  uniqueIndex: 13832868
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -24446,7 +24446,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 2480934
+  uniqueIndex: 12029710
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -63460,7 +63460,7 @@ MonoBehaviour:
   m_Name: Spirit Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 711388
+  uniqueIndex: 14897315
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
