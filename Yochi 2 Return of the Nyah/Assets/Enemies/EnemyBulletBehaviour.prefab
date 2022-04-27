@@ -50,5 +50,5 @@ MonoBehaviour:
   lifetimeAfterBulletDeath: 0
   yokaiBulletYokaiWorld: {fileID: 21300000, guid: 93a67b84fc1519e4dbd369d23b0d6aa1, type: 3}
   yokaiBulletRealWorld: {fileID: 21300000, guid: 81bfa1d8efed9f54eb5b9baf9e3571df, type: 3}
-  realBulletYokaiWorld: {fileID: 21300000, guid: 81bfa1d8efed9f54eb5b9baf9e3571df, type: 3}
+  realBulletYokaiWorld: {fileID: 21300000, guid: 14f3a77088e44864f8e8aff26612cf5c, type: 3}
   realBulletRealWorld: {fileID: 21300000, guid: 0b687877d19a3574d83057f924c464cb, type: 3}

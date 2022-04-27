@@ -104,7 +104,7 @@ MonoBehaviour:
   syncEnable: 1
   syncDisable: 1
   syncCollisionTags: 1
-  hitboxSize: 0.1
+  hitboxSize: 0.5
   hitboxOffset: {x: 0, y: 0}
   killBulletOnCollision: 0
   maxSimultaneousCollisionsPerFrame: 1
