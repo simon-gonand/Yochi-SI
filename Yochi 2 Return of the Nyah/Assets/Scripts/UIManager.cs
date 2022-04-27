@@ -9,12 +9,13 @@ public class UIManager : MonoBehaviour
     public GameObject deathScreen;
     public GameObject realHealthBar;
     public GameObject yokaiHealthBar;
-    public YochiManager yochi;
+    private YochiManager yochi;
 
     // Start is called before the first frame update
     void Start()
     {
         deathScreen.SetActive(false);
+        yochi = YochiManager.instance;
     }
 
     // Update is called once per frame
