@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpiritBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 8036782
+  uniqueIndex: 1571033
   profile: {fileID: 11400000}
   parent: {fileID: 222342622874853272}
   children: []
@@ -1069,7 +1069,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: {r: 0, g: 0.4705882, b: 1, a: 1}
+      defaultValue: {r: 1, g: 1, b: 1, a: 1}
       gradientValue:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -2332,7 +2332,7 @@ MonoBehaviour:
   foldoutVFX: 1
   hideSpriteList: 0
   vfxOpened: 0
-  currentlyDisplayedModule: 7
+  currentlyDisplayedModule: 3
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -2673,7 +2673,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: 0.1
+      defaultValue: 1
     useSlider: 0
     sliderMin: 0
     sliderMax: 0
@@ -2795,7 +2795,7 @@ MonoBehaviour:
     tagList: 64
   colliders:
   - colliderType: 0
-    size: 1.71
+    size: 0.2
     offset: {x: 0, y: 0, z: 0}
     lineStart: {x: 0, y: 0}
     lineEnd: {x: 0, y: 0}
@@ -7148,7 +7148,7 @@ MonoBehaviour:
   foldoutExport: 0
   foldoutEmptyBin: 0
   foldoutCompactMode: 0
-  currentParamsSelected: {fileID: 114671512830859702}
+  currentParamsSelected: {fileID: -5268183849937549841}
   numberOfSubAssets: 4
 --- !u!114 &114027673760526898
 MonoBehaviour:
@@ -7163,7 +7163,7 @@ MonoBehaviour:
   m_Name: RealBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 10813913
+  uniqueIndex: 16060065
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -8219,7 +8219,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: {r: 0, g: 0.4705882, b: 1, a: 1}
+      defaultValue: {r: 1, g: 1, b: 1, a: 1}
       gradientValue:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9482,7 +9482,7 @@ MonoBehaviour:
   foldoutVFX: 1
   hideSpriteList: 0
   vfxOpened: 0
-  currentlyDisplayedModule: 7
+  currentlyDisplayedModule: 3
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -9823,7 +9823,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: 0.1
+      defaultValue: 1
     useSlider: 0
     sliderMin: 0
     sliderMax: 0
@@ -9945,7 +9945,7 @@ MonoBehaviour:
     tagList: 128
   colliders:
   - colliderType: 0
-    size: 1.71
+    size: 0.2
     offset: {x: 0, y: 0, z: 0}
     lineStart: {x: 0, y: 0}
     lineEnd: {x: 0, y: 0}
@@ -14280,7 +14280,7 @@ MonoBehaviour:
   m_Name: RealShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 9052423
+  uniqueIndex: 13825863
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -16850,7 +16850,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 7591665
+  uniqueIndex: 3962426
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -24446,7 +24446,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 8942974
+  uniqueIndex: 2480934
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -63460,7 +63460,7 @@ MonoBehaviour:
   m_Name: Spirit Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 2988004
+  uniqueIndex: 711388
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
