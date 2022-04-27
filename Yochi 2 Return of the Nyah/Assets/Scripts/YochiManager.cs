@@ -47,7 +47,7 @@ public class YochiManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("RightBumper") || Input.GetButtonDown("LeftBumper"))
+        if (Input.GetButtonDown("RightBumper") || Input.GetButtonDown("LeftBumper") || Input.GetKeyDown(KeyCode.I))
         {
             SwitchWorld(!isInYokaiWorld);
         }
