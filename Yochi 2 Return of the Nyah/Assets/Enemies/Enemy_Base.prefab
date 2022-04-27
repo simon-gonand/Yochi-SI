@@ -241,6 +241,7 @@ MonoBehaviour:
   minDistanceToPlayer: 7
   maxDistanceToPlayer: 9
   emitter: {fileID: 4076422268100830210}
+  animator: {fileID: 4076422266252339547}
   canShoot: 0
 --- !u!114 &6620198737884562106
 MonoBehaviour:

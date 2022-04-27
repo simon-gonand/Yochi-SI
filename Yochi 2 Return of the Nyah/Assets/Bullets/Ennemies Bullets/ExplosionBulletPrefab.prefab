@@ -48,3 +48,7 @@ MonoBehaviour:
   defaultParent: {fileID: 0}
   startIsolatedFromBullet: 0
   lifetimeAfterBulletDeath: 0
+  yokaiCollision:
+    tagList: 68
+  realCollision:
+    tagList: 132

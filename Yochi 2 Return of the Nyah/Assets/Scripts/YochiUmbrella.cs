@@ -16,6 +16,8 @@ public class YochiUmbrella : MonoBehaviour
     public float aimCursorDistance;
     public Sprite[] realUmbrellaOrientations;
     public Sprite[] yokaiUmbrellaOrientations;
+    public Sprite[] realUmbrellaOrientationsShoot;
+    public Sprite[] yokaiUmbrellaOrientationsShoot;
     public SpriteRenderer umbrellaRenderer;
     public string umbrellaFrontLayer;
     public string umbrellaBackLayer;
@@ -61,6 +63,7 @@ public class YochiUmbrella : MonoBehaviour
         bulletEmitter.Play();
         bulletEmitter.Play();
         KnockBackUmbrella(yokaiShotKnockback);
+        timeLeftForEyeOpen = 0.05f;
 
         cadenceLeft = yokaiBulletCadence;
         bulletLeft--;
@@ -79,6 +82,7 @@ public class YochiUmbrella : MonoBehaviour
         rechargeTimeRemaining = realRechargeTime;
         bulletLeft = yokaiChargerBulletNumber;
         KnockBackUmbrella(realShotKnockback);
+        timeLeftForEyeOpen = 0.09f;
     }
 
     private void UpdateUmbrellaShootState()
@@ -156,6 +160,11 @@ public class YochiUmbrella : MonoBehaviour
                 //rechargeBar.gameObject.SetActive(false);
             }
         }
+
+        if(timeLeftForEyeOpen > 0)
+        {
+            timeLeftForEyeOpen -= Time.deltaTime;
+        }
     }
 
     public void SwitchEmitter(bool isYokai)
@@ -197,6 +206,7 @@ public class YochiUmbrella : MonoBehaviour
         currentUmbrellaDistance -= distance;
     }
 
+    float timeLeftForEyeOpen;
     private void UpdateUmbrellaOrientation()
     {
         int indexOrientation = 0;
@@ -207,11 +217,25 @@ public class YochiUmbrella : MonoBehaviour
 
         if(YochiManager.instance.isInYokaiWorld)
         {
-            umbrellaRenderer.sprite = yokaiUmbrellaOrientations[indexOrientation];
+            if(timeLeftForEyeOpen <= 0)
+            {
+                umbrellaRenderer.sprite = yokaiUmbrellaOrientations[indexOrientation];
+            }
+            else
+            {
+                umbrellaRenderer.sprite = yokaiUmbrellaOrientationsShoot[indexOrientation];
+            }
         }
         else
         {
-            umbrellaRenderer.sprite = realUmbrellaOrientations[indexOrientation];
+            if (timeLeftForEyeOpen <= 0)
+            {
+                umbrellaRenderer.sprite = realUmbrellaOrientations[indexOrientation];
+            }
+            else
+            {
+                umbrellaRenderer.sprite = realUmbrellaOrientationsShoot[indexOrientation];
+            }
         }
 
         if(umbrellaAngle > minMaxForBackUmbrella.x && umbrellaAngle < minMaxForBackUmbrella.y)
