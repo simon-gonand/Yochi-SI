@@ -24,11 +24,13 @@ public class MurYokai : MonoBehaviour
         {
             spriteRenderer.sprite = yokaiWall;
             spriteRenderer.color = Color.blue;
+            canTakeDamage = true;
         }
         else
         {
             spriteRenderer.sprite = realWall;
             spriteRenderer.color = Color.red;
+            canTakeDamage = false;
         }
     }
 
@@ -41,7 +43,7 @@ public class MurYokai : MonoBehaviour
 
         if (healthPoint <= 0)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }
