@@ -47,6 +47,9 @@ TagManager:
   - name: Asset
     uniqueID: 17774991
     locked: 0
+  - name: LdElements
+    uniqueID: 53547175
+    locked: 0
   - name: Ennemis
     uniqueID: 2462846393
     locked: 0
