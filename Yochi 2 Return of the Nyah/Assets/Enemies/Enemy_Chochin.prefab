@@ -201,6 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4076422266487337913}
   - component: {fileID: 4076422266487337912}
+  - component: {fileID: 2446355156312806130}
   m_Layer: 0
   m_Name: Behaviour
   m_TagString: Untagged
@@ -235,12 +236,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197457222341f9941ba5226e1767f8e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 5
   speed: 0.5
   minDistanceToPlayer: 5
   maxDistanceToPlayer: 5.2
   emitter: {fileID: 4076422268100830210}
-  lifePoints: 5
   canShoot: 0
+--- !u!114 &2446355156312806130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076422266487337915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2aafd0c1272d724ba004a092a8126f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifePoints: 5
 --- !u!1 &4076422267119276655
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4076422267119276652}
   - component: {fileID: 4076422267119276653}
+  - component: {fileID: 5445072557336705936}
   m_Layer: 0
   m_Name: Enemy_Chochin
   m_TagString: Untagged
@@ -298,6 +313,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!58 &5445072557336705936
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4076422267119276655}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: d2386b73a16c3294fbd6a0c56dfc6c31, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &4076422268100830220
 GameObject:
   m_ObjectHideFlags: 0
