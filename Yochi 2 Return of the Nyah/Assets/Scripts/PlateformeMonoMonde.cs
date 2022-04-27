@@ -44,13 +44,13 @@ public class PlateformeMonoMonde : MonoBehaviour
             if (YochiManager.instance.isInYokaiWorld)
             {
                 spriteRenderer.sprite = yokaiWorldVisibleSprite;
-                boxCollider.enabled = true;
+                collider.enabled = false;
                 spriteRenderer.color = Color.blue;
             }
             else
             {
                 spriteRenderer.sprite = yokaiWorldInvisibleSprite;
-                boxCollider.enabled = false;
+                collider.enabled = true;
                 spriteRenderer.color = Color.red;
             }
         }
@@ -59,13 +59,13 @@ public class PlateformeMonoMonde : MonoBehaviour
             if (YochiManager.instance.isInYokaiWorld)
             {
                 spriteRenderer.sprite = realWorldInvisibleSprite;
-                boxCollider.enabled = false;
+                collider.enabled = true;
                 spriteRenderer.color = Color.green;
             }
             else
             {
                 spriteRenderer.sprite = realWorldVisibleSprite;
-                boxCollider.enabled = true;
+                collider.enabled = false;
                 spriteRenderer.color = Color.yellow;
             }
         }
