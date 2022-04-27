@@ -49,7 +49,9 @@ public class EnemyDaruma : MonoBehaviour
         }
         else
             emitter.rootBullet.moduleParameters.SetBool("isSpirit", false);
-        yield return new WaitForSeconds(0.5f);        
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("isRolling", false);
+        animator.SetBool("isAttacking", false);
         //emitter.Stop();
         canMove = true;
     }
