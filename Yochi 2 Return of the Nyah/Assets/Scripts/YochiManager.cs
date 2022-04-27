@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using BulletPro;
 using UnityEngine.UI;
+using Cinemachine;
 
 public class YochiManager : MonoBehaviour
 {
@@ -16,6 +17,10 @@ public class YochiManager : MonoBehaviour
     public CollisionTags collisionInYokaiWorld;
     [Header("Collision in real dimension")]
     public CollisionTags collisionInRealWorld;
+    public Animator animator;
+    public CinemachineVirtualCamera cineCamera;
+    public float shakeIntensity;
+    public float shakeTime;
 
     [HideInInspector]
     public bool isInYokaiWorld;
@@ -65,6 +70,7 @@ public class YochiManager : MonoBehaviour
         }
         isInYokaiWorld = isYokaiWorld;
         yochiUmbrella.SwitchEmitter(isInYokaiWorld);
+        animator.SetBool("isYokai", isInYokaiWorld);
     }
 
     private void InvulnerableTimeUpdate()
@@ -87,11 +93,27 @@ public class YochiManager : MonoBehaviour
         {
             isInvulnerable = true;
             invulTimeRemaining = invulnerableTime;
+            StartCoroutine(ShakeImpact());
             if (currentHealthPoint > 0)
             {
                 currentHealthPoint--;
                 //feedback dégats
             }
         }
+    }
+
+    public IEnumerator ShakeImpact()
+    {
+        CinemachineBasicMultiChannelPerlin cinemachineBasicMultiChannelPerlin = cineCamera.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
+        float currentIntensity = shakeIntensity;
+        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = shakeIntensity;
+        while(currentIntensity > 0)
+        {
+            currentIntensity -= Time.deltaTime * shakeIntensity / shakeTime;
+            cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = currentIntensity;
+            yield return new WaitForEndOfFrame();
+        }
+
+        cinemachineBasicMultiChannelPerlin.m_AmplitudeGain = 0;
     }
 }

@@ -27,6 +27,10 @@ public class YochiUmbrella : MonoBehaviour
     public float realRechargeTime;
     public Image rechargeBar;
 
+    public float umbrellaLerpSpeed;
+    public float yokaiShotKnockback;
+    public float realShotKnockback;
+
     private Vector2 aimInput;
     private Vector2 aimDirection;
     private bool isShooting;
@@ -34,6 +38,7 @@ public class YochiUmbrella : MonoBehaviour
     private float rechargeTimeRemaining;
     private float cadenceLeft;
     private int bulletLeft;
+    private float umbrellaTargetDistance;
 
     void Start()
     {
@@ -45,7 +50,7 @@ public class YochiUmbrella : MonoBehaviour
 
     void Update()
     {
-        UpdateInput();
+        UpdateUmbrellaAim();
         UpdateUmbrellaOrientation();
         UpdateUmbrellaShootState();
     }
@@ -54,6 +59,7 @@ public class YochiUmbrella : MonoBehaviour
     {
         bulletEmitter.Play();
         bulletEmitter.Play();
+        KnockBackUmbrella(yokaiShotKnockback);
 
         cadenceLeft = yokaiBulletCadence;
         bulletLeft--;
@@ -70,6 +76,7 @@ public class YochiUmbrella : MonoBehaviour
         bulletEmitter.Play();
         rechargeTimeRemaining = realRechargeTime;
         bulletLeft = yokaiChargerBulletNumber;
+        KnockBackUmbrella(realShotKnockback);
     }
 
     private void UpdateUmbrellaShootState()
@@ -163,7 +170,8 @@ public class YochiUmbrella : MonoBehaviour
         }
     }
 
-    private void UpdateInput()
+    private float currentUmbrellaDistance;
+    private void UpdateUmbrellaAim()
     {
         aimInput = new Vector2(Input.GetAxis("RightStickH"), Input.GetAxis("RightStickV"));
 
@@ -173,9 +181,17 @@ public class YochiUmbrella : MonoBehaviour
             aimDirection = aimInput.normalized;
             umbrellaAngle = Vector2.SignedAngle(Vector2.right, aimDirection);
 
-            umbrella.transform.localPosition = aimCursorDistance * aimDirection;
+
             bulletEmitter.transform.rotation = Quaternion.Euler(0, 0, umbrellaAngle - 90);
         }
+
+        currentUmbrellaDistance -= currentUmbrellaDistance * umbrellaLerpSpeed * Time.deltaTime;
+        umbrella.transform.localPosition = (aimCursorDistance + currentUmbrellaDistance) * aimDirection;
+    }
+
+    private void KnockBackUmbrella(float distance)
+    {
+        currentUmbrellaDistance -= distance;
     }
 
     private void UpdateUmbrellaOrientation()
