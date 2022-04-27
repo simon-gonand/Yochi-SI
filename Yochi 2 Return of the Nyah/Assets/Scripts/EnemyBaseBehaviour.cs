@@ -8,7 +8,7 @@ public class EnemyBaseBehaviour : MonoBehaviour
     public float speed;
     public float minDistanceToPlayer;
     public float maxDistanceToPlayer;
-    public float timeBewteenShots;
+    //public float timeBewteenShots;
     public BulletEmitter emitter;
     public int lifePoints;
     private Transform playerPos;    
