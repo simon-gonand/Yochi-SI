@@ -11,6 +11,7 @@ public class YochiUmbrella : MonoBehaviour
     public EmitterProfile realEmitter;
 
     public BulletEmitter bulletEmitter;
+    public BulletEmitter shotgunEmitter;
     public GameObject umbrella;
     public float aimCursorDistance;
     public Sprite[] realUmbrellaOrientations;
@@ -74,6 +75,7 @@ public class YochiUmbrella : MonoBehaviour
     {
         bulletEmitter.Play();
         bulletEmitter.Play();
+        shotgunEmitter.Play();
         rechargeTimeRemaining = realRechargeTime;
         bulletLeft = yokaiChargerBulletNumber;
         KnockBackUmbrella(realShotKnockback);
@@ -99,7 +101,7 @@ public class YochiUmbrella : MonoBehaviour
             }
         }
 
-        if (Input.GetAxis("RightTrigger") == 1/* || aimInput.magnitude > 0.3f*/)
+        if (Input.GetAxis("RightTrigger") == 1 || Input.GetKeyDown(KeyCode.K)/* || aimInput.magnitude > 0.3f*/)
         {
             if (!isShooting)
             {
@@ -131,27 +133,27 @@ public class YochiUmbrella : MonoBehaviour
 
             if (rechargeTimeRemaining > 0)
             {
-                rechargeBar.fillAmount = (yokaiRechargeTime - rechargeTimeRemaining) / yokaiRechargeTime;
+                //rechargeBar.fillAmount = (yokaiRechargeTime - rechargeTimeRemaining) / yokaiRechargeTime;
                 rechargeTimeRemaining -= Time.deltaTime;
-                rechargeBar.gameObject.SetActive(true);
+                //rechargeBar.gameObject.SetActive(true);
             }
             else
             {
-                rechargeBar.fillAmount = (float)bulletLeft / (float)yokaiChargerBulletNumber;
-                rechargeBar.gameObject.SetActive(true);
+                //rechargeBar.fillAmount = (float)bulletLeft / (float)yokaiChargerBulletNumber;
+                //rechargeBar.gameObject.SetActive(true);
             }
         }
         else
         {
-            rechargeBar.fillAmount = (realRechargeTime - rechargeTimeRemaining) / realRechargeTime;
+            //rechargeBar.fillAmount = (realRechargeTime - rechargeTimeRemaining) / realRechargeTime;
             if (rechargeTimeRemaining > 0)
             {
                 rechargeTimeRemaining -= Time.deltaTime;
-                rechargeBar.gameObject.SetActive(true);
+                //rechargeBar.gameObject.SetActive(true);
             }
             else
             {
-                rechargeBar.gameObject.SetActive(false);
+                //rechargeBar.gameObject.SetActive(false);
             }
         }
     }
@@ -183,6 +185,7 @@ public class YochiUmbrella : MonoBehaviour
 
 
             bulletEmitter.transform.rotation = Quaternion.Euler(0, 0, umbrellaAngle - 90);
+            shotgunEmitter.transform.rotation = Quaternion.Euler(0, 0, umbrellaAngle - 90);
         }
 
         currentUmbrellaDistance -= currentUmbrellaDistance * umbrellaLerpSpeed * Time.deltaTime;

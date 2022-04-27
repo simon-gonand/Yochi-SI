@@ -68,6 +68,7 @@ MonoBehaviour:
   shakeTime: 0.2
   isInYokaiWorld: 0
   isInvulnerable: 0
+  currentHealthPoint: 0
 --- !u!114 &4634130879036724829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +99,7 @@ MonoBehaviour:
   yokaiEmitter: {fileID: 11400000, guid: b78f6a7d7ca592c4985248ec9643c8ae, type: 2}
   realEmitter: {fileID: 11400000, guid: a35fb34acede08e48adebc55f2bcdf6c, type: 2}
   bulletEmitter: {fileID: 8768771792820014503}
+  shotgunEmitter: {fileID: 3588225953890630827}
   umbrella: {fileID: 2064891494976140651}
   aimCursorDistance: 0.5
   realUmbrellaOrientations:
@@ -172,7 +174,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1510233557
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 792366077, guid: a166f0da760ef0347843c08482602254, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -429,6 +431,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2874516880121918444}
+  - {fileID: 3565977393127347980}
   m_Father: {fileID: 1132662924663911605}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -471,7 +474,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -814257267
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1307528980, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -484,3 +487,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &2397124653380648715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3565977393127347980}
+  - component: {fileID: 3588225953890630827}
+  m_Layer: 0
+  m_Name: ShotgunEmitter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3565977393127347980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397124653380648715}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 738731609100645317}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3588225953890630827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2397124653380648715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a676b285f069c3c4884c27e78d0fc696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emitterProfile: {fileID: 11400000, guid: ae3e5c0ef1d0019429d9444da60becb1, type: 2}
+  patternOrigin: {fileID: 3565977393127347980}
+  playAtStart: 0
+  useDefaultGizmoColor: 1
+  gizmoColor: {r: 0, g: 1, b: 0, a: 1}
+  gizmoSize: 0.5

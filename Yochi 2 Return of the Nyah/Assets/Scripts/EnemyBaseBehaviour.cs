@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using BulletPro;
 
-public class EnemyBaseBehaviour : MonoBehaviour
+public class EnemyBaseBehaviour : EnemyParent
 {
     public float speed;
     public float minDistanceToPlayer;
     public float maxDistanceToPlayer;
-    //public float timeBewteenShots;
     public BulletEmitter emitter;
-    public int lifePoints;
+    public Animator animator;
     private Transform playerPos;    
     public bool canShoot = true;
     private bool isMoving;
@@ -28,16 +27,7 @@ public class EnemyBaseBehaviour : MonoBehaviour
 
         MoveAgent();
     }
-
-    public void HitByBullet(int dmg)
-    {
-        lifePoints -= dmg;
-        if(lifePoints <= 0)
-        {
-            //death VFX
-            Destroy(transform.parent.gameObject);
-        }
-    }
+    
 
     public void StartShooting()
     {
@@ -51,6 +41,10 @@ public class EnemyBaseBehaviour : MonoBehaviour
     public void RotateEmitter()
     {
         Vector2 look = playerPos.position - emitter.transform.position;
+        if (look.normalized.x < 0)
+        {
+            animator.gameObject.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
+        }
         emitter.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, look));
     }
 
