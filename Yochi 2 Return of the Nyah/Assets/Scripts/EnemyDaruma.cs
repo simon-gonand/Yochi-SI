@@ -3,22 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using BulletPro;
 
-public class EnemyDaruma : MonoBehaviour
+public class EnemyDaruma : EnemyParent
 {
     public float speed;
     public float minDistanceToPlayer;
     public float maxDistanceToPlayer;
     public BulletEmitter emitter;
-    public int lifePoints;
-    private Transform playerPos;
     private bool canMove = true;
     public Animator animator;
-
-
-    void Start()
-    {
-        playerPos = YochiManager.instance.transform;
-    }
 
 
     void Update()
@@ -55,7 +47,7 @@ public class EnemyDaruma : MonoBehaviour
 
     public void RotateEmitter()
     {
-        Vector2 look = playerPos.position - emitter.transform.position;
+        Vector2 look = playerTransform.position - emitter.transform.position;
 
         if(look.normalized.x < 0)
         {
@@ -66,7 +58,7 @@ public class EnemyDaruma : MonoBehaviour
 
     public void MoveAgent()
     {
-        Vector2 distanceToPlayer = transform.position - playerPos.position;
+        Vector2 distanceToPlayer = transform.position - playerTransform.position;
 
         if (distanceToPlayer.magnitude <= minDistanceToPlayer && canMove)
         {
@@ -81,7 +73,10 @@ public class EnemyDaruma : MonoBehaviour
         {
             
             animator.SetBool("isRolling", true);
-            GetComponentInParent<Rigidbody2D>().velocity = -distanceToPlayer.normalized * speed;            
+            //GetComponentInParent<Rigidbody2D>().velocity = -distanceToPlayer.normalized * speed;
+            CalculatePath();
+            UpdateDirection();
+            GetComponentInParent<Rigidbody2D>().velocity = GetComponent<EnemyParent>().pathDirection * speed;
         }
     }
 }

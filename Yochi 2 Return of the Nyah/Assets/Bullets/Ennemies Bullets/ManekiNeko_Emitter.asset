@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: RealBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 3472944
+  uniqueIndex: 12133133
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -7647,7 +7647,7 @@ MonoBehaviour:
   m_Name: RealShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 5991094
+  uniqueIndex: 3883090
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -7935,7 +7935,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 2826105
+  uniqueIndex: 16669791
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -15531,7 +15531,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 14880892
+  uniqueIndex: 11805112
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -54545,7 +54545,7 @@ MonoBehaviour:
   m_Name: YokaiShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 5174232
+  uniqueIndex: 6788321
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -54833,7 +54833,7 @@ MonoBehaviour:
   m_Name: YokaiBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 3188843
+  uniqueIndex: 6831477
   profile: {fileID: 11400000}
   parent: {fileID: 2977995316010506600}
   children: []
