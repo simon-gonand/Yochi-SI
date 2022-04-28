@@ -2398,6 +2398,37 @@ TilemapRenderer:
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
+--- !u!1 &794438967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794438968}
+  m_Layer: 0
+  m_Name: PathfindingCentre
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &794438968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794438967}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.2, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1176929502096617260}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1210899153
 GameObject:
   m_ObjectHideFlags: 0
@@ -2679,8 +2710,7 @@ GameObject:
   - component: {fileID: 1491334442}
   - component: {fileID: 1491334443}
   - component: {fileID: 1491334444}
-  - component: {fileID: 1491334445}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Room_001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2707,6 +2737,7 @@ Transform:
   - {fileID: 1176929503703263118}
   - {fileID: 1815863142}
   - {fileID: 1405239117}
+  - {fileID: 794438968}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2777,65 +2808,12 @@ MonoBehaviour:
   self: {fileID: 1176929502096617260}
   entryPoint: {fileID: 1815863142}
   exitPoint: {fileID: 1405239117}
+  pathfindingCentre: {fileID: 794438968}
   stairsCollider: {fileID: 1491334442}
   noReturnCollider: {fileID: 1491334443}
   nextNoReturnCollider: {fileID: 0}
+  daruma: {fileID: 0}
   destroyedGameObject: []
---- !u!114 &1491334445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176929502096617261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78396926cbbfc4ac3b48fc5fc34a87d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  version: 1
-  data:
-    dataString: UEsDBBQAAAgIAAAIIezibsDQfQIAADcFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMtyozAQ/BWXzmsX4FfY2y5xnD0kccXZyoWLLA1GZSFResR2Uv73lQQY4j0huufR0xr4QkzoGoiRaq0YfZIU0M8R8mf0Y9STj3DCeym27BO6mHdGTemDcIh5xYZJh8c+TcsKjGLkl9hzHxw50ApWSFWt6B4yqY12cIG5BkcpaXy2cNDXCJ3cY5z6lLM7JUt/+nSnNBpd3JGAMKD60DiazGZpuoiXbcY4mSTz2XSRtHn+fTqPl9P4bjWOlqGIFYTjqgbqJxrUupvM2yrTeDIPocLN20ZFgSWSc6Zbucic62BHhmtt3bAugDLsxg8avRslsH1p/CjD5Jei0GBabxQ+3zPlXGyqot+ysbbC+tCo+8Dc+j5xchdUNUWf/uPHcaALJavHrm8c+R6mZOTwis8EazPwfgjffxduxRHzA95xeC9BPMu1klZQRxplfarVkNz3r9fRshLIoccbqTegrXvXu6vuLtrPcAnTnzLOql1wftYAWy6D32E/QLm7+eMEh+3RbQmHehV/Nbzh/XDNWuKBKW0c1U4pvLydtMqHolXwzE9jTSaVgAC3omsQmJvzxpUxt1d4ww3a3jAP2H9QbfOW676Tm5QA9/FRdENt5PF6WbqUxyfQ5Ys1nAnoRXvi2fmUSSGaDRt60qVtrSowGaTtLaPfVwslcVrEaYIX0W6XkiQZk0WKY5rOZ6SIFwVdoLB7TLg5Md80Qlt73K2Jvrhwe9b9Z0Zrheuw7VTh45p9VnJgOROF3BIFIF6aClfhoFwT913SFWXOoC0Yw0S4b/SVIy7JAWh+LZSHSVcno3DeV8lRzT6k8UiOsvBjyZGHr7u8UfDB4Oibd8Uu6PIPUEsDBBQAAAgIAAAIIey4Uvg0bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM011FQSi9KLMgoBooYgjilmSkgdrSSkaFlmqGlUaKZQVKSZbKRkW6ymWWiYYqlqUlymqFZWoqZUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIezibsDQfQIAADcFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIey4Uvg0bQAAAHgAAAAJACQAAAAAAAAAAAAAAMoCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAggMAAAAA
-    upgradeData: 
-    file_cachedStartup: {fileID: 0}
-    data_cachedStartup: 
-    cacheStartup: 0
-  showNavGraphs: 1
-  showUnwalkableNodes: 1
-  debugMode: 0
-  debugFloor: 0
-  debugRoof: 1
-  manualDebugFloorRoof: 0
-  showSearchTree: 0
-  unwalkableNodeDebugSize: 0.3
-  logPathResults: 1
-  maxNearestNodeDistance: 100
-  scanOnStartup: 1
-  fullGetNearestSearch: 0
-  prioritizeGraphs: 0
-  prioritizeGraphsLimit: 1
-  colorSettings:
-    _SolidColor: {r: 0.11764706, g: 0.4, b: 0.7882353, a: 0.9}
-    _UnwalkableNode: {r: 1, g: 0, b: 0, a: 0.5}
-    _BoundsHandles: {r: 0.29, g: 0.454, b: 0.741, a: 0.9}
-    _ConnectionLowLerp: {r: 0, g: 1, b: 0, a: 0.5}
-    _ConnectionHighLerp: {r: 1, g: 0, b: 0, a: 0.5}
-    _MeshEdgeColor: {r: 0, g: 0, b: 0, a: 0.5}
-    _AreaColors:
-    - {r: 0, g: 0, b: 0, a: 0}
-  tagNames: []
-  heuristic: 2
-  heuristicScale: 1
-  threadCount: 1
-  maxFrameTime: 1
-  batchGraphUpdates: 0
-  graphUpdateBatchingInterval: 0.2
-  euclideanEmbedding:
-    mode: 0
-    seed: 0
-    pivotPointRoot: {fileID: 0}
-    spreadOutCount: 1
-  showGraphs: 1
 --- !u!1 &1176929502248974013
 GameObject:
   m_ObjectHideFlags: 0

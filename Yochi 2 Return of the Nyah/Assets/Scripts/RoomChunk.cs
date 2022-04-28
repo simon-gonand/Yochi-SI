@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class RoomChunk : MonoBehaviour
 {
     public Transform self;
     public Transform entryPoint;
     public Transform exitPoint;
+    public Transform pathfindingCentre;
 
     [SerializeField]
     private Collider2D stairsCollider;
     [SerializeField]
     private Collider2D noReturnCollider;
     public Collider2D nextNoReturnCollider;
+
+    // Debug
+    public GameObject daruma;
 
     public List<MurYokai> destroyedGameObject;
 
@@ -39,6 +44,13 @@ public class RoomChunk : MonoBehaviour
             stairsCollider.enabled = false;
             nextNoReturnCollider.enabled = true;
             GameManager.instance.currentRoom = nextNoReturnCollider.GetComponent<RoomChunk>();
+            GameManager.instance.currentRoom.enabled = true;
+            ((GridGraph)AstarPath.active.graphs[0]).center = GameManager.instance.currentRoom.pathfindingCentre.position;
+            AstarPath.active.Scan();
+
+            // Debug
+            if (GameManager.instance.currentRoom.daruma is not null)
+                GameManager.instance.currentRoom.daruma.SetActive(true);
         }
     }
 }
