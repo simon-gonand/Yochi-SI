@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1132662924663911602}
   - component: {fileID: 8675668267994493411}
   - component: {fileID: 8433160207501487802}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Yochi
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -66,6 +66,11 @@ MonoBehaviour:
   cineCamera: {fileID: 0}
   shakeIntensity: 1
   shakeTime: 0.2
+  postProcessVolume: {fileID: 0}
+  yokaiWorldProfile: {fileID: 11400000, guid: c9471e6385bd8404781c36f4645037c9, type: 2}
+  realWorldProfile: {fileID: 11400000, guid: 57ae70958e607774bbc18d3afaa30276, type: 2}
+  yokaiEffectLerpRatio: 15
+  yokaiEffectPrefab: {fileID: 1621319020465530925, guid: bd94b316145b4a248bf7b33ec8f183f8, type: 3}
   isInYokaiWorld: 0
   isInvulnerable: 0
   currentHealthPoint: 0
@@ -194,7 +199,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1510233557
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 792366077, guid: a166f0da760ef0347843c08482602254, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -494,7 +499,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -814257267
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 1307528980, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

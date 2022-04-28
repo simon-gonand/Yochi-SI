@@ -4,21 +4,24 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public enum EnemyType { Doll, Kameosa, Chochin, Daruma};
+    public enum EnemyType { DollHuman, DollYokai, Kameosa, Chochin, Daruma};
 
-    public int dollNumber;
+    public int dollHumanNumber;
+    public int dollYokaiNumber;
     public int kameosaNumber;
     public int chochinNumber;
     public int darumaNumber;
 
-    public GameObject dollPrefab;
+    public GameObject dollHumanPrefab;
+    public GameObject dollYokaiPrefab;
     public GameObject kameosaPrefab;
     public GameObject chochinPrefab;
     public GameObject darumaPrefab;
 
     public List<SpawnPoint> allRoomSpawnPoints;
 
-    private List<SpawnPoint> dollSP;
+    private List<SpawnPoint> dollHumanSP;
+    private List<SpawnPoint> dollYokaiSP;
     private List<SpawnPoint> kameosaSP;
     private List<SpawnPoint> chochinSP;
     private List<SpawnPoint> darumaSP;
@@ -27,7 +30,8 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
-        dollSP = new List<SpawnPoint>();
+        dollHumanSP = new List<SpawnPoint>();
+        dollYokaiSP = new List<SpawnPoint>();
         kameosaSP = new List<SpawnPoint>();
         chochinSP = new List<SpawnPoint>();
         darumaSP = new List<SpawnPoint>();
@@ -35,9 +39,14 @@ public class SpawnManager : MonoBehaviour
 
         for (int i = 0; i < allRoomSpawnPoints.Count; i++)
         {
-            if(allRoomSpawnPoints[i].enemy == EnemyType.Doll)
+            if(allRoomSpawnPoints[i].enemy == EnemyType.DollHuman)
             {
-                dollSP.Add(allRoomSpawnPoints[i]);
+                dollHumanSP.Add(allRoomSpawnPoints[i]);
+            }
+
+            if (allRoomSpawnPoints[i].enemy == EnemyType.DollYokai)
+            {
+                dollYokaiSP.Add(allRoomSpawnPoints[i]);
             }
 
             if (allRoomSpawnPoints[i].enemy == EnemyType.Kameosa)
@@ -61,7 +70,8 @@ public class SpawnManager : MonoBehaviour
 
     public void SpawnAllEnemies(float powerLevelMultiplier)
     {
-        int currDollNumber = Mathf.RoundToInt(dollNumber * powerLevelMultiplier);
+        int currDollHumanNumber = Mathf.RoundToInt(dollHumanNumber * powerLevelMultiplier);
+        int currDollYokaiNumber = Mathf.RoundToInt(dollYokaiNumber * powerLevelMultiplier);
         int currKameosaNumber = Mathf.RoundToInt(kameosaNumber * powerLevelMultiplier);
         int currChochinNumber = Mathf.RoundToInt(chochinNumber * powerLevelMultiplier);
         int currDarumaNumber = Mathf.RoundToInt(darumaNumber * powerLevelMultiplier);
@@ -69,11 +79,19 @@ public class SpawnManager : MonoBehaviour
         int randomSpawnPointIndex = 0;
         Vector2 randomPosInSpawner = Vector2.zero;
         float spawnerRange = 0;
-        for (int i = 0; i < currDollNumber; i++)
+        for (int i = 0; i < currDollHumanNumber; i++)
         {
-            spawnerRange = dollSP[randomSpawnPointIndex].spawnerRange;
-            randomSpawnPointIndex = Random.Range(0, dollSP.Count);
-            allEnemies.Add(Instantiate(dollPrefab, dollSP[randomSpawnPointIndex].transform.position
+            spawnerRange = dollHumanSP[randomSpawnPointIndex].spawnerRange;
+            randomSpawnPointIndex = Random.Range(0, dollHumanSP.Count);
+            allEnemies.Add(Instantiate(dollHumanPrefab, dollHumanSP[randomSpawnPointIndex].transform.position
+                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity));
+        }
+
+        for (int i = 0; i < currDollYokaiNumber; i++)
+        {
+            spawnerRange = dollYokaiSP[randomSpawnPointIndex].spawnerRange;
+            randomSpawnPointIndex = Random.Range(0, dollYokaiSP.Count);
+            allEnemies.Add(Instantiate(dollYokaiPrefab, dollYokaiSP[randomSpawnPointIndex].transform.position
                 + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity));
         }
 

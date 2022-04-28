@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Chochin_Human_Controller
+  m_Controller: {fileID: 9100000, guid: 4b4240cc0c7b9b045a47224f45e5c878, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9ae87db9e9c18884cb8332a0e5d97064, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9ae87db9e9c18884cb8332a0e5d97064, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b3374cd4086efed4a92a1ed59baae449, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c1622f7f84449604e889faf819c02cf6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 58bbf0df870bd73469959e2fde691de7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c1622f7f84449604e889faf819c02cf6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fde9c36da97411a4d8f6ec6830a60252, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: fde9c36da97411a4d8f6ec6830a60252, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 1afae3bb3957d6d46babfe9c1c388f90, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c1622f7f84449604e889faf819c02cf6, type: 2}

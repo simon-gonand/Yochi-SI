@@ -9,19 +9,30 @@ public class EnemyBaseBehaviour : EnemyParent
     public float minDistanceToPlayer;
     public float maxDistanceToPlayer;
     public BulletEmitter emitter;
-    public Animator animator;
+    [HideInInspector]
     public bool canShoot = true;
     private bool isMoving;
+
+    public LayerMask playerWallMask;
 
 
     void Update()
     {        
         RotateEmitter();
 
-        if (CheckObstacle())
+        if (IsObstacleInSight())
             MoveAgent();
         else
             AdjustDistance();
+
+        animator.SetBool("isMoving", isMoving);
+
+        if (yokaiAnimator != null)
+        {
+            yokaiAnimator.SetBool("isMoving", isMoving);
+        }
+
+        UpdateYokaiDisplay();
     }
     
 
@@ -30,6 +41,11 @@ public class EnemyBaseBehaviour : EnemyParent
         if(canShoot)
         {
             emitter.Play();
+            animator.SetBool("isAttacking", true);
+            if (yokaiAnimator != null)
+            {
+                yokaiAnimator.SetBool("isAttacking", true);
+            }
             canShoot = false;
         }        
     }
@@ -44,11 +60,14 @@ public class EnemyBaseBehaviour : EnemyParent
         emitter.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, look));
     }
 
-    private bool CheckObstacle()
+    private bool IsObstacleInSight()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, (playerTransform.position - transform.position), Mathf.Infinity);
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, (playerTransform.position - transform.position), Mathf.Infinity, playerWallMask);
         if (hit.collider.gameObject.Equals(YochiManager.instance.gameObject))
+        {
             return false;
+        }
+
         return true;
     }
 
@@ -63,8 +82,7 @@ public class EnemyBaseBehaviour : EnemyParent
     public void AdjustDistance()
     {
         Vector2 distanceToPlayer = transform.position - playerTransform.position;
-
-        if (Vector2.Distance(transform.position, playerTransform.position) < minDistanceToPlayer)
+        if (distanceToPlayer.magnitude < minDistanceToPlayer)
         {
             targetPosition = (Vector2)playerTransform.position + (distanceToPlayer.normalized * maxDistanceToPlayer);
             CalculatePath();
@@ -74,13 +92,18 @@ public class EnemyBaseBehaviour : EnemyParent
             isMoving = true;
         }
 
-        else if (Vector2.Distance(transform.position, playerTransform.position) > maxDistanceToPlayer)
+        else if (distanceToPlayer.magnitude > maxDistanceToPlayer)
         {
             targetPosition = (Vector2)playerTransform.position + distanceToPlayer.normalized * minDistanceToPlayer;
             CalculatePath();
             UpdateDirection();
             GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
             emitter.Stop();
+            animator.SetBool("isAttacking", false);
+            if (yokaiAnimator != null)
+            {
+                yokaiAnimator.SetBool("isAttacking", false);
+            }
             canShoot = true;
             isMoving = true;
         }
