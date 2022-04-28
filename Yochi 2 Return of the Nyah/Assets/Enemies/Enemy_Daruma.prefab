@@ -59,7 +59,7 @@ MonoBehaviour:
   OnHitByBullet:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8343355435821651307}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: EnemyParent, Assembly-CSharp
         m_MethodName: HitByBullet
         m_Mode: 1
@@ -157,8 +157,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1832120903
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 1546199562, guid: 3ff2b2195883ddd4b9dce22900ab65d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -201,7 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4076422266487337913}
   - component: {fileID: 5580798533681613908}
-  - component: {fileID: 8343355435821651307}
+  - component: {fileID: 809648366}
   m_Layer: 0
   m_Name: Behaviour
   m_TagString: Untagged
@@ -236,13 +236,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d82da02ffb25ff479362d8fb925e858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifePoints: 5
+  seeker: {fileID: 809648366}
+  pathEndReached: 0
+  pathDirection: {x: 0, y: 0}
   speed: 0.8
   minDistanceToPlayer: 2
   maxDistanceToPlayer: 2
   emitter: {fileID: 4076422268100830210}
-  lifePoints: 5
   animator: {fileID: 4076422266252339547}
---- !u!114 &8343355435821651307
+--- !u!114 &809648366
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -251,10 +254,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 4076422266487337915}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2aafd0c1272d724ba004a092a8126f9, type: 3}
+  m_Script: {fileID: 11500000, guid: 373b52eb9bf8c40f785bb6947a1aee66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoints: 5
+  version: 1
+  drawGizmos: 1
+  detailedGizmos: 0
+  startEndModifier:
+    addPoints: 0
+    exactStartPoint: 3
+    exactEndPoint: 3
+    useRaycasting: 0
+    mask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    useGraphRaycasting: 0
+  traversableTags: -1
+  tagPenalties: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  graphMask:
+    value: -1
 --- !u!1 &4076422267119276655
 GameObject:
   m_ObjectHideFlags: 0
