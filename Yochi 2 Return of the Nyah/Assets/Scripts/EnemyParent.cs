@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class EnemyParent : MonoBehaviour
 {
+    public EnemyTypes type;
     public int lifePoints;
     public Seeker seeker;
     public SpriteRenderer render;
 
     protected Transform playerTransform;
     public Vector3 targetPosition;
+    private ScoringManager scoringManager;
 
     private Path path;
     private int currentWaypoint;
@@ -18,10 +20,20 @@ public class EnemyParent : MonoBehaviour
     private float nextWaypointDistance;
     public Vector2 pathDirection;
 
+    public enum EnemyTypes
+    {
+        RealDoll,
+        YokaiDoll,
+        Kameosa,
+        Chochin,
+        Daruma
+    }
+
     private void Start()
     {
         playerTransform = YochiManager.instance.transform;
         targetPosition = playerTransform.position;
+        scoringManager = ScoringManager.instance;
     }
 
     public void HitByBullet()
