@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7050191415793659592}
   - component: {fileID: 7050191415793659593}
   - component: {fileID: 7050191415793659594}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Manekineko
   m_TagString: Untagged
   m_Icon: {fileID: 0}
