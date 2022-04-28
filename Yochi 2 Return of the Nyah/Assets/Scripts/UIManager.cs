@@ -9,13 +9,21 @@ public class UIManager : MonoBehaviour
     public GameObject deathScreen;
     public GameObject realHealthBar;
     public GameObject yokaiHealthBar;
+    public GameObject inGameUI;
     private YochiManager yochi;
+    private ScoringManager scoringManager;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        deathScreen.SetActive(false);
+
+    }
+
+    private void Start()
+    {
         yochi = YochiManager.instance;
+        scoringManager = ScoringManager.instance;
+        deathScreen.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,12 +44,25 @@ public class UIManager : MonoBehaviour
 
         if (yochi.currentHealthPoint <= 0)
         {
+            inGameUI.SetActive(false);
             deathScreen.SetActive(true);
+            scoringManager.PrintScore();
         }
     }
 
     public void Restart()
     {
+        yochi.currentHealthPoint = yochi.maxHealthPoint;
+        inGameUI.SetActive(true);
+        deathScreen.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void ReturnToMenu()
+    {
+        yochi.currentHealthPoint = yochi.maxHealthPoint;
+        inGameUI.SetActive(true);
+        deathScreen.SetActive(false);
+        SceneManager.LoadScene("MainMenu");
     }
 }
