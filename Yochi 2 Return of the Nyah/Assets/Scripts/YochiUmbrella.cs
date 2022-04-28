@@ -53,7 +53,11 @@ public class YochiUmbrella : MonoBehaviour
 
     void Update()
     {
-        UpdateUmbrellaAim();
+        if(YochiManager.instance.currentHealthPoint > 0)
+        {
+            UpdateUmbrellaAim();
+        }
+
         UpdateUmbrellaOrientation();
         UpdateUmbrellaShootState();
     }
@@ -137,27 +141,27 @@ public class YochiUmbrella : MonoBehaviour
 
             if (rechargeTimeRemaining > 0)
             {
-                //rechargeBar.fillAmount = (yokaiRechargeTime - rechargeTimeRemaining) / yokaiRechargeTime;
+                rechargeBar.fillAmount = (yokaiRechargeTime - rechargeTimeRemaining) / yokaiRechargeTime;
                 rechargeTimeRemaining -= Time.deltaTime;
-                //rechargeBar.gameObject.SetActive(true);
+                rechargeBar.gameObject.SetActive(true);
             }
             else
             {
-                //rechargeBar.fillAmount = (float)bulletLeft / (float)yokaiChargerBulletNumber;
-                //rechargeBar.gameObject.SetActive(true);
+                rechargeBar.fillAmount = (float)bulletLeft / (float)yokaiChargerBulletNumber;
+                rechargeBar.gameObject.SetActive(true);
             }
         }
         else
         {
-            //rechargeBar.fillAmount = (realRechargeTime - rechargeTimeRemaining) / realRechargeTime;
+            rechargeBar.fillAmount = (realRechargeTime - rechargeTimeRemaining) / realRechargeTime;
             if (rechargeTimeRemaining > 0)
             {
                 rechargeTimeRemaining -= Time.deltaTime;
-                //rechargeBar.gameObject.SetActive(true);
+                rechargeBar.gameObject.SetActive(true);
             }
             else
             {
-                //rechargeBar.gameObject.SetActive(false);
+                rechargeBar.gameObject.SetActive(false);
             }
         }
 
