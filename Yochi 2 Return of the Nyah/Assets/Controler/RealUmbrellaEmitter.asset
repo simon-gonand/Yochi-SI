@@ -9305,7 +9305,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: 
+      defaultValue: Ennemis
   color:
     valueTree:
     - settings:
