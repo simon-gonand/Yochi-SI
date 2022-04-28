@@ -9,15 +9,23 @@ public class EnemyParent : MonoBehaviour
     public int lifePoints;
     public Seeker seeker;
     public SpriteRenderer render;
+    public Animator animator;
+    public Animator yokaiAnimator;
+    public SpriteRenderer realSprite;
+    public SpriteRenderer yokaiSprite;
 
     protected Transform playerTransform;
+
+    [HideInInspector]
     public Vector3 targetPosition;
     private ScoringManager scoringManager;
 
     private Path path;
     private int currentWaypoint;
+    [HideInInspector]
     public bool pathEndReached;
     private float nextWaypointDistance;
+    [HideInInspector]
     public Vector2 pathDirection;
 
     public enum EnemyTypes
@@ -49,7 +57,13 @@ public class EnemyParent : MonoBehaviour
 
     public IEnumerator DeathFX()
     {
-        yield return new WaitForSeconds(0.21f);
+        animator.SetTrigger("Die");
+        if(yokaiAnimator != null)
+        {
+            yokaiAnimator.SetTrigger("Die");
+        }
+
+        yield return new WaitForSeconds(0.6f);
         //Instantiate death VFX
         Destroy(transform.parent.gameObject);
     }
@@ -92,9 +106,23 @@ public class EnemyParent : MonoBehaviour
 
     public IEnumerator HitFeedback()
     {
+        /*
         render.color = Color.red;
         yield return new WaitForSeconds(0.2f);
-        render.color = Color.white;
+        render.color = Color.white;*/
+        animator.SetTrigger("Hit");
+
+        if (yokaiAnimator != null)
+        {
+            yokaiAnimator.SetTrigger("Hit");
+        }
+        yield return new WaitForSeconds(0.2f);
+    }
+
+    protected void UpdateYokaiDisplay()
+    {
+        realSprite.enabled = !YochiManager.instance.isInYokaiWorld;
+        yokaiSprite.enabled = YochiManager.instance.isInYokaiWorld;
     }
 
 }
