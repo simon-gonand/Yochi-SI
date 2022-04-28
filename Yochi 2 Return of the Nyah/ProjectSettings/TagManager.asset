@@ -65,3 +65,6 @@ TagManager:
   - name: UmbrellaFront
     uniqueID: 3562903989
     locked: 0
+  - name: ObstacleInFrontOfPlayer
+    uniqueID: 3219354797
+    locked: 0
