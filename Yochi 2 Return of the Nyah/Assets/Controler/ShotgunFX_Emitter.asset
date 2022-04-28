@@ -29,7 +29,7 @@ MonoBehaviour:
   foldoutExport: 0
   foldoutEmptyBin: 0
   foldoutCompactMode: 0
-  currentParamsSelected: {fileID: 114917193883442684}
+  currentParamsSelected: {fileID: 114027673760526898}
   numberOfSubAssets: 4
 --- !u!114 &114027673760526898
 MonoBehaviour:
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 10924561
+  uniqueIndex: 1741869
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -3047,7 +3047,7 @@ MonoBehaviour:
   foldoutVFX: 1
   hideSpriteList: 0
   vfxOpened: 0
-  currentlyDisplayedModule: 3
+  currentlyDisplayedModule: 5
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -3501,7 +3501,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: 0
+      defaultValue: 1
   animFoldout: 0
   animationClip: {fileID: 0}
   animationMovementSpace: 0
@@ -7730,7 +7730,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 8542653
+  uniqueIndex: 9660910
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -7957,7 +7957,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: 3
+      defaultValue: 1
     useSlider: 0
     sliderMin: 0
     sliderMax: 0
@@ -7967,17 +7967,9 @@ MonoBehaviour:
     bulletOrigin: {x: 0, y: 0, z: 0}
     useDifferentBullet: 0
     bulletParams: {fileID: 0}
-  - index: 1
-    bulletOrigin: {x: 0, y: 0, z: 0}
-    useDifferentBullet: 0
-    bulletParams: {fileID: 0}
-  - index: 2
-    bulletOrigin: {x: 0, y: 0, z: 0}
-    useDifferentBullet: 0
-    bulletParams: {fileID: 0}
   hasUnknownBulletAmount: 0
   modifiers:
-  - modifierType: 0
+  - modifierType: 3
     globalMovement:
       valueTree:
       - settings:
@@ -7987,9 +7979,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -8039,8 +8031,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -8048,8 +8040,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -8097,9 +8089,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -8149,8 +8141,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -8158,8 +8150,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -8197,7 +8189,7 @@ MonoBehaviour:
           parameterType: 0
           relativeTo: 0
           parameterName: 
-        defaultValue: {x: 0, y: 0}
+        defaultValue: {x: 0, y: 1}
     pointToLookAt:
       valueTree:
       - settings:
@@ -8207,9 +8199,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -8259,8 +8251,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -8268,8 +8260,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -8317,9 +8309,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -8369,8 +8361,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -8378,8 +8370,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -8427,9 +8419,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -8479,8 +8471,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -8488,8 +8480,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -8537,9 +8529,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -8589,8 +8581,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -8598,8 +8590,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -8647,9 +8639,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -8699,8 +8691,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -8708,8 +8700,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -8757,9 +8749,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -8809,8 +8801,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -8818,8 +8810,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -8867,9 +8859,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -8919,8 +8911,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -8928,8 +8920,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -8977,9 +8969,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -9029,8 +9021,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -9038,8 +9030,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -9087,9 +9079,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -9139,8 +9131,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -9148,8 +9140,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -9197,9 +9189,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -9249,8 +9241,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -9258,8 +9250,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -9297,7 +9289,7 @@ MonoBehaviour:
           parameterType: 0
           relativeTo: 0
           parameterName: 
-        defaultValue: 30
+        defaultValue: 0
       useSlider: 0
       sliderMin: 0
       sliderMax: 0
@@ -9310,9 +9302,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -9362,8 +9354,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -9371,8 +9363,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -9423,9 +9415,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -9475,8 +9467,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -9484,8 +9476,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -9536,9 +9528,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -9588,8 +9580,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -9597,8 +9589,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -9649,9 +9641,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -9701,8 +9693,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -9710,8 +9702,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -9762,9 +9754,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -9814,8 +9806,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -9823,8 +9815,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -9875,9 +9867,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -9927,8 +9919,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -9936,8 +9928,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -9993,9 +9985,9 @@ MonoBehaviour:
             repartitionCurve:
               serializedVersion: 2
               m_Curve: []
-              m_PreInfinity: 2
-              m_PostInfinity: 2
-              m_RotationOrder: 4
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
             shareValueBetweenInstances: 0
             rerollFrequency: 0
             interpolationFactorFromShot: 0
@@ -10045,8 +10037,8 @@ MonoBehaviour:
                 outSlope: 1
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               - serializedVersion: 3
                 time: 1
                 value: 1
@@ -10054,8 +10046,8 @@ MonoBehaviour:
                 outSlope: 0
                 tangentMode: 0
                 weightedMode: 0
-                inWeight: 0.33333334
-                outWeight: 0.33333334
+                inWeight: 0
+                outWeight: 0
               m_PreInfinity: 2
               m_PostInfinity: 2
               m_RotationOrder: 4
@@ -10097,29 +10089,21 @@ MonoBehaviour:
     numberOfModifiersAffected: 0
     selectionRects: []
     indexesOfBulletsAffected: 
-    selectionColor: {r: 0, g: 0, b: 0, a: 0}
+    selectionColor: {r: 0.84369504, g: 0.8787298, b: 0.09160021, a: 0.3}
     pivotColor: {r: 0, g: 0, b: 1, a: 1}
     isEditingSelection: 0
-    selectionRectsVisible: 0
+    selectionRectsVisible: 1
     postEffectBulletSpawns:
     - index: 0
-      bulletOrigin: {x: 0, y: 0, z: 30}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 1
-      bulletOrigin: {x: 0, y: 0, z: 0}
-      useDifferentBullet: 0
-      bulletParams: {fileID: 0}
-    - index: 2
-      bulletOrigin: {x: 0, y: 0, z: -30}
+      bulletOrigin: {x: 0, y: 1, z: 0}
       useDifferentBullet: 0
       bulletParams: {fileID: 0}
     enabled: 1
   bulletParamsRandom: 0
   listOfPossibleBulletParams: []
   possibleBulletParams: 0
-  highestValues: {x: 0, y: 0, z: 30}
-  lowestValues: {x: 0, y: 0, z: -30}
+  highestValues: {x: 0, y: 1, z: 0}
+  lowestValues: {x: 0, y: 1, z: 0}
   hasBeenSerializedOnce: 1
   fakeBulletAmount: 0
   foldout0: 0
@@ -10164,7 +10148,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 3713870
+  uniqueIndex: 9962866
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -11680,7 +11664,7 @@ MonoBehaviour:
       unless: 0
       canceller: 0
     onBulletDeath:
-      enabled: 1
+      enabled: 0
       behaviour: 0
       unless: 0
       canceller: 0
@@ -12484,7 +12468,7 @@ MonoBehaviour:
   foldoutVFX: 0
   hideSpriteList: 0
   vfxOpened: 0
-  currentlyDisplayedModule: 6
+  currentlyDisplayedModule: 2
   canMove: 0
   canCollide: 0
   isVisible: 0
@@ -17258,7 +17242,491 @@ MonoBehaviour:
     typeName: UnityEngine.AudioClip, UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral,
       PublicKeyToken=null
     requiredComponentName: 
-  customParameters: []
+  customParameters:
+  - type: 2
+    name: lifetime
+    intValue:
+      valueTree: []
+      useSlider: 0
+      sliderMin: 0
+      sliderMax: 0
+      buttons: 
+    floatValue:
+      valueTree:
+      - settings:
+          valueType: 0
+          interpolationValue:
+            interpolationFactor: 0
+            repartitionCurve:
+              serializedVersion: 2
+              m_Curve: []
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
+            shareValueBetweenInstances: 0
+            rerollFrequency: 0
+            interpolationFactorFromShot: 0
+            interpolationFactorFromPattern: 0
+            interpolationFactorFromBullet: 0
+            relativeTo: 0
+            parameterName: 
+            loopDepth: 0
+            useComplexRerollSequence: 0
+            checkEveryNLoops: 0
+            loopSequence: 0
+            period: 0
+            wrapMode: 0
+            sortMode: 0
+            sortDirection: 0
+            repartitionTexture: {fileID: 0}
+            centerX: 0
+            centerY: 0
+            radius: 0
+            wrapPoint: 0
+            countClockwise: 0
+            differentValuesPerShot: 0
+          combinedInterpolationFactors: 0
+          index: 0
+          indexOfParent: 0
+          indexOfFrom: 0
+          indexOfTo: 0
+          indexOfBlendedChildren: 
+          weight: 0
+          headerTitle: 
+          blendColor: {r: 0, g: 0, b: 0, a: 0}
+          parameterType: 0
+          relativeTo: 0
+          parameterName: 
+        defaultValue: 0
+      - settings:
+          valueType: 0
+          interpolationValue:
+            interpolationFactor: 0
+            repartitionCurve:
+              serializedVersion: 2
+              m_Curve:
+              - serializedVersion: 3
+                time: 0
+                value: 0
+                inSlope: 0
+                outSlope: 1
+                tangentMode: 0
+                weightedMode: 0
+                inWeight: 0
+                outWeight: 0
+              - serializedVersion: 3
+                time: 1
+                value: 1
+                inSlope: 1
+                outSlope: 0
+                tangentMode: 0
+                weightedMode: 0
+                inWeight: 0
+                outWeight: 0
+              m_PreInfinity: 2
+              m_PostInfinity: 2
+              m_RotationOrder: 4
+            shareValueBetweenInstances: 0
+            rerollFrequency: 0
+            interpolationFactorFromShot: 0
+            interpolationFactorFromPattern: 0
+            interpolationFactorFromBullet: 0
+            relativeTo: 0
+            parameterName: 
+            loopDepth: 0
+            useComplexRerollSequence: 0
+            checkEveryNLoops: 0
+            loopSequence: 0
+            period: 0
+            wrapMode: 0
+            sortMode: 0
+            sortDirection: 0
+            repartitionTexture: {fileID: 0}
+            centerX: 0
+            centerY: 0
+            radius: 0
+            wrapPoint: 0
+            countClockwise: 0
+            differentValuesPerShot: 0
+          combinedInterpolationFactors: 0
+          index: 1
+          indexOfParent: 0
+          indexOfFrom: 0
+          indexOfTo: 0
+          indexOfBlendedChildren: 
+          weight: 0
+          headerTitle: Float Value
+          blendColor: {r: 0, g: 0, b: 0, a: 0}
+          parameterType: 0
+          relativeTo: 0
+          parameterName: 
+        defaultValue: 0.75
+      useSlider: 0
+      sliderMin: 0
+      sliderMax: 0
+    sliderValue:
+      valueTree: []
+    doubleValue: 0
+    longValue: 0
+    boolValue:
+      valueTree: []
+    stringValue:
+      valueTree: []
+    colorValue:
+      valueTree:
+      - settings:
+          valueType: 0
+          interpolationValue:
+            interpolationFactor: 0
+            repartitionCurve:
+              serializedVersion: 2
+              m_Curve: []
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
+            shareValueBetweenInstances: 0
+            rerollFrequency: 0
+            interpolationFactorFromShot: 0
+            interpolationFactorFromPattern: 0
+            interpolationFactorFromBullet: 0
+            relativeTo: 0
+            parameterName: 
+            loopDepth: 0
+            useComplexRerollSequence: 0
+            checkEveryNLoops: 0
+            loopSequence: 0
+            period: 0
+            wrapMode: 0
+            sortMode: 0
+            sortDirection: 0
+            repartitionTexture: {fileID: 0}
+            centerX: 0
+            centerY: 0
+            radius: 0
+            wrapPoint: 0
+            countClockwise: 0
+            differentValuesPerShot: 0
+          combinedInterpolationFactors: 0
+          index: 0
+          indexOfParent: 0
+          indexOfFrom: 0
+          indexOfTo: 0
+          indexOfBlendedChildren: 
+          weight: 0
+          headerTitle: 
+          blendColor: {r: 0, g: 0, b: 0, a: 0}
+          parameterType: 0
+          relativeTo: 0
+          parameterName: 
+        defaultValue: {r: 0, g: 0, b: 0, a: 0}
+        gradientValue:
+          serializedVersion: 2
+          key0: {r: 0, g: 0, b: 0, a: 0}
+          key1: {r: 0, g: 0, b: 0, a: 0}
+          key2: {r: 0, g: 0, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 65535
+          ctime2: 0
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 2
+          m_NumAlphaKeys: 2
+      - settings:
+          valueType: 0
+          interpolationValue:
+            interpolationFactor: 0
+            repartitionCurve:
+              serializedVersion: 2
+              m_Curve:
+              - serializedVersion: 3
+                time: 0
+                value: 0
+                inSlope: 0
+                outSlope: 1
+                tangentMode: 0
+                weightedMode: 0
+                inWeight: 0
+                outWeight: 0
+              - serializedVersion: 3
+                time: 1
+                value: 1
+                inSlope: 1
+                outSlope: 0
+                tangentMode: 0
+                weightedMode: 0
+                inWeight: 0
+                outWeight: 0
+              m_PreInfinity: 2
+              m_PostInfinity: 2
+              m_RotationOrder: 4
+            shareValueBetweenInstances: 0
+            rerollFrequency: 0
+            interpolationFactorFromShot: 0
+            interpolationFactorFromPattern: 0
+            interpolationFactorFromBullet: 0
+            relativeTo: 0
+            parameterName: 
+            loopDepth: 0
+            useComplexRerollSequence: 0
+            checkEveryNLoops: 0
+            loopSequence: 0
+            period: 0
+            wrapMode: 0
+            sortMode: 0
+            sortDirection: 0
+            repartitionTexture: {fileID: 0}
+            centerX: 0
+            centerY: 0
+            radius: 0
+            wrapPoint: 0
+            countClockwise: 0
+            differentValuesPerShot: 0
+          combinedInterpolationFactors: 0
+          index: 1
+          indexOfParent: 0
+          indexOfFrom: 0
+          indexOfTo: 0
+          indexOfBlendedChildren: 
+          weight: 0
+          headerTitle: 
+          blendColor: {r: 0, g: 0, b: 0, a: 0}
+          parameterType: 0
+          relativeTo: 0
+          parameterName: 
+        defaultValue: {r: 0, g: 0, b: 0, a: 1}
+        gradientValue:
+          serializedVersion: 2
+          key0: {r: 0, g: 0, b: 0, a: 0}
+          key1: {r: 0, g: 0, b: 0, a: 0}
+          key2: {r: 0, g: 0, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 65535
+          ctime2: 0
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 2
+          m_NumAlphaKeys: 2
+    gradientValue:
+      valueTree:
+      - settings:
+          valueType: 0
+          interpolationValue:
+            interpolationFactor: 0
+            repartitionCurve:
+              serializedVersion: 2
+              m_Curve: []
+              m_PreInfinity: 0
+              m_PostInfinity: 0
+              m_RotationOrder: 0
+            shareValueBetweenInstances: 0
+            rerollFrequency: 0
+            interpolationFactorFromShot: 0
+            interpolationFactorFromPattern: 0
+            interpolationFactorFromBullet: 0
+            relativeTo: 0
+            parameterName: 
+            loopDepth: 0
+            useComplexRerollSequence: 0
+            checkEveryNLoops: 0
+            loopSequence: 0
+            period: 0
+            wrapMode: 0
+            sortMode: 0
+            sortDirection: 0
+            repartitionTexture: {fileID: 0}
+            centerX: 0
+            centerY: 0
+            radius: 0
+            wrapPoint: 0
+            countClockwise: 0
+            differentValuesPerShot: 0
+          combinedInterpolationFactors: 0
+          index: 0
+          indexOfParent: 0
+          indexOfFrom: 0
+          indexOfTo: 0
+          indexOfBlendedChildren: 
+          weight: 0
+          headerTitle: 
+          blendColor: {r: 0, g: 0, b: 0, a: 0}
+          parameterType: 0
+          relativeTo: 0
+          parameterName: 
+        defaultValue:
+          serializedVersion: 2
+          key0: {r: 0, g: 0, b: 0, a: 0}
+          key1: {r: 0, g: 0, b: 0, a: 0}
+          key2: {r: 0, g: 0, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 65535
+          ctime2: 0
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 2
+          m_NumAlphaKeys: 2
+      - settings:
+          valueType: 0
+          interpolationValue:
+            interpolationFactor: 0
+            repartitionCurve:
+              serializedVersion: 2
+              m_Curve:
+              - serializedVersion: 3
+                time: 0
+                value: 0
+                inSlope: 0
+                outSlope: 1
+                tangentMode: 0
+                weightedMode: 0
+                inWeight: 0
+                outWeight: 0
+              - serializedVersion: 3
+                time: 1
+                value: 1
+                inSlope: 1
+                outSlope: 0
+                tangentMode: 0
+                weightedMode: 0
+                inWeight: 0
+                outWeight: 0
+              m_PreInfinity: 2
+              m_PostInfinity: 2
+              m_RotationOrder: 4
+            shareValueBetweenInstances: 0
+            rerollFrequency: 0
+            interpolationFactorFromShot: 0
+            interpolationFactorFromPattern: 0
+            interpolationFactorFromBullet: 0
+            relativeTo: 0
+            parameterName: 
+            loopDepth: 0
+            useComplexRerollSequence: 0
+            checkEveryNLoops: 0
+            loopSequence: 0
+            period: 0
+            wrapMode: 0
+            sortMode: 0
+            sortDirection: 0
+            repartitionTexture: {fileID: 0}
+            centerX: 0
+            centerY: 0
+            radius: 0
+            wrapPoint: 0
+            countClockwise: 0
+            differentValuesPerShot: 0
+          combinedInterpolationFactors: 0
+          index: 1
+          indexOfParent: 0
+          indexOfFrom: 0
+          indexOfTo: 0
+          indexOfBlendedChildren: 
+          weight: 0
+          headerTitle: 
+          blendColor: {r: 0, g: 0, b: 0, a: 0}
+          parameterType: 0
+          relativeTo: 0
+          parameterName: 
+        defaultValue:
+          serializedVersion: 2
+          key0: {r: 0, g: 0, b: 0, a: 1}
+          key1: {r: 0, g: 0, b: 0, a: 1}
+          key2: {r: 0, g: 0, b: 0, a: 0}
+          key3: {r: 0, g: 0, b: 0, a: 0}
+          key4: {r: 0, g: 0, b: 0, a: 0}
+          key5: {r: 0, g: 0, b: 0, a: 0}
+          key6: {r: 0, g: 0, b: 0, a: 0}
+          key7: {r: 0, g: 0, b: 0, a: 0}
+          ctime0: 0
+          ctime1: 65535
+          ctime2: 0
+          ctime3: 0
+          ctime4: 0
+          ctime5: 0
+          ctime6: 0
+          ctime7: 0
+          atime0: 0
+          atime1: 65535
+          atime2: 0
+          atime3: 0
+          atime4: 0
+          atime5: 0
+          atime6: 0
+          atime7: 0
+          m_Mode: 0
+          m_NumColorKeys: 2
+          m_NumAlphaKeys: 2
+    animationCurveValue:
+      valueTree: []
+      forceZeroToOne: 0
+    vector2Value:
+      valueTree: []
+    vector3Value:
+      valueTree: []
+    vector4Value:
+      valueTree: []
+    quaternionValue: {x: 0, y: 0, z: 0, w: 0}
+    rectValue:
+      valueTree: []
+    boundsValue:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0, y: 0, z: 0}
+    objectReferenceValue:
+      valueTree: []
+      narrowType: 0
+      requireComponent: 0
+      typeName: 
+      requiredComponentName: 
   preview:
     collidersTex: {fileID: 0}
     sprite: {fileID: 0}
@@ -17276,7 +17744,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 13638448
+  uniqueIndex: 10586838
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -31908,7 +32376,7 @@ MonoBehaviour:
             parameterName: 
           defaultValue: 0
         - settings:
-            valueType: 0
+            valueType: 4
             interpolationValue:
               interpolationFactor: 0
               repartitionCurve:
@@ -31964,12 +32432,12 @@ MonoBehaviour:
             indexOfTo: 0
             indexOfBlendedChildren: 
             weight: 0
-            headerTitle: 
+            headerTitle: Wait Time
             blendColor: {r: 0, g: 0, b: 0, a: 0}
             parameterType: 0
             relativeTo: 0
-            parameterName: 
-          defaultValue: 1
+            parameterName: lifetime
+          defaultValue: 0.75
         useSlider: 0
         sliderMin: 0
         sliderMax: 0
@@ -46423,4 +46891,4 @@ MonoBehaviour:
   advancedFoldout: 0
   hasBeenSerializedOnce: 1
   focusedInstruction: -1
-  safetyForPlaymode: 24
+  safetyForPlaymode: 41
