@@ -10,22 +10,18 @@ public class EnemyBaseBehaviour : EnemyParent
     public float maxDistanceToPlayer;
     public BulletEmitter emitter;
     public Animator animator;
-    private Transform playerPos;    
     public bool canShoot = true;
     private bool isMoving;
-
-
-    void Start()
-    {
-        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-    }
 
 
     void Update()
     {        
         RotateEmitter();
 
-        MoveAgent();
+        if (CheckObstacle())
+            MoveAgent();
+        else
+            AdjustDistance();
     }
     
 
@@ -40,7 +36,7 @@ public class EnemyBaseBehaviour : EnemyParent
 
     public void RotateEmitter()
     {
-        Vector2 look = playerPos.position - emitter.transform.position;
+        Vector2 look = playerTransform.position - emitter.transform.position;
         if (look.normalized.x < 0)
         {
             animator.gameObject.GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
@@ -48,20 +44,42 @@ public class EnemyBaseBehaviour : EnemyParent
         emitter.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, look));
     }
 
-    public void MoveAgent()
+    private bool CheckObstacle()
     {
-        Vector2 distanceToPlayer = transform.position - playerPos.position;
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, (playerTransform.position - transform.position), Mathf.Infinity);
+        if (hit.collider.gameObject.Equals(YochiManager.instance.gameObject))
+            return false;
+        return true;
+    }
 
-        if (distanceToPlayer.magnitude < minDistanceToPlayer)
+    private void MoveAgent()
+    {
+        targetPosition = playerTransform.position;
+        CalculatePath();
+        UpdateDirection();
+        GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
+    }
+
+    public void AdjustDistance()
+    {
+        Vector2 distanceToPlayer = transform.position - playerTransform.position;
+
+        if (Vector2.Distance(transform.position, playerTransform.position) < minDistanceToPlayer)
         {
-            GetComponentInParent<Rigidbody2D>().velocity = distanceToPlayer.normalized * speed;
+            targetPosition = (Vector2)playerTransform.position + (distanceToPlayer.normalized * maxDistanceToPlayer);
+            CalculatePath();
+            UpdateDirection();
+            GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
             StartShooting();
             isMoving = true;
         }
 
-        else if (distanceToPlayer.magnitude > maxDistanceToPlayer)
+        else if (Vector2.Distance(transform.position, playerTransform.position) > maxDistanceToPlayer)
         {
-            GetComponentInParent<Rigidbody2D>().velocity = -distanceToPlayer.normalized * speed;
+            targetPosition = (Vector2)playerTransform.position + distanceToPlayer.normalized * minDistanceToPlayer;
+            CalculatePath();
+            UpdateDirection();
+            GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
             emitter.Stop();
             canShoot = true;
             isMoving = true;

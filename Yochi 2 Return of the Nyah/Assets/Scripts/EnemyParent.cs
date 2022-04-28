@@ -9,6 +9,7 @@ public class EnemyParent : MonoBehaviour
     public Seeker seeker;
 
     protected Transform playerTransform;
+    public Vector3 targetPosition;
 
     private Path path;
     private int currentWaypoint;
@@ -19,6 +20,7 @@ public class EnemyParent : MonoBehaviour
     private void Start()
     {
         playerTransform = YochiManager.instance.transform;
+        targetPosition = playerTransform.position;
     }
 
     public void HitByBullet()
@@ -48,7 +50,7 @@ public class EnemyParent : MonoBehaviour
 
     protected void CalculatePath()
     {
-        seeker.StartPath(transform.position, playerTransform.position, OnPathComplete);
+        seeker.StartPath(transform.position, targetPosition, OnPathComplete);
     }
 
     protected void UpdateDirection()

@@ -73,10 +73,9 @@ public class EnemyDaruma : EnemyParent
         {
             
             animator.SetBool("isRolling", true);
-            //GetComponentInParent<Rigidbody2D>().velocity = -distanceToPlayer.normalized * speed;
             CalculatePath();
             UpdateDirection();
-            GetComponentInParent<Rigidbody2D>().velocity = GetComponent<EnemyParent>().pathDirection * speed;
+            GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
         }
     }
 }
