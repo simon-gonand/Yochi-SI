@@ -5,10 +5,13 @@ using UnityEngine;
 public class EnemyParent : MonoBehaviour
 {
     public int lifePoints;
+    public SpriteRenderer render;
 
     public void HitByBullet()
     {
         lifePoints -= 1;
+        StartCoroutine(HitFeedback());
+
         if (lifePoints <= 0)
         {
             StartCoroutine(DeathFX());
@@ -21,4 +24,12 @@ public class EnemyParent : MonoBehaviour
         //Instantiate death VFX
         Destroy(transform.parent.gameObject);
     }
+
+    public IEnumerator HitFeedback()
+    {
+        render.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        render.color = Color.white;
+    }
+
 }
