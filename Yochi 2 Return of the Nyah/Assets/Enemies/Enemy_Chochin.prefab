@@ -237,6 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifePoints: 5
+  render: {fileID: 0}
   speed: 0.5
   minDistanceToPlayer: 5
   maxDistanceToPlayer: 5.2
@@ -256,6 +257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifePoints: 5
+  render: {fileID: 4076422266252339544}
 --- !u!1 &4076422267119276655
 GameObject:
   m_ObjectHideFlags: 0

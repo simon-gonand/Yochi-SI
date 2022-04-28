@@ -7,6 +7,7 @@ public class EnemyParent : MonoBehaviour
 {
     public int lifePoints;
     public Seeker seeker;
+    public SpriteRenderer render;
 
     protected Transform playerTransform;
     public Vector3 targetPosition;
@@ -26,6 +27,8 @@ public class EnemyParent : MonoBehaviour
     public void HitByBullet()
     {
         lifePoints -= 1;
+        StartCoroutine(HitFeedback());
+
         if (lifePoints <= 0)
         {
             StartCoroutine(DeathFX());
@@ -74,4 +77,12 @@ public class EnemyParent : MonoBehaviour
             }
         }
     }
+
+    public IEnumerator HitFeedback()
+    {
+        render.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        render.color = Color.white;
+    }
+
 }
