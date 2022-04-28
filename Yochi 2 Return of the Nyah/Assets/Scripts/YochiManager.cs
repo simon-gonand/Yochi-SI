@@ -4,6 +4,8 @@ using UnityEngine;
 using BulletPro;
 using UnityEngine.UI;
 using Cinemachine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class YochiManager : MonoBehaviour
 {
@@ -21,6 +23,11 @@ public class YochiManager : MonoBehaviour
     public CinemachineVirtualCamera cineCamera;
     public float shakeIntensity;
     public float shakeTime;
+    public Volume postProcessVolume;
+    public VolumeProfile yokaiWorldProfile;
+    public VolumeProfile realWorldProfile;
+    public float yokaiEffectLerpRatio;
+    public GameObject yokaiEffectPrefab;
 
     [HideInInspector]
     public bool isInYokaiWorld;
@@ -29,7 +36,10 @@ public class YochiManager : MonoBehaviour
     private BulletReceiver bulletReceiver;
     [HideInInspector]
     public bool isInvulnerable;
+    [HideInInspector]
     public int currentHealthPoint;
+
+    private VolumeProfile currentProfile;
 
     private void Awake()
     {
@@ -43,6 +53,11 @@ public class YochiManager : MonoBehaviour
         isInYokaiWorld = false;
         SwitchWorld(isInYokaiWorld);
         currentHealthPoint = maxHealthPoint;
+
+        yokaiEffectCurrentState = 0;
+        currentProfile = Instantiate(yokaiWorldProfile);
+
+        postProcessVolume.sharedProfile = currentProfile;
     }
 
     void Update()
@@ -52,6 +67,7 @@ public class YochiManager : MonoBehaviour
             SwitchWorld(!isInYokaiWorld);
         }
         InvulnerableTimeUpdate();
+        UpdatePostProcess();
     }
 
     public void SwitchWorld(bool isYokaiWorld)
@@ -66,6 +82,8 @@ public class YochiManager : MonoBehaviour
         {
             spriteRenderer.color = yokaiWorldColor;
             bulletReceiver.collisionTags = collisionInYokaiWorld;
+
+            Instantiate(yokaiEffectPrefab, transform.position, Quaternion.identity);
             //Debug.Log("Switch to Yokai world");
         }
         isInYokaiWorld = isYokaiWorld;
@@ -94,13 +112,23 @@ public class YochiManager : MonoBehaviour
         {
             isInvulnerable = true;
             invulTimeRemaining = invulnerableTime;
-            StartCoroutine(ShakeImpact());
             if (currentHealthPoint > 0)
             {
                 currentHealthPoint--;
                 //feedback d�gats
+                animator.SetTrigger("Hit");
+                StartCoroutine(ShakeImpact());
+                if (currentHealthPoint <= 0)
+                {
+                    Die();
+                }
             }
         }
+    }
+
+    public void Die()
+    {
+        animator.SetTrigger("Die");
     }
 
     public IEnumerator ShakeImpact()
@@ -123,5 +151,31 @@ public class YochiManager : MonoBehaviour
         currentHealthPoint += hp;
 
         //feedback heal
+    }
+
+    private float lastRealTime;
+    private float yokaiEffectCurrentState;
+    private void UpdatePostProcess()
+    {
+        if (isInYokaiWorld)
+        {
+            yokaiEffectCurrentState = Mathf.Lerp(yokaiEffectCurrentState, 1, yokaiEffectLerpRatio * (Time.realtimeSinceStartup - lastRealTime));
+
+        }
+        else
+        {
+            if (yokaiEffectCurrentState < 0.01f)
+            {
+                yokaiEffectCurrentState = 0;
+                //postProcessVolume.sharedProfile = realWorldProfile;
+            }
+            else
+            {
+                yokaiEffectCurrentState = Mathf.Lerp(yokaiEffectCurrentState, 0, yokaiEffectLerpRatio * (Time.realtimeSinceStartup - lastRealTime));
+            }
+        }
+
+        postProcessVolume.weight = yokaiEffectCurrentState;
+        lastRealTime = Time.realtimeSinceStartup;
     }
 }

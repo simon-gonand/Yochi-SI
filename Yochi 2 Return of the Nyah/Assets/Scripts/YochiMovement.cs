@@ -22,7 +22,14 @@ public class YochiMovement : MonoBehaviour
 
         targetMovementVelocity = Vector2.ClampMagnitude(leftJoytsickInput, 1);
 
-        rb.velocity = leftJoytsickInput * movementMaxSpeed;
+        if(YochiManager.instance.currentHealthPoint > 0)
+        {
+            rb.velocity = leftJoytsickInput * movementMaxSpeed;
+        }
+        else
+        {
+            rb.velocity = Vector2.zero;
+        }
 
         animator.SetBool("isMoving", rb.velocity.magnitude > 0.1f);
     }
