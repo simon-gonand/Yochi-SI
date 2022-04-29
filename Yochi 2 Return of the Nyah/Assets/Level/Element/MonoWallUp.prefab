@@ -165,7 +165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6244629410342323493, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6244629410342323493, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
       propertyPath: isAlwaysHere
@@ -182,7 +182,7 @@ PrefabInstance:
     - target: {fileID: 6244629410342323493, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
       propertyPath: realWorldInvisibleSprite
       value: 
-      objectReference: {fileID: 1412746318, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
+      objectReference: {fileID: 1504248368, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
     - target: {fileID: 6244629410342323494, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
       propertyPath: startingChildren.Array.data[0]
       value: 

@@ -13,7 +13,6 @@ public class MurMonoMonde : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
     private BulletReceiver receiver;
-    public bool isAlwaysHere;
 
     // Start is called before the first frame update
     void Start()
@@ -38,48 +37,38 @@ public class MurMonoMonde : MonoBehaviour
             if (YochiManager.instance.isInYokaiWorld)
             {
                 spriteRenderer.sprite = yokaiWorldVisibleSprite;
-                if(isAlwaysHere == false)
-                {
-                    boxCollider.enabled = true;
-                    receiver.enabled = true;
-                    spriteRenderer.color = new Color(1f,1f,1f,1f);
-                }
+                boxCollider.enabled = true;
+                receiver.enabled = true;
+                spriteRenderer.color = new Color(1f,1f,1f,1f);
+
 
             }
             else
             {
                 spriteRenderer.sprite = yokaiWorldInvisibleSprite;
-                if (isAlwaysHere == false)
-                {
-                    boxCollider.enabled = false;
-                    receiver.enabled = false;
-                    spriteRenderer.color = new Color(1f,1f,1f,0.2f);
-                }
-
+                boxCollider.enabled = false;
+                receiver.enabled = false;
+                spriteRenderer.color = new Color(1f,1f,1f,0.2f);
             }
+            
         }
         else
         {
             if (YochiManager.instance.isInYokaiWorld)
             {
                 spriteRenderer.sprite = realWorldInvisibleSprite;
-                if (isAlwaysHere == false)
-                {
-                    boxCollider.enabled = false;
-                    receiver.enabled = false;
-                    spriteRenderer.color = new Color(1f,1f,1f,0.2f);
-                }
+                boxCollider.enabled = false;
+                receiver.enabled = false;
+                spriteRenderer.color = new Color(1f,1f,1f,0.2f);
 
             }
             else
             {
                 spriteRenderer.sprite = realWorldVisibleSprite;
-                if (isAlwaysHere == false)
-                {
-                    boxCollider.enabled = true;
-                    receiver.enabled = true;
-                    spriteRenderer.color = new Color(1f,1f,1f,1f);    
-                }
+                boxCollider.enabled = true;
+                receiver.enabled = true;
+                spriteRenderer.color = new Color(1f,1f,1f,1f);    
+
 
             }
         }
