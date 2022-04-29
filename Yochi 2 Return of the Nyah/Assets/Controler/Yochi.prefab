@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugDamage: 0
-  maxHealthPoint: 6
-  invulnerableTime: 0.2
+  maxHealthPoint: 10
+  invulnerableTime: 0.75
   healthBar: {fileID: 0}
   spriteRenderer: {fileID: 1132662924663911604}
   realWorldColor: {r: 1, g: 1, b: 1, a: 1}

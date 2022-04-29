@@ -158,7 +158,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1832120903
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 405656284, guid: 8afb6a77c7f8b3a4b832db5c8ae1f8cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  lifePoints: 15
+  lifePoints: 5
   seeker: {fileID: 3988622136572903879}
   render: {fileID: 4076422266252339544}
   animator: {fileID: 4076422266252339547}
@@ -249,11 +249,11 @@ MonoBehaviour:
   pathDirection: {x: 0, y: 0}
   pathUpdateCooldown: 2
   speed: 2
-  minDistanceToPlayer: 7
-  maxDistanceToPlayer: 9
+  minDistanceToPlayer: 5
+  maxDistanceToPlayer: 10
   emitter: {fileID: 4076422268100830210}
   canShoot: 0
-  salveCD: 1
+  salveCD: 3
   playerWallMask:
     serializedVersion: 2
     m_Bits: 384
@@ -482,7 +482,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1832120903
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 405656284, guid: 8afb6a77c7f8b3a4b832db5c8ae1f8cf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

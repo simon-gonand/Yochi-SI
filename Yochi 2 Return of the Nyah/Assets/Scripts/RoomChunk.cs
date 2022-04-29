@@ -55,7 +55,7 @@ public class RoomChunk : MonoBehaviour
             GameManager.instance.currentRoom.enabled = true;
             ((GridGraph)AstarPath.active.graphs[0]).center = GameManager.instance.currentRoom.pathfindingCentre.position;
             AstarPath.active.Scan();
-            GameManager.instance.currentRoom.spawnManager.SpawnAllEnemies(1 + (GameManager.instance.level * GameManager.instance.enemyMultiplier));
+            GameManager.instance.currentRoom.spawnManager.SpawnAllEnemies(GameManager.instance.basePowerLevelValue + (GameManager.instance.level * GameManager.instance.enemyMultiplier));
         }
     }
 
