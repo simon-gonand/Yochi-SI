@@ -48,7 +48,7 @@ MonoBehaviour:
   defaultParent: {fileID: 0}
   startIsolatedFromBullet: 0
   lifetimeAfterBulletDeath: 0
-  yokaiBulletYokaiWorld: {fileID: 21300000, guid: 5703234e5a15a004fb333f05fe60c456, type: 3}
-  yokaiBulletRealWorld: {fileID: 21300000, guid: 27c9e9d8551131b43ba0cd4ee09d5ebe, type: 3}
-  realBulletYokaiWorld: {fileID: 21300000, guid: aca8b89c0ae166e4ca44ea330aeb467d, type: 3}
-  realBulletRealWorld: {fileID: 21300000, guid: 77227e3631acd4342a8ab0b66a3ffaac, type: 3}
+  yokaiBulletYokaiWorld: {fileID: 21300000, guid: bfbc303654365a040b511aa65b2278ac, type: 3}
+  yokaiBulletRealWorld: {fileID: 21300000, guid: cf43c69b787e9554fbc0480fb22ec15b, type: 3}
+  realBulletYokaiWorld: {fileID: 21300000, guid: 40a75c40981dd3a4a85a6a317bfb06dc, type: 3}
+  realBulletRealWorld: {fileID: 21300000, guid: 937fd30fa0d97804ebc21398f1495418, type: 3}

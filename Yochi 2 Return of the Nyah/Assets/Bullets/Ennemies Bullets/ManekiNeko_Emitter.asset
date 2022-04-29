@@ -31,7 +31,7 @@ MonoBehaviour:
   foldoutExport: 0
   foldoutEmptyBin: 0
   foldoutCompactMode: 0
-  currentParamsSelected: {fileID: 114917193883442684}
+  currentParamsSelected: {fileID: 3348739327739292870}
   numberOfSubAssets: 0
 --- !u!114 &114027673760526898
 MonoBehaviour:
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: RealBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 16527866
+  uniqueIndex: 14511775
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -963,7 +963,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: 
+      defaultValue: Ennemis
   color:
     valueTree:
     - settings:
@@ -7647,7 +7647,7 @@ MonoBehaviour:
   m_Name: RealShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 13286682
+  uniqueIndex: 4438653
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -7935,7 +7935,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 13246702
+  uniqueIndex: 18153
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -16123,7 +16123,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 4344606
+  uniqueIndex: 11999972
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -64989,7 +64989,7 @@ MonoBehaviour:
   m_Name: YokaiShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 8529498
+  uniqueIndex: 8380789
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -65277,7 +65277,7 @@ MonoBehaviour:
   m_Name: YokaiBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 4220508
+  uniqueIndex: 16629546
   profile: {fileID: 11400000}
   parent: {fileID: 2977995316010506600}
   children: []
@@ -66194,7 +66194,7 @@ MonoBehaviour:
         parameterType: 0
         relativeTo: 0
         parameterName: 
-      defaultValue: 
+      defaultValue: Ennemis
   color:
     valueTree:
     - settings:
@@ -67596,7 +67596,7 @@ MonoBehaviour:
   foldoutVFX: 1
   hideSpriteList: 0
   vfxOpened: 0
-  currentlyDisplayedModule: 7
+  currentlyDisplayedModule: 0
   canMove: 1
   canCollide: 1
   isVisible: 1
