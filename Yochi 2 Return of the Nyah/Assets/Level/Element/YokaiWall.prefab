@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986f9e67d0fe492409181badf571779a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  realWall: {fileID: 21300000, guid: 7227f76e2aaa82644809b423bafc74f6, type: 3}
+  realWall: {fileID: 21300000, guid: 2a42d9cd69c26b84bbc8744a6419c70c, type: 3}
   yokaiWall: {fileID: 21300000, guid: 7bb36357bb2901548bbdbd68d55bb443, type: 3}
   healthPoint: 3
 --- !u!1 &1752522126948751938

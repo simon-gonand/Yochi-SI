@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6244629410342323493, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
+      propertyPath: isAlwaysHere
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6244629410342323494, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
       propertyPath: startingChildren.Array.data[0]
       value: 
