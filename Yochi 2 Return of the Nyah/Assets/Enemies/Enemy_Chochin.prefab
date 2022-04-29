@@ -247,6 +247,7 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   pathEndReached: 0
   pathDirection: {x: 0, y: 0}
+  pathUpdateCooldown: 2
   speed: 2
   minDistanceToPlayer: 7
   maxDistanceToPlayer: 9

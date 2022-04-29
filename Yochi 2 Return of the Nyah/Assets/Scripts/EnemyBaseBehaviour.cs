@@ -36,7 +36,7 @@ public class EnemyBaseBehaviour : EnemyParent
         UpdateYokaiDisplay();
         UpdateShoot();
     }
-    
+
 
     public void UpdateShoot()
     {
@@ -105,7 +105,8 @@ public class EnemyBaseBehaviour : EnemyParent
         targetPosition = playerTransform.position;
         CalculatePath();
         UpdateDirection();
-        GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
+        rb.velocity = pathDirection * speed;
+        canShoot = false;
     }
 
     public void AdjustDistance()
@@ -116,7 +117,7 @@ public class EnemyBaseBehaviour : EnemyParent
             targetPosition = (Vector2)playerTransform.position + (distanceToPlayer.normalized * maxDistanceToPlayer);
             CalculatePath();
             UpdateDirection();
-            GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
+            rb.velocity = pathDirection * speed;
             canShoot = false;
             isMoving = true;
         }
@@ -126,7 +127,7 @@ public class EnemyBaseBehaviour : EnemyParent
             targetPosition = (Vector2)playerTransform.position + distanceToPlayer.normalized * minDistanceToPlayer;
             CalculatePath();
             UpdateDirection();
-            GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
+            rb.velocity = pathDirection * speed;
             //emitter.Stop();
             canShoot = false;
             animator.SetBool("isAttacking", false);
@@ -141,9 +142,20 @@ public class EnemyBaseBehaviour : EnemyParent
         {
             if (isMoving)
             {
-                GetComponentInParent<Rigidbody2D>().velocity = Vector3.zero;
+
                 isMoving = false;
+                rb.velocity = Vector3.zero;
                 canShoot = true;
+                /*
+                if (pathEndReached)
+                {
+                }
+                else
+                {
+                    isMoving = true;
+                    rb.velocity = pathDirection * speed;
+                }
+                */
             }
             
         }

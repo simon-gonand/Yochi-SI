@@ -86,6 +86,21 @@ public class EnemyParent : MonoBehaviour
         seeker.StartPath(transform.position, targetPosition, OnPathComplete);
     }
 
+    private float pathUpdateCDLeft;
+    public float pathUpdateCooldown;
+    protected void UpdatePath()
+    {
+        if(pathUpdateCDLeft <= 0)
+        {
+            CalculatePath();
+            pathUpdateCDLeft = pathUpdateCooldown;
+        }
+        else
+        {
+            pathUpdateCDLeft -= Time.deltaTime;
+        }
+    }
+
     protected void UpdateDirection()
     {
         if (path != null)
@@ -110,10 +125,6 @@ public class EnemyParent : MonoBehaviour
 
     public IEnumerator HitFeedback()
     {
-        /*
-        render.color = Color.red;
-        yield return new WaitForSeconds(0.2f);
-        render.color = Color.white;*/
         animator.SetTrigger("Hit");
 
         if (yokaiAnimator != null)
