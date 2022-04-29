@@ -26,7 +26,8 @@ public class SpawnManager : MonoBehaviour
     private List<SpawnPoint> chochinSP;
     private List<SpawnPoint> darumaSP;
 
-    private List<GameObject> allEnemies;
+    [HideInInspector]
+    public List<EnemyParent> allEnemies;
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class SpawnManager : MonoBehaviour
         kameosaSP = new List<SpawnPoint>();
         chochinSP = new List<SpawnPoint>();
         darumaSP = new List<SpawnPoint>();
-        allEnemies = new List<GameObject>();
+        allEnemies = new List<EnemyParent>();
 
         for (int i = 0; i < allRoomSpawnPoints.Count; i++)
         {
@@ -84,7 +85,7 @@ public class SpawnManager : MonoBehaviour
             spawnerRange = dollHumanSP[randomSpawnPointIndex].spawnerRange;
             randomSpawnPointIndex = Random.Range(0, dollHumanSP.Count);
             allEnemies.Add(Instantiate(dollHumanPrefab, dollHumanSP[randomSpawnPointIndex].transform.position
-                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity));
+                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
         }
 
         for (int i = 0; i < currDollYokaiNumber; i++)
@@ -92,7 +93,7 @@ public class SpawnManager : MonoBehaviour
             spawnerRange = dollYokaiSP[randomSpawnPointIndex].spawnerRange;
             randomSpawnPointIndex = Random.Range(0, dollYokaiSP.Count);
             allEnemies.Add(Instantiate(dollYokaiPrefab, dollYokaiSP[randomSpawnPointIndex].transform.position
-                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity));
+                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
         }
 
         for (int i = 0; i < currKameosaNumber; i++)
@@ -100,7 +101,7 @@ public class SpawnManager : MonoBehaviour
             spawnerRange = kameosaSP[randomSpawnPointIndex].spawnerRange;
             randomSpawnPointIndex = Random.Range(0, kameosaSP.Count);
             allEnemies.Add(Instantiate(kameosaPrefab, kameosaSP[randomSpawnPointIndex].transform.position
-                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity));
+                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
         }
 
         for (int i = 0; i < currChochinNumber; i++)
@@ -108,7 +109,7 @@ public class SpawnManager : MonoBehaviour
             spawnerRange = chochinSP[randomSpawnPointIndex].spawnerRange;
             randomSpawnPointIndex = Random.Range(0, chochinSP.Count);
             allEnemies.Add(Instantiate(chochinPrefab, chochinSP[randomSpawnPointIndex].transform.position
-                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity));
+                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
         }
 
         for (int i = 0; i < currDarumaNumber; i++)
@@ -116,7 +117,7 @@ public class SpawnManager : MonoBehaviour
             spawnerRange = darumaSP[randomSpawnPointIndex].spawnerRange;
             randomSpawnPointIndex = Random.Range(0, darumaSP.Count);
             allEnemies.Add(Instantiate(darumaPrefab, darumaSP[randomSpawnPointIndex].transform.position
-                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity));
+                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
         }
     }
 }
