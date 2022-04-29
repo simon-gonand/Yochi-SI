@@ -55,6 +55,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 5a2aae9f5784bea47b73aa25e3bf7e60, type: 3}
   - {fileID: 8300000, guid: 75850fedf25cd44469e8606440f8a7c8, type: 3}
   death: {fileID: 8300000, guid: d52873923bc7f6842a12fe052a3e0e6f, type: 3}
+  switchIRL: {fileID: 8300000, guid: a90f355b39b86c1498ac09f0f08c3685, type: 3}
+  switchYokai: {fileID: 8300000, guid: c3fe1eeb4c06ac0418a2dccf7deb211d, type: 3}
   mainMusic: {fileID: 8300000, guid: 64e41d773be305b4e8d1f5a8cb587708, type: 3}
   audioSource: {fileID: 9131515736022468643}
 --- !u!82 &9131515736022468643

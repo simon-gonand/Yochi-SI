@@ -60,6 +60,9 @@ public class YochiUmbrella : MonoBehaviour
 
         UpdateUmbrellaOrientation();
         UpdateUmbrellaShootState();
+
+
+        umbrellaRenderer.enabled = YochiManager.instance.currentHealthPoint > 0;
     }
 
     private void YokaiSingleShoot()
