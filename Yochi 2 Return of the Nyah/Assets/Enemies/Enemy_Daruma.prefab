@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 4
-  lifePoints: 15
+  lifePoints: 10
   seeker: {fileID: 809648366}
   render: {fileID: 4076422266252339544}
   animator: {fileID: 4076422266252339547}
@@ -352,6 +352,7 @@ MonoBehaviour:
   targetPosition: {x: 0, y: 0, z: 0}
   pathEndReached: 0
   pathDirection: {x: 0, y: 0}
+  pathUpdateCooldown: 0.5
   speed: 3
   minDistanceToPlayer: 2
   maxDistanceToPlayer: 3
