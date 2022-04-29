@@ -25,16 +25,13 @@ public class GameManager : MonoBehaviour
 
     public float enemyMultiplier;
 
+    public float basePowerLevelValue;
+
     private void Awake()
     {
-        if (_instance is not null)
-            Destroy(this.gameObject);
-        else
-        {
-            _instance = this;
+        if (_instance is null)
             SceneManager.sceneLoaded += OnSceneLoaded;
-            DontDestroyOnLoad(gameObject);
-        }
+         _instance = this;
     }
 
     private void Start()
@@ -67,7 +64,8 @@ public class GameManager : MonoBehaviour
         currentRoom = GameObject.FindGameObjectsWithTag("FirstRoom")[0].GetComponent<RoomChunk>();
         if (scene.name == "GetRoomsScenes")
         {
-            currentRoom.spawnManager.SpawnAllEnemies(1.0f);
+            currentRoom.spawnManager.SpawnAllEnemies(basePowerLevelValue);
+            BulletManager.instance.ClearBullets();
         }
     }
 }

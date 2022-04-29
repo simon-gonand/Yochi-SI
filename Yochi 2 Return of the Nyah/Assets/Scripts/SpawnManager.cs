@@ -70,53 +70,59 @@ public class SpawnManager : MonoBehaviour
     public void SpawnAllEnemies(float powerLevelMultiplier)
     {
         Debug.Log("pl ! " + powerLevelMultiplier);
-        int currDollHumanNumber = Mathf.Clamp(Mathf.RoundToInt(dollHumanNumber * powerLevelMultiplier), 1, 200);
-        int currDollYokaiNumber = Mathf.Clamp(Mathf.RoundToInt(dollYokaiNumber * powerLevelMultiplier), 1, 200);
-        int currKameosaNumber = Mathf.Clamp(Mathf.RoundToInt(kameosaNumber * powerLevelMultiplier), 1, 200);
-        int currChochinNumber = Mathf.Clamp(Mathf.RoundToInt(chochinNumber * powerLevelMultiplier), 1, 200);
-        int currDarumaNumber = Mathf.Clamp(Mathf.RoundToInt(darumaNumber * powerLevelMultiplier), 1, 200);
+        int currDollHumanNumber = Mathf.Clamp(Mathf.RoundToInt(dollHumanNumber * powerLevelMultiplier), 0, 200);
+        int currDollYokaiNumber = Mathf.Clamp(Mathf.RoundToInt(dollYokaiNumber * powerLevelMultiplier), 0, 200);
+        int currKameosaNumber = Mathf.Clamp(Mathf.RoundToInt(kameosaNumber * powerLevelMultiplier), 0, 200);
+        int currChochinNumber = Mathf.Clamp(Mathf.RoundToInt(chochinNumber * powerLevelMultiplier), 0, 200);
+        int currDarumaNumber = Mathf.Clamp(Mathf.RoundToInt(darumaNumber * powerLevelMultiplier), 0, 200);
 
         int randomSpawnPointIndex = 0;
         Vector2 randomPosInSpawner = Vector2.zero;
         float spawnerRange = 0;
-        for (int i = 0; i < currDollHumanNumber; i++)
+
+        if (currDollHumanNumber > 0)
+            for (int i = 0; i < currDollHumanNumber; i++)
         {
-            spawnerRange = dollHumanSP[randomSpawnPointIndex].spawnerRange;
             randomSpawnPointIndex = Random.Range(0, dollHumanSP.Count);
+            spawnerRange = dollHumanSP[randomSpawnPointIndex].spawnerRange;
             allEnemies.Add(Instantiate(dollHumanPrefab, dollHumanSP[randomSpawnPointIndex].transform.position
                 + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
         }
 
-        for (int i = 0; i < currDollYokaiNumber; i++)
+        if (currDollYokaiNumber > 0)
+            for (int i = 0; i < currDollYokaiNumber; i++)
         {
-            spawnerRange = dollYokaiSP[randomSpawnPointIndex].spawnerRange;
             randomSpawnPointIndex = Random.Range(0, dollYokaiSP.Count);
+            spawnerRange = dollYokaiSP[randomSpawnPointIndex].spawnerRange;
             allEnemies.Add(Instantiate(dollYokaiPrefab, dollYokaiSP[randomSpawnPointIndex].transform.position
                 + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
         }
 
-        for (int i = 0; i < currKameosaNumber; i++)
+        if (currKameosaNumber > 0)
+            for (int i = 0; i < currKameosaNumber; i++)
         {
-            spawnerRange = kameosaSP[randomSpawnPointIndex].spawnerRange;
             randomSpawnPointIndex = Random.Range(0, kameosaSP.Count);
+            spawnerRange = kameosaSP[randomSpawnPointIndex].spawnerRange;
             allEnemies.Add(Instantiate(kameosaPrefab, kameosaSP[randomSpawnPointIndex].transform.position
                 + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
         }
 
+        if(currChochinNumber > 0)
         for (int i = 0; i < currChochinNumber; i++)
         {
-            spawnerRange = chochinSP[randomSpawnPointIndex].spawnerRange;
             randomSpawnPointIndex = Random.Range(0, chochinSP.Count);
+            spawnerRange = chochinSP[randomSpawnPointIndex].spawnerRange;
             allEnemies.Add(Instantiate(chochinPrefab, chochinSP[randomSpawnPointIndex].transform.position
                 + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
         }
 
-        for (int i = 0; i < currDarumaNumber; i++)
-        {
-            spawnerRange = darumaSP[randomSpawnPointIndex].spawnerRange;
-            randomSpawnPointIndex = Random.Range(0, darumaSP.Count);
-            allEnemies.Add(Instantiate(darumaPrefab, darumaSP[randomSpawnPointIndex].transform.position
-                + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
-        }
+        if (currDarumaNumber > 0)
+            for (int i = 0; i < currDarumaNumber; i++)
+            {
+                randomSpawnPointIndex = Random.Range(0, darumaSP.Count);
+                spawnerRange = darumaSP[randomSpawnPointIndex].spawnerRange;
+                allEnemies.Add(Instantiate(darumaPrefab, darumaSP[randomSpawnPointIndex].transform.position
+                    + new Vector3(Random.Range(-spawnerRange, spawnerRange), Random.Range(-spawnerRange, spawnerRange)), Quaternion.identity).transform.GetChild(0).GetComponent<EnemyParent>());
+            }
     }
 }

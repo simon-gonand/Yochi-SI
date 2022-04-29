@@ -28,6 +28,11 @@ public class BulletManager
         enemiesBullet.Remove(bullet);
     }
 
+    public void ClearBullets()
+    {
+        enemiesBullet.Clear();
+    }
+
     public void ChangeBulletWorld(Bullet bullet)
     {
         if (bullet.moduleCollision.collisionTags[6])
