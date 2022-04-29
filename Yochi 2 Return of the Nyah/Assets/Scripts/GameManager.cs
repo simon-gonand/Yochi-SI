@@ -59,12 +59,12 @@ public class GameManager : MonoBehaviour
             freeRooms.Add(usedRooms[0]);
             usedRooms.RemoveAt(0);
         }
-
         ++level;
     }
 
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        currentRoom = GameObject.FindGameObjectsWithTag("FirstRoom")[0].GetComponent<RoomChunk>();
         if (scene.name == "GetRoomsScenes")
         {
             currentRoom.spawnManager.SpawnAllEnemies(1.0f);

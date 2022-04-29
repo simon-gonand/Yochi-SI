@@ -59,7 +59,6 @@ public class UIManager : MonoBehaviour
         inGameUI.SetActive(true);
         deathScreen.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        GameManager.instance.currentRoom.spawnManager.SpawnAllEnemies(1.0f);
     }
 
     public void ReturnToMenu()
