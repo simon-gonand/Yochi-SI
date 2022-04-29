@@ -21,6 +21,7 @@ public class RoomChunk : MonoBehaviour
 
     public List<MurYokai> destroyedGameObject;
     public List<PropsDestructible> destroyedProps;
+    public List<Manekineko> manekinekos;
 
     public void SetChunkPosition(RoomChunk lastRoom)
     {
@@ -41,6 +42,12 @@ public class RoomChunk : MonoBehaviour
             props.gameObject.SetActive(true);
         }
         destroyedGameObject.Clear();
+        destroyedProps.Clear();
+
+        foreach(Manekineko manekineko in manekinekos)
+        {
+            manekineko.StartBehaviour();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -66,6 +73,10 @@ public class RoomChunk : MonoBehaviour
         {
             nextNoReturnCollider.enabled = false;
             nextDoor.Open();
+            foreach(Manekineko manekineko in manekinekos)
+            {
+                manekineko.StopBehaviour();
+            }
         }
     }
 }

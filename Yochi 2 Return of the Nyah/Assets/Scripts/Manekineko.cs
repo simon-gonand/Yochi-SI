@@ -18,9 +18,29 @@ public class Manekineko : MonoBehaviour
     private float timer;
     [SerializeField] private float shootDelay;
 
+    private bool isStarted;
+
+
+    private void Start()
+    {
+        isStarted = true;
+    }
+
+    public void StartBehaviour()
+    {
+        isStarted = true;
+    }
+
+    public void StopBehaviour()
+    {
+        isStarted = false;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (!isStarted) return;
+
         timer += Time.deltaTime;
 
         if (timer >= shootDelay)
