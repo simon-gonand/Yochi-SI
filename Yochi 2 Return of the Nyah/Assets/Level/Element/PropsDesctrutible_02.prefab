@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5e7b11e773874438a3f8e09b1fa07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceToDrop: 6
+  chanceToDrop: 2
   rangeToDrop: 6
   pickupHP: {fileID: 1984731766308711602, guid: bb0ab65a5c5729c4694155f2f42c3482, type: 3}
 --- !u!58 &3250088138429988814
