@@ -11,6 +11,8 @@ public class YochiMovement : MonoBehaviour
     private Vector2 leftJoytsickInput;
     private Rigidbody2D rb;
 
+    private bool canPlayFoosteps = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,5 +34,18 @@ public class YochiMovement : MonoBehaviour
         }
 
         animator.SetBool("isMoving", rb.velocity.magnitude > 0.1f);
+
+        if (animator.GetBool("isMoving") == true && canPlayFoosteps)
+        {
+            StartCoroutine(PlayFootSFX());
+        }
+    }
+
+    public IEnumerator PlayFootSFX()
+    {
+        canPlayFoosteps = false;
+        AudioManager.instance.PlayFoostep();
+        yield return new WaitForSeconds(0.3f);
+        canPlayFoosteps = true;
     }
 }

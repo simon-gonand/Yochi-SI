@@ -9,6 +9,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] footstep;
     public AudioClip[] hit;
     public AudioClip death;
+    public AudioClip switchIRL;
+    public AudioClip switchYokai;
     public AudioClip mainMusic;
 
     public AudioSource audioSource;
@@ -21,8 +23,8 @@ public class AudioManager : MonoBehaviour
 
     private void Start()
     {
-        /*audioSource.clip = mainMusic;
-        audioSource.Play();*/
+        audioSource.clip = mainMusic;
+        audioSource.Play();
     }
 
     public void PlayFoostep()
@@ -38,5 +40,15 @@ public class AudioManager : MonoBehaviour
     {
         audioSource.PlayOneShot(death);
 
+    }
+
+    public void PlaySwitchYokai()
+    {
+        audioSource.PlayOneShot(switchYokai);
+    }
+
+    public void PlaySwitchReal()
+    {
+        audioSource.PlayOneShot(switchIRL);
     }
 }
