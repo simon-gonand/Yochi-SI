@@ -53,7 +53,7 @@ public class YochiManager : MonoBehaviour
         yochiUmbrella = GetComponent<YochiUmbrella>();
         bulletReceiver = GetComponent<BulletReceiver>();
         isInYokaiWorld = false;
-        SwitchWorld(isInYokaiWorld);
+        SwitchWorld(isInYokaiWorld, true);
         currentHealthPoint = maxHealthPoint;
         switchCDLeft = 0;
         yokaiEffectCurrentState = 0;
@@ -68,7 +68,7 @@ public class YochiManager : MonoBehaviour
         {
             if(switchCDLeft <= 0)
             {
-                SwitchWorld(!isInYokaiWorld);
+                SwitchWorld(!isInYokaiWorld, false);
             }
         }
 
@@ -81,7 +81,7 @@ public class YochiManager : MonoBehaviour
         UpdatePostProcess();
     }
 
-    public void SwitchWorld(bool isYokaiWorld)
+    public void SwitchWorld(bool isYokaiWorld, bool onStart)
     {
         switchCDLeft = switchWorldCoolDown;
         if (!isYokaiWorld)
@@ -102,7 +102,8 @@ public class YochiManager : MonoBehaviour
         isInYokaiWorld = isYokaiWorld;
         yochiUmbrella.SwitchEmitter(isInYokaiWorld);
         animator.SetBool("isYokai", isInYokaiWorld);
-        BulletManager.instance.OnChangeWorld();
+        if (!onStart)
+            BulletManager.instance.OnChangeWorld();
     }
 
     private void InvulnerableTimeUpdate()
