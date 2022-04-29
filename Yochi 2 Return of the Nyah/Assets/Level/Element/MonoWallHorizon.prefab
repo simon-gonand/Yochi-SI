@@ -471,8 +471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44887b223b487264fa7163228dbac57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yokaiWorldVisibleSprite: {fileID: 2142594574, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
-  realWorldVisibleSprite: {fileID: -931827361, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
-  yokaiWorldInvisibleSprite: {fileID: 2142594574, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
-  realWorldInvisibleSprite: {fileID: -931827361, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
+  yokaiWorldVisibleSprite: {fileID: -931827361, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
+  realWorldVisibleSprite: {fileID: 2142594574, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
+  yokaiWorldInvisibleSprite: {fileID: -931827361, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
+  realWorldInvisibleSprite: {fileID: 2142594574, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
   isForYokaiWorld: 0
+  isAlwaysHere: 0
