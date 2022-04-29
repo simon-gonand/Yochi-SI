@@ -39,14 +39,14 @@ public class MurMonoMonde : MonoBehaviour
                 spriteRenderer.sprite = yokaiWorldVisibleSprite;
                 boxCollider.enabled = true;
                 receiver.enabled = true;
-                spriteRenderer.color = Color.blue;
+                spriteRenderer.color = new Color(1f,1f,1f,1f);
             }
             else
             {
                 spriteRenderer.sprite = yokaiWorldInvisibleSprite;
                 boxCollider.enabled = false;
                 receiver.enabled = false;
-                spriteRenderer.color = Color.red;
+                spriteRenderer.color = new Color(1f,1f,1f,0.2f);
             }
         }
         else
@@ -56,14 +56,14 @@ public class MurMonoMonde : MonoBehaviour
                 spriteRenderer.sprite = realWorldInvisibleSprite;
                 boxCollider.enabled = false;
                 receiver.enabled = false;
-                spriteRenderer.color = Color.green;
+                spriteRenderer.color = new Color(1f,1f,1f,0.2f);
             }
             else
             {
                 spriteRenderer.sprite = realWorldVisibleSprite;
                 boxCollider.enabled = true;
                 receiver.enabled = true;
-                spriteRenderer.color = Color.yellow;
+                spriteRenderer.color = new Color(1f,1f,1f,1f);
             }
         }
     }
