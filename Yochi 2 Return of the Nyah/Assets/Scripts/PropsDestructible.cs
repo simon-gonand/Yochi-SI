@@ -18,10 +18,10 @@ public class PropsDestructible : MonoBehaviour
         receiver = GetComponent<BulletReceiver>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Reset()
     {
-        
+        receiver.enabled = true;
+        animator.SetBool("isDead", false);
     }
 
     public void Destruction()
@@ -34,13 +34,14 @@ public class PropsDestructible : MonoBehaviour
             Instantiate(pickupHP, this.transform.position, Quaternion.identity);
         }
         animator.SetBool("isDead", true);
-        
+
+        GameManager.instance.currentRoom.destroyedProps.Add(this);
         StartCoroutine(Destroy());
     }
 
     IEnumerator Destroy()
     {        
         yield return new WaitForSeconds(0.6f);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }

@@ -20,6 +20,7 @@ public class RoomChunk : MonoBehaviour
     public Collider2D nextNoReturnCollider;
 
     public List<MurYokai> destroyedGameObject;
+    public List<PropsDestructible> destroyedProps;
 
     public void SetChunkPosition(RoomChunk lastRoom)
     {
@@ -33,6 +34,11 @@ public class RoomChunk : MonoBehaviour
         {
             wall.gameObject.SetActive(true);
             wall.ResetHealth();
+        }
+        foreach(PropsDestructible props in destroyedProps)
+        {
+            props.Reset();
+            props.gameObject.SetActive(true);
         }
         destroyedGameObject.Clear();
     }
