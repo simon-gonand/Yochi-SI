@@ -161,6 +161,7 @@ GameObject:
   - component: {fileID: 1721181389874167616}
   - component: {fileID: 1721181389874167631}
   - component: {fileID: 1721181389874167630}
+  - component: {fileID: 6466851614311216811}
   m_Layer: 7
   m_Name: YokaiWall
   m_TagString: Untagged
@@ -338,6 +339,26 @@ MonoBehaviour:
   realWall: {fileID: 21300000, guid: 7227f76e2aaa82644809b423bafc74f6, type: 3}
   yokaiWall: {fileID: 21300000, guid: 7bb36357bb2901548bbdbd68d55bb443, type: 3}
   healthPoint: 3
+--- !u!95 &6466851614311216811
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721181389874167629}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c86e77ec5127474cb23f10f1630ff90, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1752522126948751938
 GameObject:
   m_ObjectHideFlags: 0
