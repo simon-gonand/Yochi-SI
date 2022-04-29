@@ -28,14 +28,6 @@ public class PlateformeMonoMonde : MonoBehaviour
         ChangeSprite();
     }
     
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            //tomber + perte de PV
-            Debug.Log("je tombe");
-        } 
-    }
 
     void ChangeSprite()
     {
