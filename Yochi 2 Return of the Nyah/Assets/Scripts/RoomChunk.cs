@@ -10,6 +10,8 @@ public class RoomChunk : MonoBehaviour
     public Transform exitPoint;
     public Transform pathfindingCentre;
     public SpawnManager spawnManager;
+    public OpenDoor door;
+    public OpenDoor nextDoor;
 
     [SerializeField]
     private Collider2D stairsCollider;
@@ -26,6 +28,7 @@ public class RoomChunk : MonoBehaviour
         stairsCollider.enabled = true;
         noReturnCollider.enabled = true;
         lastRoom.nextNoReturnCollider = noReturnCollider;
+        lastRoom.nextDoor = door;
         foreach (MurYokai wall in destroyedGameObject)
         {
             wall.gameObject.SetActive(true);
@@ -41,6 +44,7 @@ public class RoomChunk : MonoBehaviour
             GameManager.instance.GetNextRoom();
             stairsCollider.enabled = false;
             nextNoReturnCollider.enabled = true;
+            nextDoor.Close();
             GameManager.instance.currentRoom = nextNoReturnCollider.GetComponent<RoomChunk>();
             GameManager.instance.currentRoom.enabled = true;
             ((GridGraph)AstarPath.active.graphs[0]).center = GameManager.instance.currentRoom.pathfindingCentre.position;
@@ -55,6 +59,7 @@ public class RoomChunk : MonoBehaviour
         if (spawnManager.allEnemies.Count == 0)
         {
             nextNoReturnCollider.enabled = false;
+            nextDoor.Open();
         }
     }
 }

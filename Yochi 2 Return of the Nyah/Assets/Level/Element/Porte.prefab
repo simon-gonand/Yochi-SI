@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2335214529439887561}
   - component: {fileID: 4773727295131045222}
   - component: {fileID: 2457916400513349443}
-  - component: {fileID: 7244421024832500128}
   - component: {fileID: 4297904095639223093}
   m_Layer: 7
   m_Name: Porte
@@ -93,8 +92,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 53547175
-  m_SortingLayer: 3
+  m_SortingLayerID: -732063307
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 1510029646, guid: 4b9c114cd152d9949b482bd6527ce5ca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -107,32 +106,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7244421024832500128
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6078867210118799511}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.0625, y: 4.0625}
-    newSize: {x: 4.0625, y: 4.0625}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4.0625, y: 4.0625}
-  m_EdgeRadius: 0
 --- !u!114 &4297904095639223093
 MonoBehaviour:
   m_ObjectHideFlags: 0

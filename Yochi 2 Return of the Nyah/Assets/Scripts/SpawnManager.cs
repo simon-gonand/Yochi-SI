@@ -65,8 +65,6 @@ public class SpawnManager : MonoBehaviour
                 darumaSP.Add(allRoomSpawnPoints[i]);
             }
         }
-
-        //SpawnAllEnemies(1f);
     }
 
     public void SpawnAllEnemies(float powerLevelMultiplier)
