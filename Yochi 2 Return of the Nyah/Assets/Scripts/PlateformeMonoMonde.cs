@@ -45,13 +45,13 @@ public class PlateformeMonoMonde : MonoBehaviour
             {
                 spriteRenderer.sprite = yokaiWorldVisibleSprite;
                 boxCollider.enabled = false;
-                spriteRenderer.color = Color.blue;
+                spriteRenderer.color = new Color(1f,1f,1f,1f);
             }
             else
             {
                 spriteRenderer.sprite = yokaiWorldInvisibleSprite;
                 boxCollider.enabled = true;
-                spriteRenderer.color = Color.red;
+                spriteRenderer.color = new Color(1f,1f,1f,0.2f);
             }
         }
         else
@@ -60,13 +60,13 @@ public class PlateformeMonoMonde : MonoBehaviour
             {
                 spriteRenderer.sprite = realWorldInvisibleSprite;
                 boxCollider.enabled = true;
-                spriteRenderer.color = Color.green;
+                spriteRenderer.color = new Color(1f,1f,1f,0.2f);
             }
             else
             {
                 spriteRenderer.sprite = realWorldVisibleSprite;
                 boxCollider.enabled = false;
-                spriteRenderer.color = Color.yellow;
+                spriteRenderer.color = new Color(1f,1f,1f,1f);
             }
         }
         

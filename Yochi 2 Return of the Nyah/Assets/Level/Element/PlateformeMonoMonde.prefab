@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 17774991
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7028818104ebab94a8bcf867b04263f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d9684b5077a97994cba01c46307d1808, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44199d0e726cff04b831f71ec1053d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yokaiWorldVisibleSprite: {fileID: 21300000, guid: 7028818104ebab94a8bcf867b04263f7, type: 3}
-  realWorldVisibleSprite: {fileID: 21300000, guid: 084fc5429bad1a6429154c1bb9e0b622, type: 3}
-  yokaiWorldInvisibleSprite: {fileID: 21300000, guid: 9285a8dc29c81ae46819fe7d47ce734e, type: 3}
-  realWorldInvisibleSprite: {fileID: 21300000, guid: 438608444985344459fbc1d650b6fa37, type: 3}
+  yokaiWorldVisibleSprite: {fileID: 21300000, guid: d9684b5077a97994cba01c46307d1808, type: 3}
+  realWorldVisibleSprite: {fileID: 21300000, guid: d9684b5077a97994cba01c46307d1808, type: 3}
+  yokaiWorldInvisibleSprite: {fileID: 21300000, guid: d9684b5077a97994cba01c46307d1808, type: 3}
+  realWorldInvisibleSprite: {fileID: 21300000, guid: d9684b5077a97994cba01c46307d1808, type: 3}
   isForYokaiWorld: 0
 --- !u!61 &7234558914305573396
 BoxCollider2D:
@@ -120,12 +120,12 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0

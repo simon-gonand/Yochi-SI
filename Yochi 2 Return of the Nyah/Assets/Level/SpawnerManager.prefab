@@ -44,12 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d28d8a1754bc5947acacfb8fa0c89de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dollNumber: 0
+  dollHumanNumber: 1
+  dollYokaiNumber: 1
   kameosaNumber: 0
-  chochinNumber: 0
-  darumaNumber: 0
-  dollPrefab: {fileID: 4076422267119276655, guid: c76d2877ba561e643845ac54b6539839, type: 3}
+  chochinNumber: 1
+  darumaNumber: 1
+  dollHumanPrefab: {fileID: 4076422267119276655, guid: c76d2877ba561e643845ac54b6539839, type: 3}
+  dollYokaiPrefab: {fileID: 4076422267119276655, guid: 442d7c0de9cd97645b1001cb77f51df1, type: 3}
   kameosaPrefab: {fileID: 4076422267119276655, guid: c47a4addce5954c40b9e5641749c7f6b, type: 3}
   chochinPrefab: {fileID: 4076422267119276655, guid: 526157b2853c67448b0896334daa8d73, type: 3}
   darumaPrefab: {fileID: 4076422267119276655, guid: 78b66007c7185ff4980b044f9099a8c6, type: 3}
-  allRoomSpawnPoints: []
+  allRoomSpawnPoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
