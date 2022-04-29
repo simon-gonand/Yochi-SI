@@ -16,9 +16,6 @@ public class RoomChunk : MonoBehaviour
     private Collider2D noReturnCollider;
     public Collider2D nextNoReturnCollider;
 
-    // Debug
-    public GameObject daruma;
-
     public List<MurYokai> destroyedGameObject;
 
     public void SetChunkPosition(RoomChunk lastRoom)
@@ -47,10 +44,6 @@ public class RoomChunk : MonoBehaviour
             GameManager.instance.currentRoom.enabled = true;
             ((GridGraph)AstarPath.active.graphs[0]).center = GameManager.instance.currentRoom.pathfindingCentre.position;
             AstarPath.active.Scan();
-
-            // Debug
-            if (GameManager.instance.currentRoom.daruma is not null)
-                GameManager.instance.currentRoom.daruma.SetActive(true);
         }
     }
 }
