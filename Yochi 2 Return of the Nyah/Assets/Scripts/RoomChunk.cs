@@ -20,8 +20,8 @@ public class RoomChunk : MonoBehaviour
 
     public void SetChunkPosition(RoomChunk lastRoom)
     {
-        Vector3 offset = self.position - entryPoint.position;
-        self.position = lastRoom.exitPoint.position + offset;
+        Vector3 entryPointOffset = self.position - entryPoint.position;
+        self.position = lastRoom.exitPoint.position + entryPointOffset;
         stairsCollider.enabled = true;
         noReturnCollider.enabled = false;
         lastRoom.nextNoReturnCollider = noReturnCollider;

@@ -52,6 +52,6 @@ MonoBehaviour:
   defaultReceiverGizmoColor: {r: 1, g: 0, b: 1, a: 1}
   collisionHandler: {fileID: 7200000, guid: 723032a6362955b478e26af3d2a97a9a, type: 3}
   computeShaders: 0
-  maxAmountOfCollisionsPerFrame: 32
+  maxAmountOfCollisionsPerFrame: 64
   maxAmountOfBullets: 4000
-  maxAmountOfReceivers: 200
+  maxAmountOfReceivers: 1000

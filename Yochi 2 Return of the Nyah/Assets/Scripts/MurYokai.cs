@@ -41,7 +41,6 @@ public class MurYokai : MonoBehaviour
 
     public void OnTakeDamage(BulletPro.Bullet bullet, Vector3 vec3)
     {
-        Debug.Log("saucisse");
         if (canTakeDamage)
         {
             healthPoint -= 1;
