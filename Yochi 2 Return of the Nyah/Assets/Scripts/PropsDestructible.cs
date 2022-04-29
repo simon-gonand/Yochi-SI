@@ -15,6 +15,7 @@ public class PropsDestructible : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        receiver = GetComponent<BulletReceiver>();
     }
 
     // Update is called once per frame
@@ -26,13 +27,14 @@ public class PropsDestructible : MonoBehaviour
     public void Destruction()
     {
         var rand = Random.Range(0, rangeToDrop);
+        receiver.enabled = false;
         
         if (rand <= chanceToDrop)
         {
             Instantiate(pickupHP, this.transform.position, Quaternion.identity);
         }
         animator.SetBool("isDead", true);
-        receiver.enabled = false;
+        
         StartCoroutine(Destroy());
     }
 

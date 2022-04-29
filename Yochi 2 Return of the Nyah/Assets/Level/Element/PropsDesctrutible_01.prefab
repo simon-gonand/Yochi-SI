@@ -74,8 +74,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 53547175
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 483271652, guid: d7c9dd3bc0d58fc42ae69acc7bd842b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -107,7 +107,7 @@ MonoBehaviour:
   syncDisable: 1
   syncCollisionTags: 1
   hitboxSize: 0.6
-  hitboxOffset: {x: -0.04, y: 0.65}
+  hitboxOffset: {x: -0.12, y: 0.91}
   killBulletOnCollision: 1
   maxSimultaneousCollisionsPerFrame: 1
   collisionTags:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5e7b11e773874438a3f8e09b1fa07b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chanceToDrop: 3
+  chanceToDrop: 6
   rangeToDrop: 6
   pickupHP: {fileID: 1984731766308711602, guid: bb0ab65a5c5729c4694155f2f42c3482, type: 3}
 --- !u!58 &3250088138429988814
@@ -170,7 +170,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.043609023, y: 0.6638276}
+  m_Offset: {x: -0.14, y: 0.91}
   serializedVersion: 2
   m_Radius: 0.59690934
 --- !u!95 &262358221170342276

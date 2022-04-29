@@ -11111,7 +11111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8360129998463157705}
   - component: {fileID: 1735884708923628786}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Confiner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
