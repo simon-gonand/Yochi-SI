@@ -69,11 +69,12 @@ public class SpawnManager : MonoBehaviour
 
     public void SpawnAllEnemies(float powerLevelMultiplier)
     {
-        int currDollHumanNumber = Mathf.RoundToInt(dollHumanNumber * powerLevelMultiplier);
-        int currDollYokaiNumber = Mathf.RoundToInt(dollYokaiNumber * powerLevelMultiplier);
-        int currKameosaNumber = Mathf.RoundToInt(kameosaNumber * powerLevelMultiplier);
-        int currChochinNumber = Mathf.RoundToInt(chochinNumber * powerLevelMultiplier);
-        int currDarumaNumber = Mathf.RoundToInt(darumaNumber * powerLevelMultiplier);
+        Debug.Log("pl ! " + powerLevelMultiplier);
+        int currDollHumanNumber = Mathf.Clamp(Mathf.RoundToInt(dollHumanNumber * powerLevelMultiplier), 1, 200);
+        int currDollYokaiNumber = Mathf.Clamp(Mathf.RoundToInt(dollYokaiNumber * powerLevelMultiplier), 1, 200);
+        int currKameosaNumber = Mathf.Clamp(Mathf.RoundToInt(kameosaNumber * powerLevelMultiplier), 1, 200);
+        int currChochinNumber = Mathf.Clamp(Mathf.RoundToInt(chochinNumber * powerLevelMultiplier), 1, 200);
+        int currDarumaNumber = Mathf.Clamp(Mathf.RoundToInt(darumaNumber * powerLevelMultiplier), 1, 200);
 
         int randomSpawnPointIndex = 0;
         Vector2 randomPosInSpawner = Vector2.zero;
