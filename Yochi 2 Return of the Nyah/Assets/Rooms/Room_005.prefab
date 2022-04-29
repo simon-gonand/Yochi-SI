@@ -5619,6 +5619,7 @@ MonoBehaviour:
   entryPoint: {fileID: 2354531799059723839}
   exitPoint: {fileID: 1543950096502740569}
   pathfindingCentre: {fileID: 6303052981615135406}
+  spawnManager: {fileID: 8529892481747655260}
   stairsCollider: {fileID: 7015995215154311808}
   noReturnCollider: {fileID: 8685183350618763413}
   nextNoReturnCollider: {fileID: 0}
@@ -14882,6 +14883,17 @@ PrefabInstance:
       objectReference: {fileID: 8725914750380838478}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 627a0f8e22761894abd8dd4fa93fdb9e, type: 3}
+--- !u!114 &8529892481747655260 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3464165113429803733, guid: 627a0f8e22761894abd8dd4fa93fdb9e, type: 3}
+  m_PrefabInstance: {fileID: 5076519770897045641}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d28d8a1754bc5947acacfb8fa0c89de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8529892481747655261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3464165113429803732, guid: 627a0f8e22761894abd8dd4fa93fdb9e, type: 3}

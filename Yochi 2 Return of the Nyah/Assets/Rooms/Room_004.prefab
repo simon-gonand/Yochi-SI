@@ -9745,6 +9745,7 @@ MonoBehaviour:
   entryPoint: {fileID: 5307087831823379877}
   exitPoint: {fileID: 5997008850123238286}
   pathfindingCentre: {fileID: 7641010944511109581}
+  spawnManager: {fileID: 9081783019307671359}
   stairsCollider: {fileID: 94094386444707333}
   noReturnCollider: {fileID: 8797204273171135503}
   nextNoReturnCollider: {fileID: 0}
@@ -17184,6 +17185,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3464165113429803732, guid: 627a0f8e22761894abd8dd4fa93fdb9e, type: 3}
   m_PrefabInstance: {fileID: 5628327837007797738}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &9081783019307671359 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3464165113429803733, guid: 627a0f8e22761894abd8dd4fa93fdb9e, type: 3}
+  m_PrefabInstance: {fileID: 5628327837007797738}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d28d8a1754bc5947acacfb8fa0c89de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5628327837019682589
 PrefabInstance:
   m_ObjectHideFlags: 0

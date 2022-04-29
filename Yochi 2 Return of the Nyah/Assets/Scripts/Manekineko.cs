@@ -22,7 +22,6 @@ public class Manekineko : MonoBehaviour
     void FixedUpdate()
     {
         timer += Time.deltaTime;
-        Debug.Log(timer);
 
         if (timer >= shootDelay)
         {
@@ -41,8 +40,6 @@ public class Manekineko : MonoBehaviour
             {
                 rotateStep = 0;
             }
-
-            Debug.Log(rotateStep);
         }
     }
 }

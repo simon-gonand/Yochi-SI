@@ -54,6 +54,7 @@ public class EnemyParent : MonoBehaviour
 
         if (lifePoints <= 0)
         {
+            GameManager.instance.currentRoom.OnEnemyDied(this);
             StartCoroutine(DeathFX());
         }
     }

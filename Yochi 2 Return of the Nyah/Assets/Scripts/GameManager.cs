@@ -19,8 +19,10 @@ public class GameManager : MonoBehaviour
     public RoomChunk currentRoom;
     private ScoringManager scoringManager;
 
-    private int _level = 1;
+    private int _level = 0;
     public int level { get { return _level; } set { _level = value; } }
+
+    public float enemyMultiplier;
 
     private void Awake()
     {
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         scoringManager = ScoringManager.instance;
+        currentRoom.spawnManager.SpawnAllEnemies(1.0f);
     }
 
     public void GetNextRoom()
