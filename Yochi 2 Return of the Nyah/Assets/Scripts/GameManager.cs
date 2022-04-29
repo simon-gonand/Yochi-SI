@@ -47,7 +47,7 @@ public class GameManager : MonoBehaviour
         freeRooms[index].SetChunkPosition(usedRooms[usedRooms.Count - 1]);
 
         usedRooms.Add(freeRooms[index]);
-        freeRooms.RemoveAt(0);
+        freeRooms.RemoveAt(index);
 
         if (usedRooms.Count > 3)
         {

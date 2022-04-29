@@ -9,6 +9,7 @@ using UnityEngine.Rendering.Universal;
 
 public class YochiManager : MonoBehaviour
 {
+    public bool debugDamage;
     public int maxHealthPoint;
     public float invulnerableTime;
     public Image healthBar;
@@ -125,6 +126,7 @@ public class YochiManager : MonoBehaviour
     private float invulTimeRemaining;
     public void TakeOneDamage()
     {
+        if (debugDamage) return;
         if(!isInvulnerable)
         {
             isInvulnerable = true;

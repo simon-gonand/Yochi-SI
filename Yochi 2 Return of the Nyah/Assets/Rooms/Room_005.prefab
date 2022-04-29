@@ -5627,6 +5627,7 @@ MonoBehaviour:
   noReturnCollider: {fileID: 8685183350618763413}
   nextNoReturnCollider: {fileID: 0}
   destroyedGameObject: []
+  destroyedProps: []
 --- !u!61 &7015995215154311808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5703,7 +5704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5076519770027259738}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 36.340004, y: 33, z: -0.012285987}
+  m_LocalPosition: {x: 36.5, y: 33, z: -0.012285987}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
