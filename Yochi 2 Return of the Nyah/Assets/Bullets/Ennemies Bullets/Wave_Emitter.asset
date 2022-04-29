@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpiritBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 2076514
+  uniqueIndex: 3792531
   profile: {fileID: 11400000}
   parent: {fileID: 222342622874853272}
   children: []
@@ -7163,7 +7163,7 @@ MonoBehaviour:
   m_Name: RealBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 4678550
+  uniqueIndex: 16692440
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -14280,7 +14280,7 @@ MonoBehaviour:
   m_Name: RealShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 13105184
+  uniqueIndex: 12729999
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -16850,7 +16850,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 8979349
+  uniqueIndex: 13219636
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -24446,7 +24446,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 9770227
+  uniqueIndex: 3078559
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -63460,7 +63460,7 @@ MonoBehaviour:
   m_Name: Spirit Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 7274212
+  uniqueIndex: 6097626
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:

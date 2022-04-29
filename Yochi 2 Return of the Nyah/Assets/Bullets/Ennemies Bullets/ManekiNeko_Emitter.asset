@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: RealBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 14511775
+  uniqueIndex: 9871851
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -7647,7 +7647,7 @@ MonoBehaviour:
   m_Name: RealShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 4438653
+  uniqueIndex: 6414010
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -7935,7 +7935,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 18153
+  uniqueIndex: 16151744
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -16123,7 +16123,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 11999972
+  uniqueIndex: 15011137
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -64989,7 +64989,7 @@ MonoBehaviour:
   m_Name: YokaiShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 8380789
+  uniqueIndex: 13543395
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -65277,7 +65277,7 @@ MonoBehaviour:
   m_Name: YokaiBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 16629546
+  uniqueIndex: 7055550
   profile: {fileID: 11400000}
   parent: {fileID: 2977995316010506600}
   children: []
@@ -67596,7 +67596,7 @@ MonoBehaviour:
   foldoutVFX: 1
   hideSpriteList: 0
   vfxOpened: 0
-  currentlyDisplayedModule: 0
+  currentlyDisplayedModule: 2
   canMove: 1
   canCollide: 1
   isVisible: 1
