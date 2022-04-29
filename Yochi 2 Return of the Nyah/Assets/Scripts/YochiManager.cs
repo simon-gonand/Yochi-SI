@@ -30,6 +30,9 @@ public class YochiManager : MonoBehaviour
     public GameObject yokaiEffectPrefab;
     public float switchWorldCoolDown;
 
+    public GameObject umbrellaYokaiDeath;
+    public GameObject umbrellaHumanDeath;
+
     [HideInInspector]
     public bool isInYokaiWorld;
     public static YochiManager instance;
@@ -143,6 +146,7 @@ public class YochiManager : MonoBehaviour
     public void Die()
     {
         AudioManager.instance.PlayDeath();
+        Instantiate(isInYokaiWorld ? umbrellaYokaiDeath : umbrellaHumanDeath, transform.position, Quaternion.identity);
         animator.SetTrigger("Die");
     }
 
