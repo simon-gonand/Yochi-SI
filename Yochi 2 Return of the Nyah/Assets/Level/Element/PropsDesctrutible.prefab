@@ -105,8 +105,8 @@ MonoBehaviour:
   syncEnable: 1
   syncDisable: 1
   syncCollisionTags: 1
-  hitboxSize: 0.5
-  hitboxOffset: {x: 0, y: 0}
+  hitboxSize: 0.6
+  hitboxOffset: {x: -0.04, y: 0.65}
   killBulletOnCollision: 1
   maxSimultaneousCollisionsPerFrame: 1
   collisionTags:
@@ -169,6 +169,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.043609023, y: 0.6638276}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.59690934

@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 27924508572785481}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710665, w: 0.70710695}
-  m_LocalPosition: {x: -0.005, y: 0.242, z: 0}
-  m_LocalScale: {x: 1.5, y: 2, z: 1}
+  m_LocalPosition: {x: 0.018, y: 0.242, z: 0}
+  m_LocalScale: {x: 1.5, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6244629410342323489}
@@ -99,7 +99,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296189637215115007}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003, y: 1.03, z: 0}
+  m_LocalPosition: {x: 1.003, y: 1.03, z: 0}
   m_LocalScale: {x: 1, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -173,8 +173,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947671417732230624}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710665, w: 0.70710695}
-  m_LocalPosition: {x: 0.001, y: 1.819, z: 0}
-  m_LocalScale: {x: 1.5, y: 2, z: 1}
+  m_LocalPosition: {x: 0.018, y: 1.819, z: 0}
+  m_LocalScale: {x: 1.5, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6244629410342323489}
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3826207707631459348}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.001, y: 1.039, z: 0}
+  m_LocalPosition: {x: -0.959, y: 1.039, z: 0}
   m_LocalScale: {x: 1, y: 1.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 6244629410342323494}
   - component: {fileID: 6244629410342323493}
   m_Layer: 7
-  m_Name: MonoWall
+  m_Name: MonoWallHorizon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -376,7 +376,7 @@ SpriteRenderer:
   m_SortingLayerID: 53547175
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1187147116, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
+  m_Sprite: {fileID: 2142594574, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -400,18 +400,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0034732819, y: 1.0436717}
+  m_Offset: {x: 0.017917156, y: 1.0436717}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 1, y: 2.375}
+    oldSize: {x: 3, y: 2.375}
     newSize: {x: 1, y: 3}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.0007334, y: 1.4156511}
+  m_Size: {x: 2.9708824, y: 1.4156511}
   m_EdgeRadius: 0
 --- !u!114 &6244629410342323494
 MonoBehaviour:
@@ -471,8 +471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44887b223b487264fa7163228dbac57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yokaiWorldVisibleSprite: {fileID: 439318931, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
-  realWorldVisibleSprite: {fileID: 1187147116, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
-  yokaiWorldInvisibleSprite: {fileID: 1187147116, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
-  realWorldInvisibleSprite: {fileID: 439318931, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
+  yokaiWorldVisibleSprite: {fileID: 2142594574, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
+  realWorldVisibleSprite: {fileID: -931827361, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
+  yokaiWorldInvisibleSprite: {fileID: 2142594574, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
+  realWorldInvisibleSprite: {fileID: -931827361, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
   isForYokaiWorld: 0

@@ -50,8 +50,8 @@ MonoBehaviour:
   syncEnable: 1
   syncDisable: 1
   syncCollisionTags: 1
-  hitboxSize: 4
-  hitboxOffset: {x: 0, y: -2}
+  hitboxSize: 2
+  hitboxOffset: {x: -0.2, y: -1}
   killBulletOnCollision: 1
   maxSimultaneousCollisionsPerFrame: 1
   collisionTags:
