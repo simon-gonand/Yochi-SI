@@ -9,6 +9,8 @@ public class MenuManager : MonoBehaviour
     public GameObject mainMenuUI;
     public GameObject creditsScreen;
     public Button startButton;
+    public Button creditsButton;
+    public Button returnButton;
 
     // Start is called before the first frame update
     void Start()
@@ -27,11 +29,13 @@ public class MenuManager : MonoBehaviour
         {
             mainMenuUI.SetActive(false);
             creditsScreen.SetActive(true);
+            returnButton.Select();
         }
         else if (isCredits == false)
         {
             mainMenuUI.SetActive(true);
             creditsScreen.SetActive(false);
+            creditsButton.Select();
         }
     }
 

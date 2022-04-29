@@ -9453,6 +9453,8 @@ MonoBehaviour:
   nextNoReturnCollider: {fileID: 0}
   destroyedGameObject: []
   destroyedProps: []
+  manekinekos:
+  - {fileID: 1804302060136535076}
 --- !u!61 &1575118808
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12988,6 +12990,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a31955971a8a5c8458fb44d0c0614918, type: 3}
+--- !u!114 &1804302060136535076 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 604592871888070560, guid: a31955971a8a5c8458fb44d0c0614918, type: 3}
+  m_PrefabInstance: {fileID: 1254772743521350532}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1faed917b06a74cb32bdbf3843e6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8124096343368867151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7050191415793659595, guid: a31955971a8a5c8458fb44d0c0614918, type: 3}

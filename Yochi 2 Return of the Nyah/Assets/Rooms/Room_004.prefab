@@ -16616,6 +16616,9 @@ MonoBehaviour:
   nextNoReturnCollider: {fileID: 0}
   destroyedGameObject: []
   destroyedProps: []
+  manekinekos:
+  - {fileID: 5077848554533057384}
+  - {fileID: 5077848555208370017}
 --- !u!61 &94094386444707333
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23618,6 +23621,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7050191415793659595, guid: a31955971a8a5c8458fb44d0c0614918, type: 3}
   m_PrefabInstance: {fileID: 5628327836377109704}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5077848554533057384 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 604592871888070560, guid: a31955971a8a5c8458fb44d0c0614918, type: 3}
+  m_PrefabInstance: {fileID: 5628327836377109704}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1faed917b06a74cb32bdbf3843e6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5628327836390888493
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24286,6 +24300,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7050191415793659595, guid: a31955971a8a5c8458fb44d0c0614918, type: 3}
   m_PrefabInstance: {fileID: 5628327837052420289}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5077848555208370017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 604592871888070560, guid: a31955971a8a5c8458fb44d0c0614918, type: 3}
+  m_PrefabInstance: {fileID: 5628327837052420289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c1faed917b06a74cb32bdbf3843e6ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6204102229568953510
 PrefabInstance:
   m_ObjectHideFlags: 0
