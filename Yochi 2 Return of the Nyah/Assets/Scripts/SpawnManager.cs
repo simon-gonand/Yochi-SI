@@ -66,7 +66,7 @@ public class SpawnManager : MonoBehaviour
             }
         }
 
-        SpawnAllEnemies(1f);
+        //SpawnAllEnemies(1f);
     }
 
     public void SpawnAllEnemies(float powerLevelMultiplier)
