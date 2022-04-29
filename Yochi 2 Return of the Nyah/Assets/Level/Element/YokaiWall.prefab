@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 116512122945745316}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721181389874167618}
@@ -51,7 +51,7 @@ MonoBehaviour:
   syncDisable: 1
   syncCollisionTags: 1
   hitboxSize: 1
-  hitboxOffset: {x: -0.5, y: -0.5}
+  hitboxOffset: {x: -0.5, y: -0.8}
   killBulletOnCollision: 1
   maxSimultaneousCollisionsPerFrame: 1
   collisionTags:
@@ -100,7 +100,7 @@ Transform:
   m_GameObject: {fileID: 1280697149046007556}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710665, w: 0.70710695}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 2, z: 1}
+  m_LocalScale: {x: 0.6, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721181389874167618}
@@ -125,7 +125,7 @@ MonoBehaviour:
   syncDisable: 1
   syncCollisionTags: 1
   hitboxSize: 0.5
-  hitboxOffset: {x: -1, y: -0.25}
+  hitboxOffset: {x: -0.55, y: -0.25}
   killBulletOnCollision: 1
   maxSimultaneousCollisionsPerFrame: 1
   collisionTags:
@@ -177,7 +177,7 @@ Transform:
   m_GameObject: {fileID: 1721181389874167629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.46, y: -2.97, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2902300067623425356}
@@ -228,7 +228,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 084fc5429bad1a6429154c1bb9e0b622, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2a42d9cd69c26b84bbc8744a6419c70c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -252,18 +252,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0065419674, y: -0.41987407}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3, y: 2.375}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.00176, y: 1.5464828}
   m_EdgeRadius: 0
 --- !u!114 &1721181389874167631
 MonoBehaviour:
@@ -335,8 +335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 986f9e67d0fe492409181badf571779a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  realWall: {fileID: 21300000, guid: 084fc5429bad1a6429154c1bb9e0b622, type: 3}
-  yokaiWall: {fileID: 21300000, guid: 084fc5429bad1a6429154c1bb9e0b622, type: 3}
+  realWall: {fileID: 21300000, guid: 7227f76e2aaa82644809b423bafc74f6, type: 3}
+  yokaiWall: {fileID: 21300000, guid: 7bb36357bb2901548bbdbd68d55bb443, type: 3}
   healthPoint: 3
 --- !u!1 &1752522126948751938
 GameObject:
@@ -364,7 +364,7 @@ Transform:
   m_GameObject: {fileID: 1752522126948751938}
   m_LocalRotation: {x: -0, y: -0, z: -0.70710665, w: 0.70710695}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 2, z: 1}
+  m_LocalScale: {x: 1.5, y: 6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721181389874167618}
@@ -389,7 +389,7 @@ MonoBehaviour:
   syncDisable: 1
   syncCollisionTags: 1
   hitboxSize: 0.5
-  hitboxOffset: {x: 1, y: -0.25}
+  hitboxOffset: {x: 0.8, y: -0.25}
   killBulletOnCollision: 1
   maxSimultaneousCollisionsPerFrame: 1
   collisionTags:
@@ -438,7 +438,7 @@ Transform:
   m_GameObject: {fileID: 2267110785816606709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1721181389874167618}
@@ -463,7 +463,7 @@ MonoBehaviour:
   syncDisable: 1
   syncCollisionTags: 1
   hitboxSize: 1
-  hitboxOffset: {x: 0.5, y: -0.5}
+  hitboxOffset: {x: 1.5, y: -0.8}
   killBulletOnCollision: 1
   maxSimultaneousCollisionsPerFrame: 1
   collisionTags:
