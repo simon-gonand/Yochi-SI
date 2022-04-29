@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour
             isYokai = false;
         }
 
-        if (yochi.currentHealthPoint <= 0)
+        if (yochi.currentHealthPoint <= 0 && !deathScreen.activeSelf)
         {
             inGameUI.SetActive(false);
             deathScreen.SetActive(true);
