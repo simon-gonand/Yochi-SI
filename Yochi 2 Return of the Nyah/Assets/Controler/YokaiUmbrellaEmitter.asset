@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bullet 0
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 2202749
+  uniqueIndex: 13966402
   profile: {fileID: 11400000}
   parent: {fileID: -4896868741354282102}
   children: []
@@ -7499,7 +7499,7 @@ MonoBehaviour:
   m_Name: Shot 0
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 249593
+  uniqueIndex: 10643815
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -7820,7 +7820,7 @@ MonoBehaviour:
   m_Name: Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 735597
+  uniqueIndex: 5782398
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -9763,7 +9763,7 @@ MonoBehaviour:
   vfxParams:
   - tag: VFX #0
     attachToBulletTransform: 0
-    useDefaultParticles: 1
+    useDefaultParticles: 0
     particleSystemPrefab:
       valueTree:
       - settings:
@@ -9873,7 +9873,7 @@ MonoBehaviour:
           parameterType: 0
           relativeTo: 0
           parameterName: 
-        defaultValue: {fileID: 0}
+        defaultValue: {fileID: 7774421125300769885, guid: ff6d6f2cd5b2ab34f82a3918499dccce, type: 3}
       narrowType: 1
       requireComponent: 0
       typeName: UnityEngine.ParticleSystem, UnityEngine.ParticleSystemModule, Version=0.0.0.0,
@@ -9895,7 +9895,7 @@ MonoBehaviour:
       unless: 0
       canceller: 0
     onCollision:
-      enabled: 0
+      enabled: 1
       behaviour: 0
       unless: 0
       canceller: 0
@@ -9909,8 +9909,8 @@ MonoBehaviour:
       behaviour: 0
       unless: 0
       canceller: 0
-    replaceColorWithBulletColor: 1
-    replaceSizeWithNumber: 1
+    replaceColorWithBulletColor: 0
+    replaceSizeWithNumber: 0
     sizeNewValue:
       valueTree:
       - settings:
@@ -10709,7 +10709,7 @@ MonoBehaviour:
   foldoutVFX: 1
   hideSpriteList: 0
   vfxOpened: 0
-  currentlyDisplayedModule: 0
+  currentlyDisplayedModule: 1
   canMove: 1
   canCollide: 1
   isVisible: 1
@@ -15876,7 +15876,7 @@ MonoBehaviour:
   m_Name: Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 15158482
+  uniqueIndex: 1875178
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -16164,7 +16164,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 4457841
+  uniqueIndex: 2709263
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -23276,7 +23276,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 11373953
+  uniqueIndex: 14247985
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
