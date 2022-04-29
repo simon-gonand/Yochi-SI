@@ -7499,7 +7499,7 @@ MonoBehaviour:
   m_Name: Second Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 3907741
+  uniqueIndex: 6477090
   profile: {fileID: 11400000}
   parent: {fileID: 3385186977485339488}
   children: []
@@ -31677,7 +31677,7 @@ MonoBehaviour:
   m_Name: First Bullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 13858942
+  uniqueIndex: 7699555
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -47162,7 +47162,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 6070448
+  uniqueIndex: 13432254
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -103373,7 +103373,7 @@ MonoBehaviour:
   m_Name: Second Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 9853114
+  uniqueIndex: 6616363
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
