@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
@@ -10,6 +11,7 @@ public class UIManager : MonoBehaviour
     public GameObject realHealthBar;
     public GameObject yokaiHealthBar;
     public GameObject inGameUI;
+    public Button restartButton;
     private YochiManager yochi;
     private ScoringManager scoringManager;
 
@@ -46,6 +48,7 @@ public class UIManager : MonoBehaviour
         {
             inGameUI.SetActive(false);
             deathScreen.SetActive(true);
+            restartButton.Select();
             scoringManager.PrintScore();
         }
     }
@@ -56,6 +59,7 @@ public class UIManager : MonoBehaviour
         inGameUI.SetActive(true);
         deathScreen.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        GameManager.instance.currentRoom.spawnManager.SpawnAllEnemies(1.0f);
     }
 
     public void ReturnToMenu()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -29,13 +30,16 @@ public class GameManager : MonoBehaviour
         if (_instance is not null)
             Destroy(this.gameObject);
         else
+        {
             _instance = this;
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 
     private void Start()
     {
         scoringManager = ScoringManager.instance;
-        currentRoom.spawnManager.SpawnAllEnemies(1.0f);
     }
 
     public void GetNextRoom()
@@ -57,5 +61,13 @@ public class GameManager : MonoBehaviour
         }
 
         ++level;
+    }
+
+    public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (scene.name == "GetRoomsScenes")
+        {
+            currentRoom.spawnManager.SpawnAllEnemies(1.0f);
+        }
     }
 }
