@@ -128,10 +128,10 @@ TextureImporter:
       name: sprite_wall_normalworld_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 8
+        x: 34
+        y: 11
         width: 96
-        height: 76
+        height: 71
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,9 +150,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 8
+        y: 11
         width: 32
-        height: 76
+        height: 71
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
