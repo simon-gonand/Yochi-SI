@@ -163,6 +163,22 @@ PrefabInstance:
       propertyPath: isAlwaysHere
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6244629410342323493, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
+      propertyPath: realWorldVisibleSprite
+      value: 
+      objectReference: {fileID: 1187147116, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
+    - target: {fileID: 6244629410342323493, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
+      propertyPath: yokaiWorldVisibleSprite
+      value: 
+      objectReference: {fileID: 439318931, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
+    - target: {fileID: 6244629410342323493, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
+      propertyPath: realWorldInvisibleSprite
+      value: 
+      objectReference: {fileID: 1187147116, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
+    - target: {fileID: 6244629410342323493, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
+      propertyPath: yokaiWorldInvisibleSprite
+      value: 
+      objectReference: {fileID: 439318931, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
     - target: {fileID: 6244629410342323494, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
       propertyPath: startingChildren.Array.data[0]
       value: 
@@ -203,8 +219,28 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2.21875
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6244629410342323493, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
+--- !u!1 &3193156820520609494 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6244629410342323492, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
+  m_PrefabInstance: {fileID: 8861182363365172210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3118901394060890045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3193156820520609494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98fd4f71a8b038846a70a2a2522a5a48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yokaiWorldSprite: {fileID: 439318931, guid: 928cbfea768e80d43b6cbd4f3f1c334d, type: 3}
+  realWorldSprite: {fileID: 1187147116, guid: d47e0ec17180de247a51cc79dedd8f71, type: 3}
 --- !u!114 &3573844683597982440 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5431876231359416602, guid: 029ec65f386e821499ad20ed62e8e906, type: 3}
