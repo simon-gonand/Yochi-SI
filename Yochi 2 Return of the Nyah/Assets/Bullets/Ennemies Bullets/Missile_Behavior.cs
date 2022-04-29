@@ -11,12 +11,14 @@ public class Missile_Behavior : BaseBulletBehaviour {
 
 	// You can access this.bullet to get the parent bullet script.
 	// After bullet's death, you can delay this script's death : use this.lifetimeAfterBulletDeath.
+	[HideInInspector]
+	public Vector2 targetPosition;
 
 	// Use this for initialization (instead of Start)
 	public override void OnBulletBirth ()
 	{
 		base.OnBulletBirth();
-
+		targetPosition = YochiManager.instance.transform.position;
 		// Your code here
 	}
 	
@@ -25,6 +27,12 @@ public class Missile_Behavior : BaseBulletBehaviour {
 	{
 		base.Update();
 
+
+		if(Vector2.Distance(transform.position, targetPosition) < 0.5f)
+		{
+			bullet.modulePatterns.Play();
+			//bullet.Die();
+		}
 		// Your code here
 	}
 
@@ -52,8 +60,6 @@ public class Missile_Behavior : BaseBulletBehaviour {
 	public override void OnBulletCollisionEnter(BulletReceiver br, Vector3 collisionPoint)
 	{
 		base.OnBulletCollisionEnter(br, collisionPoint);
-
-		bullet.modulePatterns.Play();
 	}
 
 	// This gets called whenever the bullet stops colliding with any BulletReceiver.

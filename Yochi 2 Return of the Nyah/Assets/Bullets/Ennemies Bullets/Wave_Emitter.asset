@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpiritBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 6200003
+  uniqueIndex: 9414154
   profile: {fileID: 11400000}
   parent: {fileID: 222342622874853272}
   children: []
@@ -7163,7 +7163,7 @@ MonoBehaviour:
   m_Name: RealBullet
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 7843508
+  uniqueIndex: 6259408
   profile: {fileID: 11400000}
   parent: {fileID: 114201774248674550}
   children: []
@@ -14280,7 +14280,7 @@ MonoBehaviour:
   m_Name: RealShot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 10987263
+  uniqueIndex: 10487408
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:
@@ -16850,7 +16850,7 @@ MonoBehaviour:
   m_Name: Root Emitter
   m_EditorClassIdentifier: 
   parameterType: 0
-  uniqueIndex: 4187215
+  uniqueIndex: 3834699
   profile: {fileID: 11400000}
   parent: {fileID: 0}
   children:
@@ -24446,7 +24446,7 @@ MonoBehaviour:
   m_Name: Pattern
   m_EditorClassIdentifier: 
   parameterType: 2
-  uniqueIndex: 2859800
+  uniqueIndex: 7909837
   profile: {fileID: 11400000}
   parent: {fileID: 114671512830859702}
   children:
@@ -24575,7 +24575,7 @@ MonoBehaviour:
   delaylessInstructions: 0000000002000000030000004100000007000000
   instructionLists:
   - instructions:
-    - enabled: 1
+    - enabled: 0
       instructionType: 2
       waitTime:
         valueTree:
@@ -58625,7 +58625,7 @@ MonoBehaviour:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
       displayName: Wait
-    - enabled: 1
+    - enabled: 0
       instructionType: 3
       waitTime:
         valueTree:
@@ -63446,7 +63446,7 @@ MonoBehaviour:
   advancedFoldout: 0
   hasBeenSerializedOnce: 1
   focusedInstruction: -1
-  safetyForPlaymode: 158
+  safetyForPlaymode: 162
 --- !u!114 &222342622874853272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -63460,7 +63460,7 @@ MonoBehaviour:
   m_Name: Spirit Shot
   m_EditorClassIdentifier: 
   parameterType: 1
-  uniqueIndex: 12525418
+  uniqueIndex: 15754123
   profile: {fileID: 11400000}
   parent: {fileID: 114917193883442684}
   children:

@@ -28,6 +28,7 @@ public class YochiManager : MonoBehaviour
     public VolumeProfile realWorldProfile;
     public float yokaiEffectLerpRatio;
     public GameObject yokaiEffectPrefab;
+    public float switchWorldCoolDown;
 
     [HideInInspector]
     public bool isInYokaiWorld;
@@ -40,6 +41,7 @@ public class YochiManager : MonoBehaviour
     public int currentHealthPoint;
 
     private VolumeProfile currentProfile;
+    private float switchCDLeft;
 
     private void Awake()
     {
@@ -53,7 +55,7 @@ public class YochiManager : MonoBehaviour
         isInYokaiWorld = false;
         SwitchWorld(isInYokaiWorld);
         currentHealthPoint = maxHealthPoint;
-
+        switchCDLeft = 0;
         yokaiEffectCurrentState = 0;
         currentProfile = Instantiate(yokaiWorldProfile);
 
@@ -64,15 +66,25 @@ public class YochiManager : MonoBehaviour
     {
         if (Input.GetButtonDown("RightBumper") || Input.GetButtonDown("LeftBumper") || Input.GetKeyDown(KeyCode.I))
         {
-            SwitchWorld(!isInYokaiWorld);
+            if(switchCDLeft <= 0)
+            {
+                SwitchWorld(!isInYokaiWorld);
+            }
         }
+
+        if (switchCDLeft > 0)
+        {
+            switchCDLeft -= Time.deltaTime;
+        }
+
         InvulnerableTimeUpdate();
         UpdatePostProcess();
     }
 
     public void SwitchWorld(bool isYokaiWorld)
     {
-        if(!isYokaiWorld)
+        switchCDLeft = switchWorldCoolDown;
+        if (!isYokaiWorld)
         {
             spriteRenderer.color = realWorldColor;
             bulletReceiver.collisionTags = collisionInRealWorld;

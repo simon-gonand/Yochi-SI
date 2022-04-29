@@ -28,6 +28,8 @@ public class EnemyParent : MonoBehaviour
     [HideInInspector]
     public Vector2 pathDirection;
 
+    protected Rigidbody2D rb;
+
     public enum EnemyTypes
     {
         RealDoll,
@@ -42,6 +44,7 @@ public class EnemyParent : MonoBehaviour
         playerTransform = YochiManager.instance.transform;
         targetPosition = playerTransform.position;
         scoringManager = ScoringManager.instance;
+        rb = GetComponentInParent<Rigidbody2D>();
     }
 
     public void HitByBullet()

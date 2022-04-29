@@ -9,9 +9,9 @@ public class EnemyDaruma : EnemyParent
     public float minDistanceToPlayer;
     public float maxDistanceToPlayer;
     public BulletEmitter emitter;
-    private bool canMove = true;
-    public Animator animator;
-
+    public float attackCooldown;
+    [HideInInspector]
+    public bool isAttacking;
 
     void Update()
     {
@@ -20,29 +20,25 @@ public class EnemyDaruma : EnemyParent
         MoveAgent();
     }
 
-    public void HitByBullet(int dmg)
-    {
-        lifePoints -= dmg;
-        if (lifePoints <= 0)
-        {
-            //death VFX
-            Destroy(transform.parent);
-        }
-    }
-
     public IEnumerator StartShooting()
     {
+        isAttacking = true;
+        attackCDLeft = attackCooldown;
+        animator.SetBool("isRolling", false);
+        animator.SetTrigger("Attack");
         emitter.Play();
         if (YochiManager.instance.isInYokaiWorld)
         {
             emitter.rootBullet.moduleParameters.SetBool("isSpirit", true);
         }
         else
+        {
             emitter.rootBullet.moduleParameters.SetBool("isSpirit", false);
-        yield return new WaitForSeconds(0.5f);
-        animator.SetBool("isRolling", false);
-        animator.SetBool("isAttacking", false);
-        canMove = true;
+        }
+
+
+        yield return new WaitForSeconds(1.5f);
+        isAttacking = false;
     }
 
     public void RotateEmitter()
@@ -60,26 +56,36 @@ public class EnemyDaruma : EnemyParent
         emitter.transform.rotation = Quaternion.Euler(0, 0, Vector2.SignedAngle(Vector2.up, look));
     }
 
+    private float attackCDLeft;
     public void MoveAgent()
     {
         Vector2 distanceToPlayer = transform.position - playerTransform.position;
 
-        if (distanceToPlayer.magnitude <= minDistanceToPlayer && canMove)
+        if (attackCDLeft > 0)
         {
-            canMove = false;
-            animator.SetBool("isAttacking", true);
-            animator.SetBool("isRolling", false);
-            GetComponentInParent<Rigidbody2D>().velocity = Vector3.zero;
-            StartCoroutine(StartShooting());
+            attackCDLeft -= Time.deltaTime;
         }
-
-        else if (distanceToPlayer.magnitude > maxDistanceToPlayer && canMove)
+        
+        if (distanceToPlayer.magnitude > maxDistanceToPlayer)
         {
-            
-            animator.SetBool("isRolling", true);
-            CalculatePath();
-            UpdateDirection();
-            GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
+            if(!isAttacking)
+            {
+                targetPosition = YochiManager.instance.transform.position;
+                animator.SetBool("isRolling", true);
+                CalculatePath();
+                UpdateDirection();
+                rb.velocity = pathDirection * speed;
+            }
+        }
+        else
+        {
+            animator.SetBool("isRolling", false);
+            rb.velocity = Vector3.zero;
+
+            if(attackCDLeft <= 0)
+            {
+                StartCoroutine(StartShooting());
+            }
         }
     }
 }

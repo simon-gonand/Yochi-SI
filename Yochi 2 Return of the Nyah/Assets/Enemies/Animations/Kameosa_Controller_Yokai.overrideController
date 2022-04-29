@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Kameosa_Controller_Yokai
+  m_Controller: {fileID: 9100000, guid: f4444bd040724494eb3c60949d6505c8, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 99cff7873527093408acac3de6f8eaf9, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ecae78ab645aa8a41911b76efa14fb7e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 3f669260ce1ac1742bc9ce32efc9197f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3f669260ce1ac1742bc9ce32efc9197f, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7b063f19abe3747489d92700c189c4f8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7b063f19abe3747489d92700c189c4f8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8f328ca5067619d4c8e837120b1d82fd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e761c7342ebbb8346bc447ed437a1899, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: ce5285253e058314f89e076718098d43, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3e89be9a08a40f342b49c42b14a1f79c, type: 2}

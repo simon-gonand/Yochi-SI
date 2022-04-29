@@ -12,9 +12,10 @@ public class EnemyBaseBehaviour : EnemyParent
     [HideInInspector]
     public bool canShoot = true;
     private bool isMoving;
+    public float salveCD;
 
     public LayerMask playerWallMask;
-
+    private float currentSalveCD;
 
     void Update()
     {        
@@ -33,21 +34,49 @@ public class EnemyBaseBehaviour : EnemyParent
         }
 
         UpdateYokaiDisplay();
+        UpdateShoot();
     }
     
 
-    public void StartShooting()
+    public void UpdateShoot()
     {
         if(canShoot)
         {
-            emitter.Play();
             animator.SetBool("isAttacking", true);
+
             if (yokaiAnimator != null)
             {
                 yokaiAnimator.SetBool("isAttacking", true);
             }
-            canShoot = false;
-        }        
+        }
+        else
+        {
+            animator.SetBool("isAttacking", false);
+
+            if (yokaiAnimator != null)
+            {
+                yokaiAnimator.SetBool("isAttacking", false);
+            }
+        }
+
+
+        if (currentSalveCD <= 0)
+        {
+            if(canShoot)
+            {
+                Shoot();
+            }
+        }
+        else
+        {
+            currentSalveCD -= Time.deltaTime;
+        }  
+    }
+
+    private void Shoot()
+    {
+        currentSalveCD = salveCD;
+        emitter.Play();
     }
 
     public void RotateEmitter()
@@ -88,7 +117,7 @@ public class EnemyBaseBehaviour : EnemyParent
             CalculatePath();
             UpdateDirection();
             GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
-            StartShooting();
+            canShoot = false;
             isMoving = true;
         }
 
@@ -98,13 +127,13 @@ public class EnemyBaseBehaviour : EnemyParent
             CalculatePath();
             UpdateDirection();
             GetComponentInParent<Rigidbody2D>().velocity = pathDirection * speed;
-            emitter.Stop();
+            //emitter.Stop();
+            canShoot = false;
             animator.SetBool("isAttacking", false);
             if (yokaiAnimator != null)
             {
                 yokaiAnimator.SetBool("isAttacking", false);
             }
-            canShoot = true;
             isMoving = true;
         }
 
@@ -114,7 +143,7 @@ public class EnemyBaseBehaviour : EnemyParent
             {
                 GetComponentInParent<Rigidbody2D>().velocity = Vector3.zero;
                 isMoving = false;
-                StartShooting();
+                canShoot = true;
             }
             
         }
