@@ -144,7 +144,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Chochin Obakes Killed: 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c99dd09f5da9742878f2584b01ce47, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &340591194801656471
@@ -320,7 +320,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Restart
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c99dd09f5da9742878f2584b01ce47, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2157557776135688998
@@ -455,7 +455,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Time: 00:00:00'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c99dd09f5da9742878f2584b01ce47, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3240657801688982335
@@ -590,7 +590,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Darumas Killed: 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c99dd09f5da9742878f2584b01ce47, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3718328263970170295
@@ -1018,7 +1018,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Dolls Killed: 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c99dd09f5da9742878f2584b01ce47, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4681939786285236675
@@ -1153,7 +1153,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'FINAL SCORE: 00000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c99dd09f5da9742878f2584b01ce47, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4828041214133745266
@@ -1288,7 +1288,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2aed3c663649c554c9e93b577f2a0d9f, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1352,7 +1352,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5136772497418096918
@@ -1423,7 +1423,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Rooms cleared: 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2aed3c663649c554c9e93b577f2a0d9f, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1487,7 +1487,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5433548161817386992
@@ -2101,7 +2101,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kameosas Killed: 000'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c99dd09f5da9742878f2584b01ce47, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2165,7 +2165,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &9158025398936901050
@@ -2234,11 +2234,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Quit
-
-'
+  m_text: Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d2c99dd09f5da9742878f2584b01ce47, type: 2}
   m_sharedMaterial: {fileID: -1613292940763595833, guid: 2adecaeab120f064cb44c6f6bf3e2785, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -2302,6 +2300,6 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
