@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1558d999417d26f43ad09ff13dcd4383
+guid: c132b85fa489ebc4e85984160f8cb9e4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -118,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6e345074119d4b43a83d85fe341ae80
-      internalID: -289220180
+      spriteID: 43431a068bdf5b84c8f27e0e38d5eef1
+      internalID: 643548131
       vertices: []
       indices: 
       edges: []
@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a50e35ff37df3541a2478425164212c
-      internalID: -1193936521
+      spriteID: 1165fe2edf9778545aad056595c24077
+      internalID: -390001384
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 484b6b3375e508148b7ef6f49585cd41
-      internalID: -1252778646
+      spriteID: edd429e68c4e31041beed4aa347ae12d
+      internalID: -1901809896
       vertices: []
       indices: 
       edges: []
@@ -181,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7639baef975ec245ac9dedc415e7922
-      internalID: 91731669
+      spriteID: 01c50c90a821a914886bfa3d18033703
+      internalID: -1593848877
       vertices: []
       indices: 
       edges: []
@@ -202,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4ae08b1216534440acdb9197b72e445
-      internalID: -382124951
+      spriteID: 9ff3411452663cb45a89c0fe4be5a799
+      internalID: -197411755
       vertices: []
       indices: 
       edges: []
@@ -223,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4cf71b9619155649ba9f2eb78841e35
-      internalID: -882705397
+      spriteID: c17926d03ca17b44b8f9cf66cc94f1d2
+      internalID: -1244855804
       vertices: []
       indices: 
       edges: []
@@ -240,12 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Projectile_Tengu-sheet_0: -289220180
-      Projectile_Tengu-sheet_2: -1252778646
-      Projectile_Tengu-sheet_1: -1193936521
-      Projectile_Tengu-sheet_4: -382124951
-      Projectile_Tengu-sheet_3: 91731669
-      Projectile_Tengu-sheet_5: -882705397
+      Projectile_Tengu-sheet_0: 643548131
+      Projectile_Tengu-sheet_2: -1901809896
+      Projectile_Tengu-sheet_1: -390001384
+      Projectile_Tengu-sheet_4: -197411755
+      Projectile_Tengu-sheet_3: -1593848877
+      Projectile_Tengu-sheet_5: -1244855804
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
