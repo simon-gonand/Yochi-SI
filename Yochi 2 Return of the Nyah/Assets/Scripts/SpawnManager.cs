@@ -29,7 +29,7 @@ public class SpawnManager : MonoBehaviour
     [HideInInspector]
     public List<EnemyParent> allEnemies;
 
-    private void Start()
+    private void Awake()
     {
         dollHumanSP = new List<SpawnPoint>();
         dollYokaiSP = new List<SpawnPoint>();
