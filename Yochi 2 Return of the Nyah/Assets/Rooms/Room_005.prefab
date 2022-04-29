@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2354531799059723839}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: EntryPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8374,7 +8374,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1075612499
-  m_SortingLayer: 9
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -11147,7 +11147,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1075612499
-  m_SortingLayer: 9
+  m_SortingLayer: 5
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -12641,7 +12641,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1543950096502740569}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: ExitPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12672,7 +12672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6303052981615135406}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Pathfinding Centre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
