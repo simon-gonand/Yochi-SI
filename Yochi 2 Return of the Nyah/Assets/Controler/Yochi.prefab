@@ -71,7 +71,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1510233557
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 76ace5c3117110a44ba760fb8f2a87a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.3764706}
@@ -137,6 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a824e807a861a34a995ec3b807a4b7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugDamage: 0
   maxHealthPoint: 6
   invulnerableTime: 0.2
   healthBar: {fileID: 0}
@@ -241,8 +242,8 @@ MonoBehaviour:
   minMaxForBackUmbrella: {x: 0, y: 180}
   playerRenderer: {fileID: 1132662924663911604}
   yokaiRechargeTime: 0.5
-  yokaiBulletCadence: 0.12
-  yokaiChargerBulletNumber: 14
+  yokaiBulletCadence: 0.2
+  yokaiChargerBulletNumber: 10
   realRechargeTime: 0.8
   rechargeBar: {fileID: 0}
   umbrellaLerpSpeed: 3
@@ -287,7 +288,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1510233557
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 792366077, guid: a166f0da760ef0347843c08482602254, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -597,7 +598,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -814257267
-  m_SortingLayer: 6
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 1307528980, guid: cb66c741c4c9c29488fef3596174cef8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
