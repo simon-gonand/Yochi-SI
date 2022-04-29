@@ -76,13 +76,14 @@ public class YochiManager : MonoBehaviour
         {
             spriteRenderer.color = realWorldColor;
             bulletReceiver.collisionTags = collisionInRealWorld;
+            AudioManager.instance.PlaySwitchReal();
             //Debug.Log("Switch to Real world");
         }
         else
         {
             spriteRenderer.color = yokaiWorldColor;
             bulletReceiver.collisionTags = collisionInYokaiWorld;
-
+            AudioManager.instance.PlaySwitchYokai();
             Instantiate(yokaiEffectPrefab, transform.position, Quaternion.identity);
             //Debug.Log("Switch to Yokai world");
         }
@@ -117,6 +118,7 @@ public class YochiManager : MonoBehaviour
                 currentHealthPoint--;
                 //feedback d�gats
                 animator.SetTrigger("Hit");
+                AudioManager.instance.PlayHit();
                 StartCoroutine(ShakeImpact());
                 if (currentHealthPoint <= 0)
                 {
@@ -128,6 +130,7 @@ public class YochiManager : MonoBehaviour
 
     public void Die()
     {
+        AudioManager.instance.PlayDeath();
         animator.SetTrigger("Die");
     }
 
