@@ -71,6 +71,7 @@ MonoBehaviour:
   realWorldProfile: {fileID: 11400000, guid: 57ae70958e607774bbc18d3afaa30276, type: 2}
   yokaiEffectLerpRatio: 15
   yokaiEffectPrefab: {fileID: 1621319020465530925, guid: bd94b316145b4a248bf7b33ec8f183f8, type: 3}
+  switchWorldCoolDown: 0.5
   isInYokaiWorld: 0
   isInvulnerable: 0
   currentHealthPoint: 0
