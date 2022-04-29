@@ -53,6 +53,9 @@ TagManager:
   - name: Dirt
     uniqueID: 3422188273
     locked: 0
+  - name: ObstacleInFrontOfPlayer
+    uniqueID: 3219354797
+    locked: 0
   - name: Ennemis
     uniqueID: 2462846393
     locked: 0
@@ -64,7 +67,4 @@ TagManager:
     locked: 0
   - name: UmbrellaFront
     uniqueID: 3562903989
-    locked: 0
-  - name: ObstacleInFrontOfPlayer
-    uniqueID: 3219354797
     locked: 0
