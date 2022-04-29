@@ -24,6 +24,7 @@ public class PickupHealth : MonoBehaviour
     {
         if (col.tag == "Player")
         {
+            if (YochiManager.instance.currentHealthPoint == YochiManager.instance.maxHealthPoint) return;
             col.GetComponent<YochiManager>().getHP(numberOfHPHeal);
             Destroy(gameObject);
         }
